@@ -9,7 +9,7 @@ ul{
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-
+	position: fixed;
 }
 li a {
     display: block;
@@ -17,10 +17,11 @@ li a {
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
-    height: 80px;
+    height: 50px;
     font-size: 40px;
     margin: 10px;
     background-color: #c2d4d8;
+
    
 }
 
@@ -41,11 +42,11 @@ img.homeevent{
 
 }
 .sec{
-	background-color: #c9c9c9;
+	background-color: #c2d4d8;
 	padding: 10px 20px;
 }
 body{
-	background-color: #e3e3e3;
+	background-color: #f2efe8;
 	margin: 0px;
 }
 #heading{
