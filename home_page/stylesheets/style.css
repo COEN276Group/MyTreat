@@ -1,33 +1,48 @@
 .event{
-
+	margin: 0px 5px;
+	padding:10px;
+	background-color: white;
 }
 ul{
 	text-align: center;
 	list-style: none;
-	position: fixed;
-	width: 180px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+
 }
 li a {
     display: block;
     color: #666;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
+    height: 60px;
+    font-size: 40px;
+    margin: 10px;
+    background-color: #c2d4d8;
+   
 }
 a.sidebar:hover{
-	background-color: #ddd;
+	background-color: #f2efe8;
+
+}
+.sidebar{	
+	
+
 }
 img.homeevent{
 	width: 100%;
 
 }
 .event_title{
+	color: black;
 
 }
 .sec{
-	background-color: white;
+	background-color: #f2efe8;
 	padding: 10px 20px;
 }
 body{
-	background-color: #d9d9d9;
+	background-color: #dbe9d8;
 }
