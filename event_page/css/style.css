@@ -267,4 +267,9 @@ li a.active {
 #signup {
   float: left;
 }
+
+#title {
+  text-align: center;
+  font-size: 300%;
+}
   
