@@ -6,38 +6,37 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <div class = "row" style = "border:solid medium">
-    <div class = "col8">
-      <h1 style = "text-align:center;">MyTreat.com</h1>
-    </div>
-    <div class = "col4">
-      <div class = "row">
-        <div class = "col6">
-        </div>
-        <div class = "col6">
-          <div class = "col4">
-          </div>
-          <form class = "col3" action = "http://www.google.com">
-            <input type = "submit" value = "Log in">
-          </form>
-          <form class = "col3" action = "">
-            <input type = "submit" value = "Sign up">
-          </form>
-          <div class = "col2">
-          </div>
-          </div>
-        </div>
-      <br>
-      <div clas = "row">
-        <div class = "col6">
-        </div>
-        <form class = "col6" action = "">
-          <input type = "text">
-          <input type = "submit" value = "Search">
-        </form>
-      </div>
-    </div>
+  <div class="row" id = "heading" style = "padding:0px;margin:0px;">           
+                  <div class="col8" id="title_row"> 
+                     <h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1>
+                  </div>
+                  <div class="col4">
+                    <br><br><br><br>
+                    <div class="row">
+                      <div class="col8"></div>
+                      <div class="col2" id="login">
+                        <form action="">
+                        <input type="submit" value="Log In">
+                        </form>
+                      </div>
+                      <div class="col2" id="signup">
+                        <form action="">
+                        <input type="submit" value="Sign Up">
+                        </form>
+                      </div> 
+                    </div>
+                    <div class="row">
+                      <div id="tfheader">
+                        <form id="tfnewsearch" method="get" action="http://www.google.com">
+                            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+                        </form>
+                      <div class="tfclear"></div>
+                      </div>
+                    </div>         
+                  </div>        
   </div>
+
+  
   <br/>
   <div class = "row">
     <div class = "col10">
@@ -165,7 +164,7 @@
       </div>
       <br/>
       </div>
-    <div class = "col2" style = "position:fixed;">
+    <div class = "col2">
       <div class = "sidebar">
         <ul>
           <li><a class = "sidebar" href="#sports">Sports</a></li>
@@ -178,5 +177,6 @@
       </div>
     </div>
   </div>
+
 </body>
 </html>

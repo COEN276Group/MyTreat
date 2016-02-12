@@ -17,12 +17,13 @@ li a {
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
-    height: 60px;
+    height: 80px;
     font-size: 40px;
     margin: 10px;
     background-color: #c2d4d8;
    
 }
+
 a.sidebar:hover{
 	background-color: #f2efe8;
 
@@ -40,9 +41,14 @@ img.homeevent{
 
 }
 .sec{
-	background-color: #f2efe8;
+	background-color: #c9c9c9;
 	padding: 10px 20px;
 }
 body{
-	background-color: #dbe9d8;
+	background-color: #e3e3e3;
+	margin: 0px;
+}
+#heading{
+	background-color: #9ad3de;
+	margin: 0px;
 }
