@@ -7,8 +7,7 @@ img, embed, object, videos{
 }
 
 * {
-	font-family: "Poiret One", cursive;
-	font-weight: 600;
+	
 }
 
 p {
@@ -21,7 +20,8 @@ p {
 h1 {
 	color: #003366;
 	font-weight: 600;
-	text-align: right;
+	text-align: center;
+  font-size: 380%
 }
 
 h2 {
@@ -275,6 +275,26 @@ li a.active {
 #title {
   position: relative;
   top: -20px;
+}
+
+#header1 {
+  background-color: #9ad3de;
+}
+
+body {
+  background-color: #e3e3e3;
+  margin: 0px;
+}
+
+.event_img {
+  display: block;
+  margin: auto;
+}
+
+
+
+#event_text {
+  font-size: 250%;
 }
 
 

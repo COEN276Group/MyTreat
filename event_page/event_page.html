@@ -15,44 +15,65 @@
         <title>Event Page</title>
     </head>
   <body>
-    <div class="container">
-      <div class="row">           
-                <div class="col8" id="title_row"> 
-                   <img id="title" src="images/mytreat.png">MyTreat.com</h1>
-                </div>
-                <div class="col4">
-                  <div class="row">
-                    <div class="col8"></div>
-                    <div class="col2" id="login">
-                      <form action="">
-                      <input type="submit" value="Log In">
-                      </form>
-                    </div>
-                    <div class="col2" id="signup">
-                      <form action="">
-                      <input type="submit" value="Sign Up">
-                      </form>
-                    </div> 
+    <div class="row" id = "header1" style = "padding:0px;margin:0px;">           
+                  <div class="col8" id="title_row"> 
+                     <h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1>
                   </div>
-                  <div class="row">
-                    <div id="tfheader">
-                      <form id="tfnewsearch" method="get" action="http://www.google.com">
-                          <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-                      </form>
-                    <div class="tfclear"></div>
+                  <div class="col4">
+                    <br><br><br><br>
+                    <div class="row">
+                      <div class="col8"></div>
+                      <div class="col2" id="login">
+                        <form action="">
+                        <input type="submit" value="Log In">
+                        </form>
+                      </div>
+                      <div class="col2" id="signup">
+                        <form action="">
+                        <input type="submit" value="Sign Up">
+                        </form>
+                      </div> 
                     </div>
-                  </div>         
-                </div>        
-      </div>
+                    <div class="row">
+                      <div id="tfheader">
+                        <form id="tfnewsearch" method="get" action="http://www.google.com">
+                            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+                        </form>
+                      <div class="tfclear"></div>
+                      </div>
+                    </div>         
+                  </div>        
+    </div>
 
-
-      
+    <div class="container">
       <div class="row">
-        <h2>Place Holder</h2>
-        <p>My 
-        </p>
+        <div class="col12">
+          <h1 id="event_text">Concert</h1>
+        </div>
       </div>
 
+      <div class="row">
+        <div class="col6">
+          <img class="img-responsive event_img" src="images/event.jpg" alt="event" width="400" hight="200">
+        </div>
+        <div class="col1"></div>
+        <div class="col5">
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:200px;width:400px;'><div id='gmap_canvas' style='height:200px;width:400px;'></div><div><small></small></div><div><small></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(39.32125843425908,-119.49784363828127),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(39.32125843425908,-119.49784363828127)});infowindow = new google.maps.InfoWindow({content:'<strong>Concert</strong><br>tahoe city<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col1"></div>
+        <div class="col10"><p>From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly Mountain Resort activities and events are as varied as they are exciting. Lake Tahoe events are famous for incorporating the winter wonderland that surrounds this gorgeous corner of the world. But with our monthly calendar, you can see that the fun lasts all year long – even in the warmer months!
+
+        Heavenly is also famous for hosting nightlife and après ski events for adults, including some of the best parties around. Planning a guy's trip? Heavenly group tickets are available for parties over 20. Plus, the combination of South Lake Tahoe restaurants, casino nightlife, steakhouses and on-mountain events will keep your group going 24/7.
+
+        At Heavenly, we also love to help make your family vacation something the kids will never forget. Kids will love the Ripperoo Parade where they can march alongside Heavenly’s adorable mascot while singing songs, playing music, and sipping hot chocolate!
+
+        Check out all the Heavenly Resort events below and add even more fun to your Lake Tahoe getaway.</p>
+        </div>
+        <div class="col1"></div>
+      </div>
       <!-- <div class="row">
         <h2>Cities I've lived in</h2>
         <div></div>
@@ -60,7 +81,16 @@
 
 
 
-      <div class="row">
+      
+
+
+
+
+
+
+
+    </div>
+    <div class="row">
         <div id="connect">Connection</div>
         <div>
           <div id="footer" class="row">
@@ -70,13 +100,5 @@
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-    </div>
   </body>
 </html>
