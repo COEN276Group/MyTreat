@@ -220,7 +220,7 @@ li a.active {
 
 /*search bar*/
 #tfheader{
-    
+
   }
   #tfnewsearch{
     float:right;
@@ -262,14 +262,21 @@ li a.active {
 
 #login {
   float: right;
+  resize: horizontal; 
+  overflow: auto;
 }
 
 #signup {
   float: left;
+  resize: horizontal; 
+  overflow: auto;
 }
 
 #title {
-  text-align: center;
-  font-size: 300%;
+  position: relative;
+  top: -20px;
 }
+
+
+
   

@@ -135,5 +135,62 @@ a {
     width: 7.6%;
   }
 
+/*search bar*/
+#tfheader{
 
+  }
+  #tfnewsearch{
+    float:right;
+    padding:20px;
+  }
+  .tftextinput{
+    margin: 0;
+    padding: 5px 15px;
+    font-size:14px;
+    border:1px solid #666; border-right:0px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+  }
+  .tfbutton {
+    margin: 0;
+    padding: 5px 15px;
+    font-size:14px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: solid 1px #666;
+    background-color: #ddd;
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+  }
+  .tfbutton:hover {
+    text-decoration: none;
+    background-color: #666;
+  }
+  /* Fixes submit button height problem in Firefox */
+  .tfbutton::-moz-focus-inner {
+    border: 0;
+  }
+  .tfclear{
+    clear:both;
+  }
+
+#login {
+  float: right;
+  resize: horizontal; 
+  overflow: auto;
+}
+
+#signup {
+  float: left;
+  resize: horizontal; 
+  overflow: auto;
+}
+
+#title {
+  position: relative;
+  top: -20px;
+}
 
