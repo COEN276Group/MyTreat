@@ -1,5 +1,5 @@
 .event{
-	margin: 0px 5px;
+	margin: 0px 10px;
 	padding:10px;
 	background-color: white;
 }
@@ -21,8 +21,6 @@ li a {
     font-size: 40px;
     margin: 10px;
     background-color: #c2d4d8;
-
-   
 }
 
 a.sidebar:hover{
