@@ -179,14 +179,10 @@ a {
 
 #login {
   float: right;
-  resize: horizontal; 
-  overflow: auto;
 }
 
 #signup {
   float: left;
-  resize: horizontal; 
-  overflow: auto;
 }
 
 #title {
