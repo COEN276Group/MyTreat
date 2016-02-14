@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel = 'stylesheet' type = 'text/css' href = "../css/style.css">
-  <link rel = 'stylesheet' type = 'text/css' href = 'stylesheets/style.css'>
-  <meta charset="utf-8">
-</head>
-<body>
-  <div class="row" id = "header1" style = "padding:0px;margin:0px;">           
-                  <div class="col8" id="title_row"> 
+  <head>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon.ico" />
+
+        <title>profile page</title>
+    </head>
+  <body>
+
+    <div class="container">
+       <div class="row">           
+                <div class="col8"> 
                      <h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1>
                   </div>
-                  <div class="col4">
+                <div class="col4">
                     <br><br><br><br>
                     <div class="row">
                       <div class="col8"></div>
@@ -25,160 +34,52 @@
                         </form>
                       </div> 
                     </div>
-                    <div class="row">
-                      <div id="tfheader">
-                        <form id="tfnewsearch" method="get" action="http://www.google.com">
-                            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-                        </form>
-                      <div class="tfclear"></div>
-                      </div>
-                    </div>         
-                  </div>        
-  </div>
+                  <div class="row">
+                    <div id="tfheader">
+                      <form id="tfnewsearch" method="get" action="http://www.google.com">
+                          <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+                      </form>
+                    <div class="tfclear"></div>
+                    </div>
+                  </div>         
+                </div>        
+      </div>
 
+      <div class="row">
+                <h2>My Profile</h2>
+      </div>          
+      <div class="row">
+      <a href=""><h3>Stephen Curry</h3></a>
+      </div>
+      <div class="row">          
+      <div class="col2"><img src="images/curry.jpg" alt="loading..."></div>
+      <div class="col1"></div>
+      <div class="col9"><p>Introduction</p>
+      <p>Wardell Stephen "Steph" Curry II (born March 14, 1988) is an American professional basketball player for the Golden State Warriors of the National Basketball Association (NBA). He is considered by some to be the greatest shooter in NBA history. Curry won the 2015 NBA Most Valuable Player (MVP) award and is a three-time NBA All-Star.</p>
+      <hr><br>
+      <h5>Rating:*****</h5>
+      </div>
+      </div>               
+
+      <div class = "row">
+      <h4>My Event Pictures</h4>
+      <hr><br>
+      </div>
+
+        <div class="row">
+        <div class = "col1"></div>
+        <div class="col3"><a href="http://google.com"><img width="175" height="120" src="images/event1.jpg" alt="event1"></a><span class = "event_title"><a href="">#Music Concert Festival</a></span></div>
+        <div class="col3"><a href="http://google.com"><img width="175" height="120" src="images/event2.jpeg" alt="event2"></a><span class = "event_title"><a href="">#Night Clubbing</a></span></div>
+        <div class="col3"><a href="http://google.com"><img width="175" height="120" src="images/event3.jpeg" alt="event3"></a><span class = "event_title"><a href="">#Banquet</a></span></div>
+        <div class = "col1"></div>
+        <div class = "col1">
+                <form>
+                  <input type = "submit" value = "More...">
+                </form>
+        </div>
+        </div>      
   
-  <br/>
-  <div class = "row">
-    <div class = "col10">
-      <!--Section Code Starts Here-->
-      <div id = "date" class = "row">
-        <div class = "col1">
-        </div>
-        <div class = "col10 sec"> 
-            <a href = ""><h2>Dating</h2></a>
-            <hr><br>
-            <div>
-              <div class = "col1">
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/girl.jpg" alt = "not found">
-                  <span class = "event_title">Any programers still awake?</span>
-                </a>
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/guy.png" alt = "not found">
-                  <span class = "event_title">Looking for date</span>
-                </a>
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/fancydate.jpg" alt = "not found">
-                  <span class = "event_title">Classy Lady Needed!</span>
-                </a>
-              </div>
-              <div class = "col1">
-              </div>
-              <div class = "col1">
-                <form>
-                  <input type = "submit" value = "more">
-                </form>
-              </div>
-              <br>
-            </div>
-        </div>
-        <div class = "col1"></div>
-        <br>
-      </div>
-      <br/>
-      <!--Section Code Starts Here-->
-      <div id = "sports" class = "row">
-        <div class = "col1">
-        </div>
-        <div class = "col10 sec"> 
-            <a href = ""><h2>Sports</h2></a>
-            <hr><br>
-            <div>
-              <div class = "col1">
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/ski.jpg" alt = "not found">
-                  <span class = "event_title">Lake Tahoe this Weekend?</span>
-                </a>
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/curry.jpg" alt = "not found">
-                  <span class = "event_title">Looking for a shooting guard</span>
-                </a>
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/running.jpg" alt = "not found">
-                  <span class = "event_title">Trial running on Sunday</span>
-                </a>
-              </div>
-              <div class = "col1">
-              </div>
-              <div class = "col1">
-                <form>
-                  <input type = "submit" value = "more">
-                </form>
-              </div>
-              <br>
-            </div>
-        </div>
-        <div class = "col1"></div>
-      </div>
-      <br/>
-      
+  </div>            
 
-      <div id = "food" class = "row">
-        <div class = "col1">
-        </div>
-        <div class = "col10 sec"> 
-            <a href = ""><h2>Food</h2></a>
-            <hr><br>
-            <div>
-              <div class = "col1">
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/korean.jpg" alt = "not found">
-                  <span class = "event_title">My Treat Korean Food</span>
-                </a>
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/hotpot.jpg" alt = "not found">
-                  <span class = "event_title">Chinese people look at here</span>
-                </a>
-              </div>
-              <div class = "col3 event">
-                <a href = "">
-                  <img class = "homeevent" src = "images/dessert.jpg" alt = "not found">
-                  <span class = "event_title">Forget about diet!</span>
-                </a>
-              </div>
-              <div class = "col1">
-              </div>
-              <div class = "col1">
-                <form>
-                  <input type = "submit" value = "more">
-                </form>
-              </div>
-              <br>
-            </div>
-        </div>
-        <div class = "col1"></div>
-      </div>
-      <br/>
-      </div>
-    <div class = "col2">
-      <div class = "sidebar">
-        <ul>
-          <li><a class = "sidebar" href="#sports">Sports</a></li>
-          <li><a class = "sidebar" href="#date">Dating</a></li>
-          <li><a class = "sidebar" href="#food">Food</a></li>
-          <li><a class = "sidebar" href="">Music</a></li>
-          <li><a class = "sidebar" href="">Academic</a></li>
-          <li><a class = "sidebar" href="">Geek</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-</body>
-</html>
+  </body>
+</html> 

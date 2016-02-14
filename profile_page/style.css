@@ -14,10 +14,10 @@ img, embed, object, videos{
 p {
 	/*text-align: center;*/
 	font-size: 110%;
-  margin-left:20px;
+    margin-left:20px;
 	text-align: left;
-  font-family: sans-serif;
-  text-indent:30px;
+    font-family: sans-serif;
+    text-indent:30px;
   /*color: #666;*/
 }
 
@@ -41,28 +41,37 @@ h2 {
 h3 {
 	font-size: 150%;
 	font-weight: 900;
-  text-align: center;
-  color:white;
-  background-color:#c2d4d8; 
+    text-align: center;
+    color:white;
+    background-color:#c2d4d8; 
 }
 
 h4 {
-	font-size: 100%;
+	font-size: 150%;
 	font-weight: 600;
 	vertical-align: top;
-  font-style: italic;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    background-color:#c2d4d8; 
+
 }
 
 h5 {
-  font-size: 150%;
+  font-size: 110%;
   font-weight: 600;
   padding: 0px;
+  text-align: left;
+  
 }
 
 .footer {
   display: block;
   text-align: center;
 }
+.event_title {
+    color: black;
+}   
 
 a {
   color: #1199c3;
@@ -158,13 +167,14 @@ a {
     width: 91%;
   }
   .col10 {
-    width: 85.5%;
+    width: 70.5%;
   }
   .col9 {
-    width: 70.5%;
+    width: 80%;
     border:1px solid;
     font-size: 90.6%;
-    margin-left:37px;
+    margin-left:57px;
+    line-height: normal;
   }
   .col8 {
     width: 66%;

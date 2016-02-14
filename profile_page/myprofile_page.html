@@ -6,62 +6,64 @@
         <![endif]-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="mysheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon.ico" />
 
-        <title>Profile</title>
+        <title>profile page</title>
     </head>
   <body>
+
     <div class="container">
-      <div class="row">
-                <h1>My Treat.com</h1>
-      </div>          
-                <div class="col2">
-                    <h2>Profile</h2>
+       <div class="row">           
+                <div class="col8"> 
+                   <h1 id="title">MyTreat.com</h1>
                 </div>
+                <div class="col4">
+                  <div class="row">
+                    <div class="col8"></div>
+                    <div class="col2">
+                      <form action="" id="login">
+                      <input type="submit" value="Log In">
+                      </form>
+                    </div>
+                    <div class="col2">
+                      <form action="" id="signup">
+                      <input type="submit" value="Sign Up">
+                      </form>
+                    </div> 
+                  </div>
+                  <div class="row">
+                    <div id="tfheader">
+                      <form id="tfnewsearch" method="get" action="http://www.google.com">
+                          <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+                      </form>
+                    <div class="tfclear"></div>
+                    </div>
+                  </div>         
+                </div>        
       </div>
-      <div class=
+
       <div class="row">
-        <ul>
-          <li><a href="myprofile_page.html">My profile</a></li>
-          <li><a href="myevent_page.html">My events</a></li>
-          <li style="float:right"><a class="active" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
+                <h2>My Profile</h2>
+      </div>          
       <div class="row">
-      <h3>Description of the user</h3>
+                <h3>Curry</h3>
       </div>
-
-      <div>
-        <h5>Send e-mail to Qi Zhao:</h5>
-
-        <form action="MAILTO:qizhao2@gmail.com?Subject=Hello,I_am_contacting_from_your_website" method="post" enctype="text/plain">
-        Please input your email here:<br>
-        <textarea rows="10" cols="50" required placeholder="write down your name and the reason to contact me. Thank you!" name="Hello,"></textarea><br><br>
-        <input type="submit">
-        </form>
-        <br>
-
-
-
+      <div class="row">          
+      <div class="col3"><img src="images/curry.jpg" alt="loading..."></div>
+      <div class="col9"><p>Wardell Stephen "Steph" Curry II (born March 14, 1988) is an American professional basketball player for the Golden State Warriors of the National Basketball Association (NBA). He is considered by some to be the greatest shooter in NBA history.Curry won the 2015 NBA Most Valuable Player (MVP) award and is a three-time NBA All-Star.</p>
+      <p>Average Rating:</p>
       </div>
+      </div>               
 
-      <div class="grey row">
-        <div id="connect">Connection</div>
-        <div>
-          <div id="footer" class="row">
-            <div class="col4 footer"><span class="blue">mobile</span><span class="black">   217-979-2059</span></div>
-            <div class="col4 footer"><span class="blue">email</span><span class="black">   qzhao1@scu.edu</span></div>
-            <div class="col4 footer"><span class="blue">location</span><span class="black">   San Jose, CA</span></div>
-          </div>
-        </div>
-      </div>
+        <div class="row">
+        <div class="col4"><a href="http://google.com"><img width="150" height="110" src="images/event1.jpg" alt="event1"></a></div>
+        <div class="col4"><a href="http://google.com"><img width="150" height="110" src="images/event2.jpeg" alt="event2"></a></div>
+        <div class="col4"><a href="http://google.com"><img width="150" height="110" src="images/event3.jpeg" alt="event3"></a></div>
+        </div>  
+  </div>            
 
-
-
-
-
-
-    </div>
   </body>
-</html> 
+</html> 
+
