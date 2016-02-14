@@ -1,0 +1,23 @@
+body{
+	background-color: #f2efe8;
+	margin: 0px;
+}
+#heading{
+	background-color: #9ad3de;
+	margin: 0px;
+}
+.cat_title{
+	background-color: #FF7256;
+}
+.event_container{
+	background-color: #c2d4d8;
+	margin: 10px 0px;
+}
+.eventphoto{
+	margin: 8px 0px;
+	padding:10px;
+	background-color: white;
+}
+.participant{
+	margin: 2px;
+}
