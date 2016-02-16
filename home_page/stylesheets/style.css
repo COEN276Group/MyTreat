@@ -10,26 +10,27 @@ ul{
 	margin: 0px;
 	padding: 0px;
 	position: fixed;
+
 }
 li a {
-    display: block;
     color: #666;
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
-    height: 50px;
+    height: 67px;
     font-size: 40px;
-    margin: 10px;
+    margin: 0px;
     background-color: #c2d4d8;
 }
 
-a.sidebar:hover{
+li a:hover{
 	background-color: #f2efe8;
 
 }
 .sidebar{	
-	
-
+	background-color: #85C1E9;
+	height: 160em;
+	margin-right: -100px;
 }
 img.homeevent{
 	width: 100%;
@@ -40,14 +41,19 @@ img.homeevent{
 
 }
 .sec{
-	background-color: #c2d4d8;
+	background-color: #ecf0f1;
 	padding: 10px 20px;
 }
 body{
-	background-color: #f2efe8;
+	background-color: #ffffff;
 	margin: 0px;
 }
 #heading{
-	background-color: #9ad3de;
+	background-color: #fd8a33;
 	margin: 0px;
+}
+input.more{
+	width:10em;
+	height:20em;
+	padding:10px;
 }

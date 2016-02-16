@@ -178,20 +178,11 @@ a {
   }
 
 #login {
-<<<<<<< HEAD
-  float: right;
-=======
   float: right; 
-  overflow: auto;
->>>>>>> origin/dev
 }
 
 #signup {
   float: left;
-<<<<<<< HEAD
-=======
-  overflow: auto;
->>>>>>> origin/dev
 }
 
 #title {
