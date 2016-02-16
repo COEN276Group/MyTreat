@@ -13,11 +13,10 @@ img, embed, object, videos{
 
 p {
 	/*text-align: center;*/
-	font-size: 110%;
+	font-size: 90%;
     margin-left:20px;
 	text-align: left;
     font-family: sans-serif;
-    text-indent:30px;
   /*color: #666;*/
 }
 
@@ -25,6 +24,7 @@ h1 {
 	color: #003366;
 	font-weight: 600;
 	text-align: right;
+    background-color: #71c8e3;
 }
 
 h2 {
@@ -59,10 +59,11 @@ h4 {
 
 h5 {
   font-size: 110%;
-  font-weight: 600;
+  font-weight: bold;
   padding: 0px;
   text-align: left;
-  
+  margin: 20px; 
+  font-family: 'Times New Roman'; 
 }
 
 .footer {
@@ -178,6 +179,7 @@ a {
   }
   .col8 {
     width: 66%;
+    background-color: #71c8e3;
   }
   .col7 {
     width: 57.5%;
@@ -191,12 +193,14 @@ a {
   .col4 {
     width: 32.5%;
     margin-top:80px;
+    background-color: #71c8e3;
   }
   .col3 {
     width: 24.5%;
   }
   .col2 {
     width: 15%;
+    margin-top: 10px;
   }
 
   .col1 {
@@ -220,6 +224,7 @@ ul {
 
 li {
     float: left;
+    font-size: 110%;
 }
 
 li a {
@@ -247,7 +252,7 @@ li a.active {
   }
   #tfnewsearch{
     float:right;
-    padding:20px;
+    padding:10px;
   }
   .tftextinput{
     margin: 0;
