@@ -49,8 +49,9 @@ h4 {
 }
 
 h5 {
-  font-size: 150%;
+  font-size: 100%;
   padding: 0px;
+  font-style: italic;
 }
 
 .pay_type {
@@ -268,13 +269,6 @@ li a.active {
     clear:both;
   }
 
-#login {
-  float: right;
-}
-
-#signup {
-  float: left;
-}
 
 .save {
   float: right;
@@ -308,6 +302,7 @@ body {
 .profile_img {
   display: block;
   margin: auto;
+  border-radius: 75px;
 }
 
 
