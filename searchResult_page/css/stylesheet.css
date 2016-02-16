@@ -90,6 +90,16 @@ body{
 	padding-top: 10px;
     /*background:#9c9;*/
     }
+	
+		#results .numbering{
+		font-size: 12px;
+		font-weight:bold;
+		width:30px;
+		float:left;
+		text-align: right;
+		padding-top: 2px;
+	}
+	
     #aggs {
     float:left;
     width:20%;
