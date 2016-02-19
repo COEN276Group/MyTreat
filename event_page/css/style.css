@@ -318,3 +318,18 @@ body {
 .sec {
   background-color: #c2d4d8;
   }
+
+div.profile_img_div:hover img{
+    opacity:0.5;
+}
+div.profile_img_div:hover input {
+    display: block;
+}
+div.profile_img_div input {
+    position:absolute;
+    display:none;
+}
+div.profile_img_div input.delete {
+    top:0;
+    left:70%;
+}
