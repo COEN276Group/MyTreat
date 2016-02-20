@@ -11,14 +11,12 @@ $(document).ready(function(){
         });
 });
 
-$(document).ready(function(){
-        $('.save_button').on('click', function(event) {  
-            var editElem = document.getElementsByClassName("edit_text").innerHTML;    
+function saveEdits() {  
+            var editElem = document.getElementsByClassName("edit_text");   
             var userVersion = editElem.innerHTML;
-            localStorage.userEdits = userVersion;  
-             $('.edit_text').attr("contenteditable", "false");
-        });
-});
+            localStorage.userEdits = userVersion; 
+            $('.edit_text').attr("contenteditable", "false");
+};
 
 function checkEdits() {
 

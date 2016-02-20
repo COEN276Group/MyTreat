@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" href="images/favicon.ico" />
@@ -15,35 +16,38 @@
         <title>Event Page</title>
     </head>
   <body>
-    <div class="row" id = "header1" style = "padding:0px;margin:0px;">           
-                  <div class="col8" id="title_row"> 
-                     <a href = "../home_page/home_page.html"><h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1></a>
-                  </div>
-                  <div class="col4">
-                    <br><br><br><br>
-                    <div class="row">
-                      <div class="col8"></div>
-                      <div class="col2" id="login">
-                        <form action="../Sign_in/Signin_page.html">
-                        <input type="submit" value="Log In">
-                        </form>
-                      </div>
-                      <div class="col2" id="signup">
-                        <form action="../Sign_in/Signin_page.html">
-                        <input type="submit" value="Sign Up">
-                        </form>
-                      </div> 
-                    </div>
-                    <div class="row">
-                      <div id="tfheader">
-                        <form id="tfnewsearch" method="get" action="http://www.google.com">
-                            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-                        </form>
-                      <div class="tfclear"></div>
-                      </div>
-                    </div>         
-                  </div>        
-    </div>
+    <div class="row" id = "header1" style = "padding:0px;margin:0px;">                      
+      <div class="col8" id="title_row"> 
+          <a href = "../home_page/home_page.html">
+            <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+          </a>
+        </div>
+        <div class="col4">
+          <br>
+          <div class="row">
+            <div class="col8"></div>
+            <div class="col2" id="login">
+              <form action="">
+                <input type="submit" value="Log In">
+              </form>
+            </div>
+            <div class="col2" id="signup">
+              <form action="">
+                <input type="submit" value="Sign Up">
+              </form>
+            </div> 
+          </div>
+          <div class="row">
+            <div id="tfheader">
+              <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+              </form>
+              <div class="tfclear"></div>
+            </div>
+          </div>         
+        </div>        
+      </div>        
+    
 
     <div class="container">
       <br>
@@ -57,11 +61,11 @@
       <div class="row sec">
         <div class="col1"></div>
         <div class="col5">
-          <img class="img-responsive event_img" id="event1"src="images/event1.jpg" alt="event" width="400" hight="200">
+          <img class="img-responsive event_img" id="event1" src="images/event1.jpg" alt="event" width="400">
         </div>
         <div class="col1"></div>
         <div class="col5">
-            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:200px;width:400px;'><div id='gmap_canvas' style='height:200px;width:400px;'></div><div><small></small></div><div><small></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(39.1446803,-120.17624940000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(39.1446803,-120.17624940000002)});infowindow = new google.maps.InfoWindow({content:'<strong>concert</strong><br>tahoe city<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:200px;width:400px;'><div id='gmap_canvas' style='height:200px;width:400px;'></div><div><small></small></div><div><small></small></div></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(39.1446803,-120.17624940000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(39.1446803,-120.17624940000002)});infowindow = new google.maps.InfoWindow({content:'<strong>concert</strong><br>tahoe city<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
         </div>
       </div>
 
@@ -73,15 +77,15 @@
       </div>
       <div class="row sec">
         <div class="col1"></div>
-        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile1.jpg" alt="profile1" width="100" hight="100">
+        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile1.jpg" alt="profile1" width="100">
         </div>
-        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile2.jpg" alt="profile2" width="100" hight="100">
+        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile2.jpg" alt="profile2" width="100">
         </div>
-        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile3.jpg" alt="profile3" width="100" hight="100">
+        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile3.jpg" alt="profile3" width="100">
         </div>
-        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile4.jpg" alt="profile4" width="100" hight="100">
+        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile4.jpg" alt="profile4" width="100">
         </div>
-        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile5.jpg" alt="profile5" width="100" hight="100">
+        <div class="col1"><img class="img-responsive profile_img" src="images/rsz_profile5.jpg" alt="profile5" width="100">
         </div>
         <div class="col1"></div>
       </div>

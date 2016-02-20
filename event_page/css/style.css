@@ -7,7 +7,7 @@ img, embed, object, videos{
 }
 
 * {
-  
+  font-family: 'Open Sans', sans-serif;
 }
 
 p {
@@ -21,7 +21,8 @@ h1 {
   color: #003366;
   font-weight: 600;
   text-align: center;
-  font-size: 380%
+  font-size: 380%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
@@ -33,12 +34,14 @@ h2 {
   padding: 10px;
   font-family: "Roboto", sans-serif;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h3 {
   font-size: 150%;
   font-weight: 900;
   padding: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h4 {
@@ -46,12 +49,14 @@ h4 {
   font-weight: 600;
   text-align: right;
   vertical-align: top;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h5 {
   font-size: 100%;
   padding: 0px;
   font-style: italic;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .pay_type {
@@ -69,6 +74,7 @@ a {
   color: #1199c3;
   text-decoration: none;
   display: block;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
