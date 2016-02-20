@@ -1,3 +1,7 @@
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+	
 .category{
 	min-height: 300px;
 	height:auto;
@@ -6,6 +10,11 @@
 	margin: 0px 10px;
 	padding:10px;
 	background-color: white;
+}
+.event_back{
+	margin: 0px 10px;
+	padding:10px;
+	background-color: #e0bcdd;
 }
 .organizer_info{
 	padding: 10px 30px;
@@ -41,7 +50,7 @@ li a:hover{
 	margin-right: -100px;
 }
 img.homeevent{
-	width: 100%;
+	width: 100em;
 
 }
 .event_title{
@@ -60,7 +69,7 @@ body{
 	margin: 0px;
 }
 #heading{
-	background-color: #fd8a33;
+	background-color: #ae89af;
 	margin: 0px;
 }
 input.more{

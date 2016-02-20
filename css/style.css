@@ -12,11 +12,14 @@ img, embed, object, videos{
 }
 
 a {
-  color: #1199c3;
+  color: #966d7c;
   text-decoration: none;
   display: block;
 }
-
+#heading{
+  background-color: #ae89af;
+  margin: 0px;
+}
 
 
 #connect {
