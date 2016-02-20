@@ -15,7 +15,7 @@
 
         <title>My Events</title>
     </head>
-  <body>
+  <body onload="checkEdits()">
     <div class="row" id = "header1" style = "padding:0px;margin:0px;">           
                   <div class="col8" id="title_row"> 
                      <a href = "../home_page/home_page.html"><h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1></a>
@@ -25,12 +25,12 @@
                     <div class="row">
                       <div class="col8"></div>
                       <div class="col2" id="login">
-                        <form action="">
+                        <form action="../Sign_in/Signin_page.html">
                         <input type="submit" value="Log In">
                         </form>
                       </div>
                       <div class="col2" id="signup">
-                        <form action="">
+                        <form action="../Sign_in/Signin_page.html">
                         <input type="submit" value="Sign Up">
                         </form>
                       </div> 
@@ -57,15 +57,23 @@
       <div class="row sec">
         <div class="col4">
           <h2>Concert</h2>
-          <img class="img-responsive event_img" src="images/event1.jpg" alt="event1" width="210" hight="100">
+          <img class="img-responsive event_img" src="images/event1.jpg" alt="event1" width="210">
         </div><br><br><br>
         <div class="col8">
           <div class="row">
             <div class="col10"></div>
             <div class="col2"><span class="pay_type">Split</span></div>
           </div><hr>
-          <div class="row"><h5>Location: Tahoe City</h5> <h5>Time: March 29th, 2016</h5><h5>Description:</h5><p>From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly Mountain Resort activities and events are as varied as they are exciting. Lake Tahoe events are famous for incorporating the winter wonderland that surrounds this gorgeous corner of the world. But with our monthly calendar, you can see that the fun lasts all year long – even in the warmer months!</p></div>
-          <div class="row"></div>
+          <div class="row"><h5>Location: <span class="edit_text" contenteditable="false">Tahoe City</span></h5> <h5>Time: <span class="edit_text" contenteditable="false">March 29th, 2016</span></h5><h5>Description:</h5><p class="edit_text" contenteditable="false">From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly Mountain Resort activities and events are as varied as they are exciting. Lake Tahoe events are famous for incorporating the winter wonderland that surrounds this gorgeous corner of the world. But with our monthly calendar, you can see that the fun lasts all year long – even in the warmer months!</p></div>
+          <div class="row">
+            <div class="col10"></div>
+            <div class="col1 save">
+              <input class="save_button" type="button" value="save" />
+            </div>
+            <div class="col1 edit">
+              <input class="edit_button" type="button" value="edit" />
+            </div>
+          </div>
           <br>
         </div>
       </div>
@@ -73,44 +81,41 @@
 
       <div class="row sec">
         <div class="col1"></div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile1.jpg" alt="profile1" width="100" hight="100">
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile1.jpg" alt="profile1" width="100">
         </div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile2.jpg" alt="profile2" width="100" hight="100"><input class="delete" type="button" value="X" />
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile2.jpg" alt="profile2" width="100"><input class="delete" type="button" value="X" />
         </div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile3.jpg" alt="profile3" width="100" hight="100"><input class="delete" type="button" value="X" />
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile3.jpg" alt="profile3" width="100"><input class="delete" type="button" value="X" />
         </div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile4.jpg" alt="profile4" width="100" hight="100"><input class="delete" type="button" value="X" />
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile4.jpg" alt="profile4" width="100"><input class="delete" type="button" value="X" />
         </div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile5.jpg" alt="profile5" width="100" hight="100"><input class="delete" type="button" value="X" />
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile5.jpg" alt="profile5" width="100"><input class="delete" type="button" value="X" />
         </div>
         <div class="col4"></div>
         <div class="col2 row">
-          <div class="col6"></div>
-          <div class="col3 save">
-            <form action="">
-              <input type="submit" value="save">
-            </form>
-          </div>
-          <div class="col3 edit">
-            <form action="">
-              <input type="submit" value="edit">
-            </form>
-          </div>
         </div>
       </div><br>
 
       <div class="row sec">
         <div class="col4">
           <h2>Dinner</h2>
-          <img class="img-responsive event_img" src="images/rsz_event2.jpg" alt="event2" width="210" hight="100">
+          <img class="img-responsive event_img" src="images/rsz_event2.jpg" alt="event2" width="210">
         </div><br><br><br>
         <div class="col8">
           <div class="row">
             <div class="col10"></div>
             <div class="col2"><span class="pay_type">My Treat</span></div>
           </div><hr>
-          <div class="row"><h5>Location: xxxxx Streat</h5> <h5>Time: March 20th, 2016</h5><h5>Description:</h5><p>Fine dinner at xxxx restaurant. Girls only.</p></div><br><br>
-          <div class="row"></div>
+          <div class="row"><h5>Location: <span class="edit_text" contenteditable="false">xxxxx Streat</span></h5> <h5>Time: <spanclass="edit_text" contenteditable="false" >March 20th, 2016</span></h5><h5>Description:</h5><p class="edit_text" contenteditable="false">Fine dinner at xxxx restaurant. Girls only.</p></div><br><br>
+          <div class="row">
+            <div class="col10"></div>
+            <div class="col1 save">
+              <input class="save_button" type="button" value="save" />
+            </div>
+            <div class="col1 edit">
+              <input class="edit_button" type="button" value="edit" />
+            </div>
+          </div>
           <br>
         </div>
       </div>
@@ -118,26 +123,15 @@
 
       <div class="row sec">
         <div class="col1"></div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile1.jpg" alt="profile1" width="150" hight="100"></div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile4.jpg" alt="profile4" width="150" hight="100"><input class="delete" type="button" value="X" />
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile1.jpg" alt="profile1" width="150"></div>
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile4.jpg" alt="profile4" width="150"><input class="delete" type="button" value="X" />
         </div>
-        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile5.jpg" alt="profile5" width="150" hight="100"><input class="delete" type="button" value="X" />
+        <div class="col1 profile_img_div"><img class="img-responsive profile_img" src="images/rsz_profile5.jpg" alt="profile5" width="150"><input class="delete" type="button" value="X" />
         </div>
         <div class="col1"></div>
         <div class="col1"></div>
         <div class="col4"></div>
         <div class="col2 row">
-          <div class="col6"></div>
-          <div class="col3 save">
-            <form action="">
-              <input type="submit" value="save">
-            </form>
-          </div>
-          <div class="col3 edit">
-            <form action="">
-              <input type="submit" value="edit">
-            </form>
-          </div>
         </div>
       </div>
     </div>
@@ -158,7 +152,7 @@
 
 
 
-    </div>
+    
     <div class="row">
         <div id="connect">MyTreat.com</div>
         <div>

@@ -278,6 +278,10 @@ li a.active {
   float: left;
 }
 
+.delete {
+  color: red;
+}
+
 #title {
   position: relative;
   top: -20px;
