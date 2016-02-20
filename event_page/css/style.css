@@ -298,7 +298,7 @@ li a.active {
 }
 
 body {
-  background-color: #e3e3e3;
+  background-color: white;
   margin: 0px;
 }
 
@@ -316,6 +316,7 @@ body {
 }
 
 
+
 #event_text {
   font-size: 250%;
 }
@@ -326,7 +327,7 @@ body {
 
 
 .sec {
-  background-color: #c2d4d8;
+  background-color: #ecf0f1;
   }
 
 div.profile_img_div:hover img{

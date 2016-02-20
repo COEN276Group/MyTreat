@@ -12,7 +12,7 @@ $(document).ready(function(){
 });
 
 function saveEdits() {  
-            var editElem = document.getElementsByClassName("edit_text");   
+            var editElem = $('.edit_div');   
             var userVersion = editElem.innerHTML;
             localStorage.userEdits = userVersion; 
             $('.edit_text').attr("contenteditable", "false");
