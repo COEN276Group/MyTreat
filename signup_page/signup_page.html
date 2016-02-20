@@ -4,11 +4,43 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="script.js"></script>
 	<title>Sign Up</title>
 </head>
 <body>
-	 <div class="container">
+  <div class="row" id = "heading" style = "padding:0px;margin:0px;">           
+    <div class="col8" id="title_row"> 
+      <a href = "../home_page/home_page.html">
+        <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+      </a>
+    </div>
+    <div class="col4">
+      <br>
+      <div class="row">
+        <div class="col8"></div>
+        <div class="col2" id="login">
+          <form action="">
+            <input type="submit" value="Log In">
+          </form>
+        </div>
+        <div class="col2" id="signup">
+          <form action="">
+            <input type="submit" value="Sign Up">
+          </form>
+        </div> 
+      </div>
+      <div class="row">
+        <div id="tfheader">
+          <form id="tfnewsearch" method="get" action="http://www.google.com">
+            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+          </form>
+          <div class="tfclear"></div>
+        </div>
+      </div>         
+    </div>        
+  </div>
+	  <div class="container">
      	<div class="row">
       		<div class="col12" id="header_s" >Sign Up</div>
         </div>
@@ -39,8 +71,9 @@
   		Email<br/>
   		<input type="text" name="email" class="input"><br/>
   		Profile picture<br/>
-  		<input type="submit" value="Browse" class="button">
-  		<input type="submit" value="Upload" class="button"><br/>
+  		<input type="file" onchange="previewFile()"><br>
+      <img src="" height="200" alt="Image preview...">
+
   		<br/>
   		<br/>
   		Describe yourself<br/>

@@ -1,0 +1,35 @@
+div{
+  text-align: center;
+  font-size: 20px;
+}
+#header_s {
+  background-color:#9ad3de;
+  font-size: 300%;
+  
+}
+
+#login {
+  font-size: 250%
+  text-align:center;
+}
+
+#signup {
+  font-size: 250%
+  text-align:center;
+}
+
+.input{
+  width: 300px;
+  height: 25px;
+  font-size: 40px;
+
+}
+
+.button{
+  width: 70px;
+  height: 40px;
+  margin: 10px;
+  border: 2px;
+  border-radius: 4px;
+  background-color: #9ad3de;
+}
