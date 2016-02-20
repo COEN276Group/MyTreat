@@ -1,7 +1,16 @@
+.category{
+	min-height: 300px;
+	height:auto;
+}
 .event{
 	margin: 0px 10px;
 	padding:10px;
 	background-color: white;
+}
+.organizer_info{
+	padding: 10px 30px;
+}
+.want_in_button{
 }
 ul{
 	text-align: center;
@@ -28,7 +37,6 @@ li a:hover{
 
 }
 .sidebar{	
-	background-color: #85C1E9;
 	height: 160em;
 	margin-right: -100px;
 }
@@ -44,6 +52,9 @@ img.homeevent{
 	background-color: #ecf0f1;
 	padding: 10px 20px;
 }
+.sec_title{
+	background-color: orange;
+}
 body{
 	background-color: #ffffff;
 	margin: 0px;
@@ -56,4 +67,7 @@ input.more{
 	width:10em;
 	height:20em;
 	padding:10px;
+}
+#title_row{
+
 }

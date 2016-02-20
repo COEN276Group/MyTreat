@@ -1,17 +1,17 @@
 body{
-	background-color: #f2efe8;
+	background-color: #ffffff;
 	margin: 0px;
 }
 #heading{
-	background-color: #9ad3de;
+	background-color: #fd8a33;
 	margin: 0px;
 }
 .cat_title{
-	background-color: #FF7256;
+	padding: 20px;
+	margin-bottom: 0px;
+	text-align: center;
 }
 .event_container{
-	background-color: #c2d4d8;
-	margin: 10px 0px;
 }
 .eventphoto{
 	margin: 8px 0px;
@@ -20,4 +20,15 @@ body{
 }
 .participant{
 	margin: 2px;
+}
+.sec{
+	background-color: #ecf0f1;
+	padding: 10px 20px;
+}
+.treat{
+	color: orange;
+	font-style: italic bold;
+	font-size: 20px;
+	margin: 20px 0px;
+	text-align: center;
 }
