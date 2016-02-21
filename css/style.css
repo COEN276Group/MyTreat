@@ -283,7 +283,7 @@ a.btn_theme {color: #FFF;}
 
 .fa {
   display: inline-block;
-  font-family: FontAwesome;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
