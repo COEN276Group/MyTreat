@@ -3,40 +3,52 @@
 <head>
   <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
   <link rel = "stylesheet" type = "text/css" href = "css/stylesheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico" />
   <script src="js/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="js/imtech_pager.js"></script>
+  <script src="js/modal.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+  });
+
+  </script>
   <meta charset="utf-8">
 </head>
 <body>
-  <div class="row" id = "heading" style = "padding:0px;margin:0px;">           
-                  <div class="col8" id="title_row"> 
-                     <a href = "../home_page/home_page.html"><h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1></a>
-                  </div>
-                  <div class="col4">
-                    <br><br><br><br>
-                    <div class="row">
-                      <div class="col8"></div>
-                      <div class="col2" id="login">
-                        <form action="">
-                        <input type="submit" value="Log In">
-                        </form>
-                      </div>
-                      <div class="col2" id="signup">
-                        <form action="">
-                        <input type="submit" value="Sign Up">
-                        </form>
-                      </div> 
-                    </div>
-                    <div class="row">
-                      <div id="tfheader">
-                        <form id="tfnewsearch" method="get" action="http://www.google.com">
-                            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-                        </form>
-                      <div class="tfclear"></div>
-                      </div>
-                    </div>         
-                  </div>        
-  </div>
+    <div class="row" id = "heading" style = "padding:0px;margin:0px;">
+      <div class="col8" id="title_row">
+          <a href = "../home_page/home_page.html">
+            <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+          </a>
+        </div>
+        <div class="col4">
+          <br>
+          <div class="row">
+            <div class="col6">
+              <form id="login" action="#modal">
+                <a id="modal_trigger" href="#modal"><span class="login_button">Log In</span></a>
+              </form>
+            </div>
+            <div class="col6">
+              <form  id="signup" action="#">
+                <a href="../signup_page/signup_page.html"><span class="login_button">Sign Up</span></a>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div id="tfheader">
+              <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+              </form>
+              <div class="tfclear"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+
 <div id="layout">
 <div class="row">
 <div class="col1"></div>
@@ -49,16 +61,16 @@
 <div id="aggs" >
 <div>
     <div class="aggHead">Refine by Genre</div>
-    
-      
+
+
                         <div>Dating
                         </div>
                         <div>Sports
                         </div>
                         <div>Food
-                        </div>                                     
+                        </div>
                         <div>Music
-                        </div>                        
+                        </div>
                         <div>Academic
                         </div>
                         <div>Names
@@ -83,15 +95,15 @@ Result 1 &ndash; 20 of 34,787
 </div>
 
 <div class="member">
-                          Dan Shen, 
-                          Jean-David Ruvini, 
+                          Dan Shen,
+                          Jean-David Ruvini,
                           Badrul Sarwar
 </div>
-        <div class="source">  
+        <div class="source">
 
 <strong>Time:</strong>
-	
-        		<span class="Time">March 29th, 2016</span>      
+
+        		<span class="Time">March 29th, 2016</span>
         </div>
 <div class="loacation">
 <strong>Location:</strong>&nbsp;Tahoe City
@@ -116,15 +128,15 @@ From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly
 </div>
 
 <div class="member">
-                          Dan Shen, 
-                          Jean-David Ruvini, 
+                          Dan Shen,
+                          Jean-David Ruvini,
                           Badrul Sarwar
 </div>
-        <div class="source">  
+        <div class="source">
 
 <strong>Time:</strong>
-	
-        		<span class="Time">March 29th, 2016</span>      
+
+        		<span class="Time">March 29th, 2016</span>
         </div>
 <div class="loacation">
 <strong>Location:</strong>&nbsp;Tahoe City
@@ -149,15 +161,15 @@ From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly
 </div>
 
 <div class="member">
-                          Dan Shen, 
-                          Jean-David Ruvini, 
+                          Dan Shen,
+                          Jean-David Ruvini,
                           Badrul Sarwar
 </div>
-        <div class="source">  
+        <div class="source">
 
 <strong>Time:</strong>
-	
-        		<span class="Time">March 29th, 2016</span>      
+
+        		<span class="Time">March 29th, 2016</span>
         </div>
 <div class="loacation">
 <strong>Location:</strong>&nbsp;Tahoe City
@@ -182,15 +194,15 @@ From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly
 </div>
 
 <div class="member">
-                          Dan Shen, 
-                          Jean-David Ruvini, 
+                          Dan Shen,
+                          Jean-David Ruvini,
                           Badrul Sarwar
 </div>
-        <div class="source">  
+        <div class="source">
 
 <strong>Time:</strong>
-	
-        		<span class="Time">March 29th, 2016</span>      
+
+        		<span class="Time">March 29th, 2016</span>
         </div>
 <div class="loacation">
 <strong>Location:</strong>&nbsp;Tahoe City
@@ -219,7 +231,66 @@ From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly
 </div>
 </div>
 
-    
+<!-- footer -->
+    <div class="row footer">
+        <div class="row">
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.instagram.com" >
+                  <img src="images/inst.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.facebook.com">
+                  <img src="images/facebook.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://github.com/COEN276Group/MyTreat/tree/dev">
+                  <img src="images/github.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+
+            <div class ="col6" id="connect">
+                <p id="footer_title">MyTreat.com</p>
+            </div>
+
+            <div class="col2">
+                <p id="support">customersupport@mytreat.com</p>
+            </div>
+        </div>
+    </div>
+
+
+      <!--modal stuff-->
+
+  <div id="modal" class="popupContainer" style="display:none;">
+      <header class="popupHeader">
+        <span class="header_title">Login</span>
+        <span class="modal_close"><i class="fa fa-times"></i></span>
+      </header>
+
+      <section class="popupBody">
+        <!-- Username & Password Login form -->
+        <div class="user_login">
+          <form>
+            <label>Email / Username</label>
+            <input type="text" />
+            <br>
+
+            <label>Password</label>
+            <input type="password" />
+            <br>
+            <div class="action_btns">
+              <div class=""><a href="#" class="btn btn_theme">Login</a></div>
+            </div>
+          </form>
+          <br>
+          <a href="#" class = "new_user">New User? Click Here to Register</a>
+        </div>
+      </section>
+  </div>
+
+
 
 <script type="text/javascript">
 var pager = new Imtech.Pager();
