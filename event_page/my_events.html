@@ -13,6 +13,12 @@
         <link rel="shortcut icon" href="images/favicon.ico" />
         <script src="js/jQuery.js"></script>
         <script src="js/eventBuilder.js"></script>
+        <script src="js/modal.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+        });
+        </script>
 
         <title>My Events</title>
     </head>
@@ -29,7 +35,7 @@
             <div class="col8"></div>
             <div class="col2" id="login">
               <form action="">
-                <input type="submit" value="Log In">
+                <a id="modal_trigger" href="#modal"><input type="submit" value="Log In"></a>
               </form>
             </div>
             <div class="col2" id="signup">
@@ -277,6 +283,34 @@
                 <p id="support">customersupport@mytreat.com</p>
             </div>
         </div>
+    </div>
+
+    <!--modal stuff-->
+
+    <div id="modal" class="popupContainer" style="display:none;">
+        <header class="popupHeader">
+          <span class="header_title">Login</span>
+          <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+        
+        <section class="popupBody">
+          <!-- Username & Password Login form -->
+          <div class="user_login">
+            <form>
+              <label>Email / Username</label>
+              <input type="text" />
+              <br>
+              <label>Password</label>
+              <input type="password" />
+              <br>
+              <div class="action_btns">
+                <div class=""><a href="#" class="btn btn_theme">Login</a></div>
+              </div>
+            </form>
+            <br>
+            <a href="#" class = "new_user">New User? Click Here to Register</a>
+          </div>
+        </section>
     </div>
   </body>
 </html>
