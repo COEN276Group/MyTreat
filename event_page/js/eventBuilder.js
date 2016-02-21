@@ -41,12 +41,17 @@ $(document).ready(function(){
         });
 });
 
-function saveEdits() {  
+$(document).ready(function(){
+        $('.save_button').on('click', function(event) {        
+             $('.edit_text').attr("contenteditable", "false");
+        });
+});
+/*function saveEdits() {  
             var editElem = $('.edit_div');   
             var userVersion = editElem.innerHTML;
             localStorage.userEdits = userVersion; 
             $('.edit_text').attr("contenteditable", "false");
-};
+};*/
 
 function checkEdits() {
 

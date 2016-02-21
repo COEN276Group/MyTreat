@@ -310,6 +310,7 @@ body {
   display: block;
   margin: auto;
   box-shadow: 0 0 0 8px #fff;
+  font-style: 
 }
 
 .profile_img {
@@ -322,6 +323,7 @@ body {
 
 #event_text {
   font-size: 250%;
+  font-family: "Poiret One", cursive;
 }
 
 .subtitle{
