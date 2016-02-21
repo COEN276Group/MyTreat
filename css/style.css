@@ -228,3 +228,55 @@ a {
   background-color: #ae89af;
   color: white;
 }
+
+
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+.popupContainer{
+  position:absolute;
+  width:330px;
+  height: auto;
+  left:45%;
+  top:80px;
+  background: #FFF;
+}
+
+#modal_trigger {
+
+}
+.new_user{color:#666;}
+
+.btn {padding:10px 20px; background: #F4F4F2;}
+.btn_theme {background: #ae89af; color: white;}
+
+.btn:hover {background: #E4E4E2;}
+.btn_theme:hover {background: #ecf0f1; color: #666;}
+
+a.btn {color:#666; text-align: center; text-decoration: none;}
+a.btn_theme {color: #FFF;}
+
+.one_half {width:50%; display: block; float:left;}
+.one_half.last {width:45%; margin-left:5%;}
+
+/* Popup Styles*/
+.popupHeader {font-size:16px; text-transform: uppercase;}
+.popupHeader {background:#F4F4F2; position:relative; padding:10px 20px; border-bottom:1px solid #DDD; font-weight:bold;}
+.popupHeader .modal_close {position: absolute; right: 0; top:0; padding:10px 15px; background:#E4E4E2; cursor: pointer; color:#aaa; font-size:16px;}
+
+.popupBody {padding:20px;}
+
+/* User Login Form */
+.user_login {display: block;}
+.user_login label {display: block; margin-bottom:5px;}
+.user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#666;}
+.user_login input[type="checkbox"] {float:left; margin-right:5px;}
+.user_login input[type="checkbox"]+label {float:left;}
