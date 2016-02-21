@@ -8,6 +8,7 @@ img, embed, object, videos{
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
 body{
     display: block;
     margin: 0px;
@@ -17,7 +18,7 @@ p {
 	font-size: 90%;
     margin-left:20px;
 	text-align: left;
-    font-family: sans-serif;
+    /*font-family: sans-serif;*/
   /*color: #666;*/
 }
 
@@ -90,11 +91,7 @@ a {
 
 
 
-#connect {
-  font-size: 120%;
-  text-align: center;
-  background-color: #ddd;
-}
+
 
 .img-responsive {
   display: block;
@@ -269,6 +266,7 @@ ul {
 
 form{
     float: right;
+    padding: 10px;
 }
 
 li {
@@ -348,4 +346,19 @@ li a.active {
   text-align: center;
   position: relative;
   top: -20px;
+}
+
+.modal_form {
+  float: none;
+  padding: 0px;
+}
+
+#footer_title {
+  text-align: center;
+  font-size: 100%;
+}
+
+#support {
+  text-align: center;
+  font-size: 100%;
 }

@@ -13,7 +13,6 @@ img, embed, object, videos{
 p {
   /*text-align: center;*/
   padding: 2px;
-  font-size: 110%;
   /*color: #666;*/
 }
 
@@ -310,7 +309,7 @@ body {
   display: block;
   margin: auto;
   box-shadow: 0 0 0 8px #fff;
-  font-style: 
+  font-style:
 }
 
 .profile_img {
@@ -350,18 +349,7 @@ div.profile_img_div input.delete {
     left:70%;
 }
 
-#footer_title{
-  padding: 0px;
-  margin: 0px;
-  padding-top: 10px;
 
-}
-
-#support {
-  padding: 0px;
-  margin: 0px;
-  padding-top: 10px;
-}
 #login{
   float: right;
 }
