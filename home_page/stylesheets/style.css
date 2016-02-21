@@ -57,21 +57,9 @@ img.homeevent{
 	color: black;
 
 }
-.sec{
-	background-color: #ecf0f1;
-	padding: 10px 20px;
-}
-.sec_title{
-	background-color: orange;
-}
-body{
-	background-color: #ffffff;
-	margin: 0px;
-}
-#heading{
-	background-color: #ae89af;
-	margin: 0px;
-}
+.sec{background-color: #ecf0f1;padding: 10px 20px;}
+.sec_title{background-color: orange;}
+body{background-color: #ffffff;margin: 0px;}
 input.more{
 	width:10em;
 	height:20em;

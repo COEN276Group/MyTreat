@@ -4,19 +4,23 @@
 <head>
 	<link rel = 'stylesheet' type = 'text/css' href = "../css/style.css">
 	<link rel = 'stylesheet' type = 'text/css' href = 'stylesheets/style.css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/modal_style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
 	<meta charset="utf-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.19/dist/jquery.flip.min.js">
 	</script>
+	<script src="scripts/modal.js"></script>
 	<script>
 	$(document).ready(function(){
 		$(".card").flip();
 		$(".want_in_button").click(function(){
 			prompt("Leave a note to the organizer to apply!","");
 		});
+	
+		$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
 	});
-
 	</script>
 
 </head>
@@ -32,9 +36,7 @@
 			<div class="row">
 				<div class="col8"></div>
 				<div class="col2" id="login">
-					<form action="">
-						<input type="submit" value="Log In">
-					</form>
+						<a id="modal_trigger" href="#modal"><input type="submit" value="Log In"></a>
 				</div>
 				<div class="col2" id="signup">
 					<form action="">
@@ -54,6 +56,7 @@
 	</div>
 
 	<br/>
+
 
 	<div class = "row">
 		<div class = "col1"></div>
@@ -669,5 +672,37 @@
 
 
 </div>
+
+<!--modal stuff-->
+
+<div id="modal" class="popupContainer" style="display:none;">
+		<header class="popupHeader">
+			<span class="header_title">Login</span>
+			<span class="modal_close"><i class="fa fa-times"></i></span>
+		</header>
+		
+		<section class="popupBody">
+			<!-- Username & Password Login form -->
+			<div class="user_login">
+				<form>
+					<label>Email / Username</label>
+					<input type="text" />
+					<br>
+					<label>Password</label>
+					<input type="password" />
+					<br>
+					<div class="action_btns">
+						<div class=""><a href="#" class="btn btn_theme">Login</a></div>
+					</div>
+				</form>
+				<br>
+				<a href="#" class = "new_user">New User? Click Here to Register</a>
+			</div>
+		</section>
+</div>
+
+
+
+
 </body>
 </html> 
