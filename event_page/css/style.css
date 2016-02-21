@@ -362,3 +362,10 @@ div.profile_img_div input.delete {
   margin: 0px;
   padding-top: 10px;
 }
+#login{
+  float: right;
+}
+
+#signup{
+  float: left;
+}
