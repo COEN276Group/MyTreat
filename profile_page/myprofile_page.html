@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="shortcut icon" href="images/favicon.ico" />
         <script src="js/jQuery.js"></script>
@@ -51,14 +52,14 @@
 	</div>
     <br>
       <div class="container">
-      <div class="row">
+      <div class="row" id="subtitle">
                 <h2>My Profile</h2>
       </div> 
-                   
-      <div class="row">
+      <br>             
+      <div class="row" id="subrow">
       <a href=""><h3>Stephen Curry</h3></a>
       </div>
-      <div class="row">          
+      <div class="row sec">          
       <div class="col3">
        <div id="changepic" style="display: none">
           <input type="file" onchange="previewFile()" value="Change Profile"><br>
@@ -67,11 +68,10 @@
        
       </div>
       <div class="col9" id="col1">
-      <p>Introduction: <span class="edit_text" contenteditable="false">nice guy</span></p>
-      <p>Hobbies: <span class="edit_text" contenteditable="false">basketball</span></p>
+      <p>Hobbies: <span class="edit_text" contenteditable="false">basketball, fishing, pet, cooking</span></p>
       <p>Occupation Area: <span class="edit_text" contenteditable="false">basketball player</span></p>    
-      <p>Places of Interests: <span class="edit_text" contenteditable="false">night bar</span></p>
-      <hr>
+      <p>Places of Interests: <span class="edit_text" contenteditable="false">night bar, basketball stadium, 3-point line</span></p>
+      
       
       <div class="row">
             <div class="col10"></div>
@@ -84,26 +84,26 @@
            
           </div>
              
-      <br><hr>
       <div class="rating">
       <span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>: gnitaR
       </div>
+       <br>
+      <p><a href="mailto:webmaster@example.com">Reach me@StephenCurry</a></p>
       </div>
       </div>               
- 
-      <div class = "row">
+      <br> 
+      <div class = "row" id="subrow">
       <h4>My Event Pictures</h4>
       </div>
-
-        <div class="row">
+        <div class="row sec">
         <div class = "col1"></div>
-        <div class="col2"><a href="http://google.com"><img width="175" height="120" src="images/event1.jpg" alt="event1"></a><span class = "event_title"><a href="">#Music Concert Festival</a></span></div>
-        <div class="col2"><a href="http://google.com"><img width="175" height="120" src="images/event2.jpeg" alt="event2"></a><span class = "event_title"><a href="">#Night Clubbing</a></span></div>
-        <div class="col2"><a href="http://google.com"><img width="175" height="120" src="images/event3.jpeg" alt="event3"></a><span class = "event_title"><a href="">#Banquet</a></span></div>
-        <div class="col2"><a href="http://google.com"><img width="175" height="120" src="images/event4.jpg" alt="event4"></a><span class = "event_title"><a href="">#Art Exhibition</a></span></div>
+        <div class="col2" id="s1"><a href="../event_page/my_events.html"><img width="175" height="120" src="images/event1.jpg" alt="event1"></a><span class = "event_title"><a href="">#Music Concert Festival</a></span></div>
+        <div class="col2" id="s2"><a href="http://google.com"><img width="175" height="120" src="images/event2.jpeg" alt="event2"></a><span class = "event_title"><a href="">#Night Clubbing</a></span></div>
+        <div class="col2" id="s3"><a href="http://google.com"><img width="175" height="120" src="images/event3.jpeg" alt="event3"></a><span class = "event_title"><a href="">#Banquet</a></span></div>
+        <div class="col2" id="s4"><a href="http://google.com"><img width="175" height="120" src="images/event4.jpg" alt="event4"></a><span class = "event_title"><a href="">#Art Exhibition</a></span></div>
         <div class = "col1"></div>
         <div class = "col1">
-                <form action="">
+                <form action="../event_page/my_events.html">
                   <input type = "submit" value = "More . . .">
                 </form>
         </div>
@@ -112,5 +112,33 @@
   </div>            
   </div>
   </div>
+      <br>
+      <div class="row footer">
+        <div class="row">
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.instagram.com" >
+                  <img src="images/inst.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.facebook.com">
+                  <img src="images/facebook.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://github.com">
+                  <img src="images/github.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+
+            <div class ="col6" id="connect">
+                <p id="footer_title">MyTreat.com</p>
+            </div>
+
+            <div class="col2">
+                <p id="support">customersupport@mytreat.com</p>
+            </div>
+        </div>
+    </div>
   </body>
 </html> 
