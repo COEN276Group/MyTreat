@@ -60,7 +60,6 @@ h5 {
 }
 
 .pay_type {
-  font-family: "Poiret One", cursive;
   font-weight: 900;
   font-size: 120%;
 }
@@ -69,6 +68,8 @@ h5 {
   display: block;
   text-align: center;
   background-color: #ae89af;
+  color: white;
+  padding: 10px;
 }
 
 a {
@@ -84,6 +85,7 @@ a {
   font-size: 120%;
   text-align: center;
   background-color: #ae89af;
+  color: white;
 }
 
 .img-responsive {
@@ -344,4 +346,17 @@ div.profile_img_div input {
 div.profile_img_div input.delete {
     top:0;
     left:70%;
+}
+
+#footer_title{
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
+
+}
+
+#support {
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
 }

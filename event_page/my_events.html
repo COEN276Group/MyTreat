@@ -16,35 +16,37 @@
         <title>My Events</title>
     </head>
   <body onload="checkEdits()">
-    <div class="row" id = "header1" style = "padding:0px;margin:0px;">           
-                  <div class="col8" id="title_row"> 
-                     <a href = "../home_page/home_page.html"><h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1></a>
-                  </div>
-                  <div class="col4">
-                    <br><br><br><br>
-                    <div class="row">
-                      <div class="col8"></div>
-                      <div class="col2" id="login">
-                        <form action="../Sign_in/Signin_page.html">
-                        <input type="submit" value="Log In">
-                        </form>
-                      </div>
-                      <div class="col2" id="signup">
-                        <form action="../Sign_in/Signin_page.html">
-                        <input type="submit" value="Sign Up">
-                        </form>
-                      </div> 
-                    </div>
-                    <div class="row">
-                      <div id="tfheader">
-                        <form id="tfnewsearch" method="get" action="http://www.google.com">
-                            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-                        </form>
-                      <div class="tfclear"></div>
-                      </div>
-                    </div>         
-                  </div>        
-    </div>
+    <div class="row" id = "heading" style = "padding:0px;margin:0px;">                      
+      <div class="col8" id="title_row"> 
+          <a href = "../home_page/home_page.html">
+            <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+          </a>
+        </div>
+        <div class="col4">
+          <br>
+          <div class="row">
+            <div class="col8"></div>
+            <div class="col2" id="login">
+              <form action="">
+                <input type="submit" value="Log In">
+              </form>
+            </div>
+            <div class="col2" id="signup">
+              <form action="">
+                <input type="submit" value="Sign Up">
+              </form>
+            </div> 
+          </div>
+          <div class="row">
+            <div id="tfheader">
+              <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+              </form>
+              <div class="tfclear"></div>
+            </div>
+          </div>         
+        </div>        
+      </div>
 
     <div class="container">
       <br>
@@ -169,7 +171,7 @@
             <div class="col10"></div>
             <div class="col2"><span class="pay_type">My Treat</span></div>
           </div><hr>
-          <div class="row"><h5>Location: <span class="edit_text" contenteditable="false">xxxxx Streat</span></h5> <h5>Time: <spanclass="edit_text" contenteditable="false" >March 20th, 2016</span></h5><h5>Description:</h5><p class="edit_text" contenteditable="false">Fine dinner at xxxx restaurant. Girls only.</p></div><br><br>
+          <div class="row"><h5>Location: <span class="edit_text" contenteditable="false">xxxxx Streat</span></h5> <h5>Time: <span class="edit_text" contenteditable="false" >March 20th, 2016</span></h5><h5>Description:</h5><p class="edit_text" contenteditable="false">Fine dinner at xxxx restaurant. Girls only.</p></div><br><br>
           <div class="row">
             <div class="col10"></div>
             <div class="col1 save">
@@ -234,12 +236,31 @@
 
 
     
-    <div class="row">
-        <div id="connect" class="row">MyTreat.com</div>
-        <div id="footer" class="row">
-            <div class="col4 footer">COEN 276</div>
-            <div class="col4 footer">Santa Clara University</div>
-            <div class="col4 footer">500 El Camino Real, Santa Clara, CA 95053</div>
+    <div class="row footer">
+        <div class="row">
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.instagram.com" >
+                  <img src="images/inst.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.facebook.com">
+                  <img src="images/facebook.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://github.com">
+                  <img src="images/github.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+
+            <div class ="col6" id="connect">
+                <p id="footer_title">MyTreat.com</p>
+            </div>
+
+            <div class="col2">
+                <p id="support">customersupport@mytreat.com</p>
+            </div>
         </div>
     </div>
   </body>

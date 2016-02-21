@@ -192,3 +192,31 @@ a {
   position: relative;
   top: -20px;
 }
+
+#footer_title{
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
+
+}
+
+#support {
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.footer {
+  display: block;
+  text-align: center;
+  background-color: #ae89af;
+  color: white;
+  padding: 10px;
+}
+
+#connect {
+  font-size: 120%;
+  text-align: center;
+  background-color: #ae89af;
+  color: white;
+}
