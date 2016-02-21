@@ -6,6 +6,7 @@
 	<link rel = 'stylesheet' type = 'text/css' href = 'stylesheets/style.css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta charset="utf-8">
+    <link rel="shortcut icon" href="images/favicon.ico" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.19/dist/jquery.flip.min.js">
 	</script>
@@ -26,36 +27,36 @@
 
 </head>
 <body>
-	<div class="row" id = "heading" style = "padding:0px;margin:0px;">
-		<div class="col8" id="title_row">
-			<a href = "../home_page/home_page.html">
-				<h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
-			</a>
-		</div>
-		<div class="col4">
-			<br>
-			<div class="row">
-				<div class="col6"></div>
-				<div class="col3">
-
-					<a href="#"><span class="login_button">Sign Up</span></a>
-				</div>
-
-				<div class="col3" id="login">
-					<a id="modal_trigger" href="#modal"><span class="login_button">Log In</spand></a>
-				</div>
-
-			</div>
-			<div class="row">
-				<div id="tfheader">
-					<form id="tfnewsearch" method="get" action="http://www.google.com">
-						<input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-					</form>
-					<div class="tfclear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="row" id = "heading" style = "padding:0px;margin:0px;">
+      <div class="col8" id="title_row">
+          <a href = "../home_page/home_page.html">
+            <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+          </a>
+        </div>
+        <div class="col4">
+          <br>
+          <div class="row">
+            <div class="col6">
+              <form id="login" action="#modal">
+                <a id="modal_trigger" href="#modal"><span class="login_button">Log In</span></a>
+              </form>
+            </div>
+            <div class="col6">
+              <form  id="signup" action="#">
+                <a href="../signup_page/signup_page.html"><span class="login_button">Sign Up</span></a>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div id="tfheader">
+              <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+              </form>
+              <div class="tfclear"></div>
+            </div>
+          </div>
+      </div>
+    </div>
 
 	<br/>
 

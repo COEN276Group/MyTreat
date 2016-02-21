@@ -295,3 +295,10 @@ a.btn_theme {color: #FFF;}
   content: "X";
 }
 
+#login{
+  float: right;
+}
+
+#signup{
+  float: left;
+}
