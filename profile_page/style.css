@@ -362,3 +362,11 @@ li a.active {
   text-align: center;
   font-size: 100%;
 }
+
+#login {
+  padding: 0px;
+}
+
+#signup {
+  padding: 0px;
+}
