@@ -36,16 +36,34 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-        $('.edit_button').on('click', function(event) {        
-             $('.edit_text').attr("contenteditable", "true");
-             $('.edit_text').css("background-color","white");
+        $('.edit_button1').on('click', function(event) {        
+             $('.edit_text1').attr("contenteditable", "true");
+             $('.edit_text1').css("background-color","white");
+             $('#changepic1').css("display","initial");
         });
 });
 
 $(document).ready(function(){
-        $('.save_button').on('click', function(event) {        
-             $('.edit_text').attr("contenteditable", "false");
-             $('.edit_text').css("background-color","");
+        $('.save_button1').on('click', function(event) {        
+             $('.edit_text1').attr("contenteditable", "false");
+             $('.edit_text1').css("background-color","");
+             $('#changepic1').css("display","none");
+        });
+});
+
+$(document).ready(function(){
+        $('.edit_button2').on('click', function(event) {        
+             $('.edit_text2').attr("contenteditable", "true");
+             $('.edit_text2').css("background-color","white");
+             $('#changepic2').css("display","initial");
+        });
+});
+
+$(document).ready(function(){
+        $('.save_button2').on('click', function(event) {        
+             $('.edit_text2').attr("contenteditable", "false");
+             $('.edit_text2').css("background-color","");
+             $('#changepic2').css("display","none");
         });
 });
 /*function saveEdits() {  
