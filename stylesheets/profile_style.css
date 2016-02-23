@@ -40,7 +40,7 @@ h2 {
     background-color: #e0d1e0;
 }
 
-#subrow{
+#subrow1,#subrow2{
     background-color: #c2d4d8;
 }
 
@@ -56,9 +56,9 @@ h3 {
 }
 
 h4 {
-  font-size: 150%;
-  font-weight: 600;
-  vertical-align: top;
+    font-size: 150%;
+    font-weight: 600;
+    vertical-align: top;
     font-style: italic;
     color: white;
     text-align: center;
@@ -232,10 +232,12 @@ a {
   .col1 {
     width: 7.6%;
   }
-#i{
-    float: right;
-    margin-right: 2%;
+
+#i1 {
+    margin-top: 50px;
+    margin-left: 15px;
 }
+
 .rating{
     unicode-bidi: bidi-override;
     direction: rtl;
