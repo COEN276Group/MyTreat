@@ -1,15 +1,16 @@
+*{
+	font-family: 'Open Sans', sans-serif;
+}
 body{
 	background-color: #ffffff;
-	margin: 0px;
-}
-#heading{
-	background-color: #fd8a33;
 	margin: 0px;
 }
 .cat_title{
 	padding: 20px;
 	margin-bottom: 0px;
 	text-align: center;
+	background-color: #9C8AA5;
+	color:#fff;
 }
 .event_container{
 }

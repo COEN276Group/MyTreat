@@ -2,34 +2,22 @@
 <html>
 
 <head>
-	<link rel = 'stylesheet' type = 'text/css' href = "../css/style.css">
-	<link rel = 'stylesheet' type = 'text/css' href = 'stylesheets/style.css'>
+	<link rel = 'stylesheet' type = 'text/css' href = 'stylesheets/general_style.css'>
+	<link rel = 'stylesheet' type = 'text/css' href = "stylesheets/home_style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta charset="utf-8">
-    <link rel="shortcut icon" href="images/favicon.ico" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.19/dist/jquery.flip.min.js">
-	</script>
+    <link rel="shortcut icon" href="images/general/favicon.ico" />
+    <script src="scripts/jQuery.js"></script>
+    <script src="scripts/flip.js"></script>
 	<script src="scripts/modal.js"></script>
-	<script>
-	$(document).ready(function(){
-		$(".card").flip();
-		$(".want_in_button").click(function(){
-			prompt("Leave a note to the organizer to apply!","");
-		});
+	<script src="scripts/home.js"></script>
 
-		$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
-
-
-	});
-
-	</script>
 
 </head>
 <body>
     <div class="row" id = "heading" style = "padding:0px;margin:0px;">
       <div class="col8" id="title_row">
-          <a href = "../home_page/home_page.html">
+          <a href = "home_page.html">
             <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
           </a>
         </div>
@@ -43,13 +31,13 @@
             </div>
             <div class="col6">
               <form  id="signup" action="#">
-                <a href="../signup_page/signup_page.html"><span class="login_button">Sign Up</span></a>
+                <a href="signup_page.html"><span class="login_button">Sign Up</span></a>
               </form>
             </div>
           </div>
           <div class="row">
             <div id="tfheader">
-              <form id="tfnewsearch" method="get" action="http://www.google.com">
+              <form id="tfnewsearch" method="get" action="search_result_page.html">
                 <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
               </form>
               <div class="tfclear"></div>
@@ -64,7 +52,7 @@
 	<div class = "row">
 		<div class = "col1"></div>
 		<div class = "col10" style = "padding:10px 20px">
-			<img src="images/theme_photo.jpg" style = "width:100em">
+			<img src="images/general/home_theme.jpg" style = "width:100em">
 		</div>
 		<div class = "col1"></div>
 
@@ -81,12 +69,10 @@
 				<div class = "col10 sec">
 					<div class = "row">
 						<div class = "col10">
-							<a href = "../categories_page/categories_page.html"><h2>Dating</h2></a>
+							<a href = "categories_page.html"><h2>Dating</h2></a>
 						</div>
 						<div class = "col2">
-							<form action = "../categories_page/categories_page.html">
-								<input type = "submit" class = "more" value = "more">
-							</form>
+							<a href="categories_page.html"><h3><span class="more_button">More</span></h3></a>
 						</div>
 					</div>
 					<br>
@@ -96,8 +82,8 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/girl.jpg" alt = "not found"><br>
-										<span class = "event_title">Any programers still awake?</span>
+										<img src = "images/content/dating1.png" alt = "not found"><br>
+										<span class = "event_title">Hangout at the beach?</span>
 									</div>
 								</div>
 								<div class = "back">
@@ -106,23 +92,23 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img class = "homeevent"src="images/girl.jpg"></a>
+													<a href=""><img class = "homeevent"src="images/profile_pics/profile1.png"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
-													<div class = "row">Gone with the wind</div>
+													<div class = "row">Ted Ross</div>
 													<div class = "row">*****</div>
 												</div>
 											</div>
 										</div>
 										<hr>
 										<p>
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
+											If you love beaches like I do, come! We can play volleyball or simply relax and people watch.
 										</p>
 										<div class = "row">
 											<div class = "col1"></div>
 											<div class = "col2">
-												<form action = "">
+												<form action = "event_page.html">
 													<input type = "submit" value = "More Info">
 												</form>
 											</div>
@@ -141,8 +127,8 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/guy.png" alt = "not found">
-										<span class = "event_title">Looking for a date on V-day</span>
+										<img src = "images/content/dating2.png" alt = "not found">
+										<span class = "event_title">Ice Cream!!</span>
 									</div>
 								</div>
 								<div class = "back">
@@ -151,23 +137,23 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/guy.png"></a>
+													<a href=""><img src="images/profile_pics/profile2.png"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
-													<div class = "row">Business Star</div>
+													<div class = "row">Richard Gear</div>
 													<div class = "row">*****</div>
 												</div>
 											</div>
 										</div>
 										<hr>
 										<p class = "event_description">
-											I am a MBA student in SCU and I want to spend the V-day with a sweet girl. I want to spend the day in museums and later a jazz concert at night. We can go to anywhere for dinner. Bill's on me!!
+											This Ice Cream is My Date! Looking for ice cream LOVERS!
 										</p>
 										<div class = "row">
 											<div class = "col1"></div>
 											<div class = "col2">
-												<form action = "">
+												<form action = "event_page.html">
 													<input type = "submit" value = "More Info">
 												</form>
 											</div>
@@ -184,8 +170,8 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/fancydate.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
+										<img src = "images/content/dating3.png" alt = "not found">
+										<span class = "event_title">Aquarium Date</span>
 									</div>
 								</div>
 								<div class = "back">
@@ -194,23 +180,23 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/user1.jpg"></a>
+													<a href=""><img src="images/profile_pics/profile3.png"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
-													<div class = "row">Grown Kid</div>
+													<div class = "row">Syndy Nafari</div>
 													<div class = "row">*****</div>
 												</div>
 											</div>
 										</div>
 										<hr>
 										<p class = "event_description">
-											I am a public accountant working in downtown San Jose. I booked a Michelin 4-star restaurant called La'Quinte for two spots. Any classy lady want to join me? We will have a good time.
+											Do you enjoy  tuna and sharks speed past, sardines swarm in huge, glittering schools, and sea turtles swim lazily across the 90-foot window! Come to the best aquarium of the bay area!
 										</p>
 										<div class = "row">
 											<div class = "col1"></div>
 											<div class = "col2">
-												<form action = "">
+												<form action = "event_page.html">
 													<input type = "submit" value = "More Info">
 												</form>
 											</div>
@@ -229,8 +215,8 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/breakup.jpg" alt = "not found">
-										<span class = "event_title">Want marriage counsoler</span>
+										<img src = "images/content/dating4.png" alt = "not found">
+										<span class = "event_title">Dancing to the top</span>
 									</div>
 								</div>
 								<div class = "back">
@@ -239,23 +225,23 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/user2.jpg"></a>
+													<a href=""><img src="images/profile_pics/profile4.png"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
-													<div class = "row">Tech Crunch</div>
+													<div class = "row">Emily Chomers</div>
 													<div class = "row">****</div>
 												</div>
 											</div>
 										</div>
 										<hr>
 										<p class = "event_description">
-											My wife and I have not been getting along lately. I just want some one with experience to meet up with me prelimilarly to set up futhur marriage counsoling sessions.
+											Calling all jitterbugs, westies, greasers, molls, jive dancers, lindy-hoppers, hepcats, and those who are ready to stop being wall flowers and join in the fun! 
 										</p>
 										<div class = "row">
 											<div class = "col1"></div>
 											<div class = "col2">
-												<form action = "">
+												<form action = "event_page.html">
 													<input type = "submit" value = "More Info">
 												</form>
 											</div>
@@ -282,12 +268,10 @@
 				<div class = "col10 sec">
 					<div class = "row">
 						<div class = "col10">
-							<a href = "../categories_page/categories_page.html"><h2>Food</h2></a>
+							<a href = "categories_page.html"><h2>Food&Drink</h2></a>
 						</div>
 						<div class = "col2">
-							<form action = "../categories_page/categories_page.html">
-								<input type = "submit" class = "more" value = "more">
-							</form>
+							<a href="categories_page.html"><h3><span class="more_button">More</span></h3></a>
 						</div>
 					</div>
 					<br>
@@ -297,16 +281,46 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/korean.jpg" alt = "not found"><br>
-										<span class = "event_title">Any programers still awake?</span>
+										<img src = "images/content/food1.png" alt = "not found"><br>
+										<span class = "event_title">Brewery Tour!</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
-										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img class = "homeevent"src="images/profile_pics/profile5.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Nathan Tian</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<p>
+											Brewery touring and beverage sampling<br>
+											* Beer Socials<br>
+											* Private tastings<br>
+											* Beer festivals<br>
+											* And much more<br>
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
+
 									</div>
 								</div>
 							</div>
@@ -316,16 +330,41 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/hotpot.jpg" alt = "not found">
-										<span class = "event_title">Need to get a lady to be with me from now</span>
+										<img src = "images/content/food2.png" alt = "not found">
+										<span class = "event_title">Scotch and Whiskey</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile6.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Kennith Reitz</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
 										<p class = "event_description">
-											Get me some girls going. I am a MBA student in SCU and I need pussies, like RIGHT NOW!
+											An evening of Scotch and Whiskey drinking usually goes hand in hand with good conversation in relaxed company. I look forward to a comfortable and vibrant group.
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -334,16 +373,41 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/dessert.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
+										<img src = "images/content/food3.png" alt = "not found">
+										<span class = "event_title">Tasty Korean Town</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile7.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Chisato Takanaga</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
 										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
+											Let's take advantage of Koreatown and try some new Barbecue joints!  We try other types of Korean restaurants, but KBBQ is our main focus
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
 									</div>
 
 
@@ -354,16 +418,41 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/hotpot.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
+										<img src = "images/content/food4.png" alt = "not found">
+										<span class = "event_title">Chinese Food Outing</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile8.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Bobby Wang</div>
+													<div class = "row">****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
 										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
+											Sichuan restaurants are winning over New York City. Let's explore them together, family-style. If you can take the heat, join us!
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -374,18 +463,16 @@
 			</div>
 			<hr>
 
-			<div id = "music" class = "row">
+			<div id = "outdoor" class = "row">
 				<div class = "col1">
 				</div>
 				<div class = "col10 sec">
 					<div class = "row">
 						<div class = "col10">
-							<a href = "../categories_page/categories_page.html"><h2>Food</h2></a>
+							<a href = "categories_page.html"><h2>Outdoor&Sport</h2></a>
 						</div>
 						<div class = "col2">
-							<form action = "../categories_page/categories_page.html">
-								<input type = "submit" class = "more" value = "more">
-							</form>
+							<a href="categories_page.html"><h3><span class="more_button">More</span></h3></a>
 						</div>
 					</div>
 					<br>
@@ -395,16 +482,42 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/singer.jpg" alt = "not found"><br>
+										<img src = "images/content/outdoor1.png" alt = "not found"><br>
 										<span class = "event_title">Any programers still awake?</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
-										<p class = "event_description">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img class = "homeevent"src="images/profile_pics/profile9.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Gone with the wind</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<p>
 											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
+
 									</div>
 								</div>
 							</div>
@@ -414,16 +527,41 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/bass.jpg" alt = "not found">
-										<span class = "event_title">Need to get a lady to be with me from now</span>
+										<img src = "images/content/outdoor2.png" alt = "not found">
+										<span class = "event_title">All About Hiking</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile10.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Beth Besserities</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
 										<p class = "event_description">
-											Get me some girls going. I am a MBA student in SCU and I need pussies, like RIGHT NOW!
+											Friendly, able to hike 10-15 miles a day, appreciate being in the outdoors exploring vistas, waterfalls, canyons, botany, and wildlife. 
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -432,16 +570,41 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/violin.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
+										<img src = "images/content/outdoor3.png" alt = "not found">
+										<span class = "event_title">BBall Fans?</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile11.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Johnathan Rickenson</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
 										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
+											Discuss the sport, leagues, etc. Play the game!
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
 									</div>
 
 
@@ -452,16 +615,238 @@
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
-										<img src = "images/bass.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
+										<img src = "images/content/outdoor4.png" alt = "not found">
+										<span class = "event_title">How about just run!</span>
 									</div>
 								</div>
 								<div class = "back">
 									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile12.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Ben Befleck</div>
+													<div class = "row">****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
 										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
+											How about we just run ? If you take joy in running any distance, then this might be a good group for you. We meetup at least once a week to run various distances. We are a diverse group of runners of different fitness levels.
 										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class = "col1"></div>
+			</div>
+			
+			<hr>
+			<div id = "entertainment" class = "row">
+				<div class = "col1">
+				</div>
+				<div class = "col10 sec">
+					<div class = "row">
+						<div class = "col10">
+							<a href = "categories_page.html"><h2>Entertainment</h2></a>
+						</div>
+						<div class = "col2">
+							<a href="categories_page.html"><h3><span class="more_button">More</span></h3></a>
+						</div>
+					</div>
+					<br>
+
+					<div class = "row">
+						<div class = "col3 category">
+							<div class = "card">
+								<div class = "front">
+									<div class = "event">
+										<img src = "images/content/enter1.png" alt = "not found"><br>
+										<span class = "event_title">KongFu Panda, Anyone?</span>
+									</div>
+								</div>
+								<div class = "back">
+									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img class = "homeevent"src="images/profile_pics/profile13.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Maria Potaj</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<p>
+											When Po's long-lost panda father suddenly reappears, the reunited duo travels to a secret panda paradise.
+										</p>
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class = "col3 category">
+							<div class = "card">
+								<div class = "front">
+									<div class = "event">
+										<img src = "images/content/enter2.png" alt = "not found">
+										<span class = "event_title">Want to watch Jungle Book together</span>
+									</div>
+								</div>
+								<div class = "back">
+									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile14.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Henry Heather</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<p class = "event_description">
+											“The Jungle Book” is an all-new live-action epic adventure about Mowgli (newcomer Neel Sethi), a man-cub raised in the jungle by a family of wolves, who embarks on a captivating journey of self-discovery.
+										</p>
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "col3 category">
+							<div class = "card">
+								<div class = "front">
+									<div class = "event">
+										<img src = "images/content/enter3.png" alt = "not found">
+										<span class = "event_title">Lets Rock Baby</span>
+									</div>
+								</div>
+								<div class = "back">
+									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile15.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Carl Russol</div>
+													<div class = "row">*****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<p class = "event_description">
+											HiLLBiLLY ROBOT: an Urban Americana Music Event returns for round three. The festival, we mean event, runs every weekend in February and features a variety of urban-flavored Americana
+										</p>
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class = "col3 category">
+							<div class = "card">
+								<div class = "front">
+									<div class = "event">
+										<img src = "images/content/enter4.png" alt = "not found">
+										<span class = "event_title">Beyonce Concert</span>
+									</div>
+								</div>
+								<div class = "back">
+									<div class = "event">
+										<div class = "row">
+											<div class = "organizer_info">
+												<div class = "col1"></div>
+												<div class = "col2">
+													<a href=""><img src="images/profile_pics/profile16.png"></a>
+												</div>
+												<div class = "col2"></div>
+												<div class = "col7">
+													<div class = "row">Alissia Tylor</div>
+													<div class = "row">****</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<p class = "event_description">
+											I am a really big Beyoncé fan and was really pumped up to see her – I'd been waiting for years for the chance. 
+										</p>
+										<div class = "row">
+											<div class = "col1"></div>
+											<div class = "col2">
+												<form action = "event_page.html">
+													<input type = "submit" value = "More Info">
+												</form>
+											</div>
+											<div class = "col5"></div>
+											<div class = "col3">
+												<input class = "want_in_button" type = "button" value = "I Want In!">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -471,207 +856,11 @@
 				<div class = "col1"></div>
 			</div>
 			<hr>
-
-			<div id = "academic" class = "row">
-				<div class = "col1">
-				</div>
-				<div class = "col10 sec">
-					<div class = "row">
-						<div class = "col10">
-							<a href = "../categories_page/categories_page.html"><h2>Academic</h2></a>
-						</div>
-						<div class = "col2">
-							<form action = "../categories_page/categories_page.html">
-								<input type = "submit" class = "more" value = "more">
-							</form>
-						</div>
-					</div>
-
-					<br>
-
-					<div class = "row">
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/singer.jpg" alt = "not found"><br>
-										<span class = "event_title">Any programers still awake?</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/bass.jpg" alt = "not found">
-										<span class = "event_title">Need to get a lady to be with me from now</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											Get me some girls going. I am a MBA student in SCU and I need pussies, like RIGHT NOW!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/violin.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-
-
-								</div>
-							</div>
-						</div>
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/bass.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class = "col1"></div>
-			</div>
-			<hr>
-
-			<div id = "geek" class = "row">
-				<div class = "col1">
-				</div>
-				<div class = "col10 sec">
-					<div class = "row">
-						<div class = "col10">
-							<a href = "../categories_page/categories_page.html"><h2>Geek</h2></a>
-						</div>
-						<div class = "col2">
-							<form action = "../categories_page/categories_page.html">
-								<input type = "submit" class = "more" value = "more">
-							</form>
-						</div>
-					</div>
-					<br>
-
-					<div class = "row">
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/singer.jpg" alt = "not found"><br>
-										<span class = "event_title">Any programers still awake?</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/bass.jpg" alt = "not found">
-										<span class = "event_title">Need to get a lady to be with me from now</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											Get me some girls going. I am a MBA student in SCU and I need pussies, like RIGHT NOW!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/violin.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-
-
-								</div>
-							</div>
-						</div>
-						<div class = "col3 category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/bass.jpg" alt = "not found">
-										<span class = "event_title">Any programers still awake?</span>
-									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<p class = "event_description">
-											I feel lonely tonight. Any programmers still awake? Wanna grabs some BBQs at 500 S El Camino Real? I will be there at 2am. Let me know if you are interested!
-										</p>
-										<input class = "want_in_button" type = "button" value = "I Want In!">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class = "col1"></div>
-			</div>
 			<br/>
-		</div>
+		
 	</div>
 	<div class = "col1"></div>
-
+</div>
 
 <!-- footer -->
 	<br><br>
@@ -679,17 +868,17 @@
         <div class="row">
             <div class="col1 footer">
                 <a class="iconlink" href="https://www.instagram.com" >
-                  <img src="images/inst.png" width="30" alt="Image Not Found">
+                  <img src="images/general/inst.png" width="30" alt="Image Not Found">
                 </a>
             </div>
             <div class="col1 footer">
                 <a class="iconlink" href="https://www.facebook.com">
-                  <img src="images/facebook.png" width="30" alt="Image Not Found">
+                  <img src="images/general/facebook.png" width="30" alt="Image Not Found">
                 </a>
             </div>
             <div class="col1 footer">
                 <a class="iconlink" href="https://github.com/COEN276Group/MyTreat/tree/dev">
-                  <img src="images/github.png" width="30" alt="Image Not Found">
+                  <img src="images/general/github.png" width="30" alt="Image Not Found">
                 </a>
             </div>
 
@@ -703,8 +892,6 @@
         </div>
     </div>
 
-
-</div>
 
 <!--modal stuff-->
 
@@ -726,7 +913,7 @@
 					<input type="password" />
 					<br>
 					<div class="action_btns">
-						<div class=""><a href="#" class="btn btn_theme">Login</a></div>
+						<div class=""><a href="myprofile_page.html" class="btn btn_theme">Login</a></div>
 					</div>
 				</form>
 				<br>
