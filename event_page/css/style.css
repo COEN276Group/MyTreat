@@ -108,6 +108,10 @@ a {
     transform: scale(1.1);
 }
 
+.application{
+  background-color: #d9d9d9;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
