@@ -12,7 +12,7 @@ img, embed, object, videos{
 
 p {
   /*text-align: center;*/
-  padding: 2px;
+  padding: 20px;
   /*color: #666;*/
 }
 
@@ -53,7 +53,7 @@ h4 {
 
 h5 {
   font-size: 100%;
-  padding: 0px;
+  margin-left: 20px;
   font-style: italic;
   font-family: 'Open Sans', sans-serif;
 }
@@ -313,7 +313,6 @@ body {
   display: block;
   margin: auto;
   box-shadow: 0 0 0 8px #fff;
-  font-style:
 }
 
 .profile_img {
@@ -327,6 +326,10 @@ body {
 #event_text {
   font-size: 250%;
   font-family: "Poiret One", cursive;
+}
+
+.event_destext {
+  padding: 0px;
 }
 
 .subtitle{
