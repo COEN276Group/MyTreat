@@ -308,7 +308,9 @@ body {
   margin: 0px;
 }
 
-
+.edit_span {
+  padding: 4px;
+}
 .event_img {
   display: block;
   margin: auto;

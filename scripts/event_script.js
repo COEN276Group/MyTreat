@@ -38,12 +38,14 @@ $(document).ready(function(){
 $(document).ready(function(){
         $('.edit_button').on('click', function(event) {        
              $('.edit_text').attr("contenteditable", "true");
+             $('.edit_text').css("background-color","white");
         });
 });
 
 $(document).ready(function(){
         $('.save_button').on('click', function(event) {        
              $('.edit_text').attr("contenteditable", "false");
+             $('.edit_text').css("background-color","");
         });
 });
 /*function saveEdits() {  
