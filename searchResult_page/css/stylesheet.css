@@ -1,9 +1,14 @@
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .event{
 	margin: 0px 10px;
 	padding:10px;
 	background-color: white;
 }
-ul{
+/*ul{
 	text-align: center;
 	list-style: none;
 	width: 100%;
@@ -22,13 +27,13 @@ li a {
     margin: 10px;
     background-color: #c2d4d8;
 }
-
+*/
 a.sidebar:hover{
 	background-color: #f2efe8;
 
 }
-.sidebar{	
-	
+.sidebar{
+
 
 }
 img.homeevent{
@@ -47,19 +52,15 @@ body{
 	background-color: white;
 	margin: 0px;
 }
-#heading{
-	background-color: #9ad3de;
-	margin: 0px;
-}
 
 #layout {
-	width:100%; 
-	margin-left: auto; 
-	margin-right: auto; 
-	padding-left:5px; 
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left:5px;
 	text-align:left;
 }
-	
+
 /*search result*/
 #resultstats {
     width:100%;
@@ -67,16 +68,16 @@ body{
 	font-size: 12px;
     /*background:#9c9;*/
     }
-	
+
 	#resultstats a:link {
 		text-decoration: none;
 	}
-	
+
 	#resultstats div {
 		padding-bottom: 10px;
 		padding-top: 5px;
 	}
-	
+
 	#resfound {
 		background-color: #ece9d8;
 		padding-left:5px
@@ -90,7 +91,7 @@ body{
 	padding-top: 10px;
     /*background:#9c9;*/
     }
-	
+
 		#results .numbering{
 		font-size: 12px;
 		font-weight:bold;
@@ -99,29 +100,64 @@ body{
 		text-align: right;
 		padding-top: 2px;
 	}
-	
+	#results .details{
+		font-size: 12px;
+		width:92%;
+		float:right;
+		padding-bottom: 20px;
+	}
+
+	#results .title{
+		font-size: 14px;
+		padding-bottom:5px;
+	}
+
+	#results .member{
+		font-size: 12px;
+		padding-bottom:5px;
+	}
+
+	#results .source{
+		font-size: 12px;
+		padding-bottom:5px;
+	}
+
+	#results .location{
+		font-size: 12px;
+		padding-bottom:5px;
+	}
+
+	#results .ft{
+		font-size: 12px;
+		padding-bottom:5px;
+	}
+
+	#results .description{
+		font-size: 12px;
+		padding-bottom:5px;
+	}
+
     #aggs {
     float:left;
     width:20%;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	font-size:12px;
-    
+
     }
-	
+
 	.pagelogic {
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	font-size:12px;
-	float:right;
-	 padding-bottom: 10px;
+	padding-bottom: 10px;
     }
-	
+
 	.pagerange {
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	font-size:12px;
 	float:left;
 	 padding-bottom: 10px;
     }
-	
+
 	#resultmenu {
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	font-size:12px;
@@ -129,3 +165,19 @@ body{
 	 padding-bottom: 10px;
     }
 
+	#content{text-indent:20px;text-align:justify;}
+	ul li{font-size: 40px;text-align:center;}
+	ul{list-style-type: none;padding-left: 0.5em}
+	li{display:inline;padding:0 0.5em}
+	a{display:inline;}
+    /*#pagingControls li{display:inline;padding:0 0.5em}*/
+
+#footer_title {
+  text-align: center;
+  font-size: 100%;
+}
+
+#support {
+  text-align: center;
+  font-size: 100%;
+}

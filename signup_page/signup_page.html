@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="script.js"></script>
@@ -19,36 +20,36 @@
 </head>
 
 <body>
-	<div class="row" id = "heading" style = "padding:0px;margin:0px;">           
-		<div class="col8" id="title_row"> 
-			<a href = "../home_page/home_page.html">
-				<h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
-			</a>
-		</div>
-		<div class="col4">
-			<br>
-			<div class="row">
-				<div class="col6"></div>
-				<div class="col3">
-
-					<a href="#"><span class="login_button">Sign Up</span></a>
-				</div> 
-
-				<div class="col3" id="login">
-					<a id="modal_trigger" href="#modal"><span class="login_button">Log In</spand></a>
-				</div>
-				
-			</div>
-			<div class="row">
-				<div id="tfheader">
-					<form id="tfnewsearch" method="get" action="http://www.google.com">
-						<input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-					</form>
-					<div class="tfclear"></div>
-				</div>
-			</div>         
-		</div>        
-	</div>
+    <div class="row" id = "heading" style = "padding:0px;margin:0px;">
+      <div class="col8" id="title_row">
+          <a href = "../home_page/home_page.html">
+            <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+          </a>
+        </div>
+        <div class="col4">
+          <br>
+          <div class="row">
+            <div class="col6">
+              <form id="login" action="#modal">
+                <a id="modal_trigger" href="#modal"><span class="login_button">Log In</span></a>
+              </form>
+            </div>
+            <div class="col6">
+              <form  id="signup" action="#">
+                <a href="../signup_page/signup_page.html"><span class="login_button">Sign Up</span></a>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div id="tfheader">
+              <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+              </form>
+              <div class="tfclear"></div>
+            </div>
+          </div>
+      </div>
+    </div>
 
 	<br/>
 
@@ -56,11 +57,11 @@
 	<div class= "row">
 		<div class="col3"></div>
 		<div class="col6 form" id="back">
-			<div class="row header_s">	
+			<div class="row header_s">
 				<h2 style = "margin:10px; color:white">Create Your Account</h2>
 			</div>
-				
-			
+
+
 			<br/>
 			<br/>
 			<div class = "row" style = "margin-bottom:50px">
@@ -75,7 +76,7 @@
 				<div class = "col3"></div>
 				<br>
 			</div>
-			<div class="row header_s" style = "margin-bottom:50px">	
+			<div class="row header_s" style = "margin-bottom:50px">
 				<h2 style = "margin:10px; color:white">Create Your Profile</h2>
 			</div>
 
@@ -91,13 +92,13 @@
 				  	<input type="radio" name="gender" value="female"> Female
 				  	<input type="radio" name="gender" value="other"> Other
 				  	<br>
-						
-			
+
+
 					<input type="text" name="date of birth" size="30px" class="input" placeholder="Date of Birth">
 					<br>
 					<input type="text" name="occupation" class="input" placeholder="Occupation">
 					<br/>
-					
+
 					<br>
 					Say Something About Yourself<br/>
 					<textarea name="describe" rows="10" cols="50" size="30px" style="color:#AE89AF;"></textarea><br/>
@@ -108,16 +109,36 @@
 	</div>
 	<br>
 	<br>
-	<div class="row">
-        <div id="connect">MyTreat.com</div>
-        <div>
-          <div id="footer" class="row">
-            <div class="col4 footer">COEN 276</div>
-            <div class="col4 footer">Santa Clara University</div>
-            <div class="col4 footer">500 El Camino Real, Santa Clara, CA 95053</div>
-          </div>
+
+<!-- footer -->
+	<br><br>
+    <div class="row footer">
+        <div class="row">
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.instagram.com" >
+                  <img src="images/inst.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.facebook.com">
+                  <img src="images/facebook.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://github.com/COEN276Group/MyTreat/tree/dev">
+                  <img src="images/github.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+
+            <div class ="col6" id="connect">
+                <p id="footer_title">MyTreat.com</p>
+            </div>
+
+            <div class="col2">
+                <p id="support">customersupport@mytreat.com</p>
+            </div>
         </div>
-      </div>
+    </div>
 
 
       <!--modal stuff-->
@@ -127,7 +148,7 @@
 				<span class="header_title">Login</span>
 				<span class="modal_close"><i class="fa fa-times"></i></span>
 			</header>
-			
+
 			<section class="popupBody">
 				<!-- Username & Password Login form -->
 				<div class="user_login">

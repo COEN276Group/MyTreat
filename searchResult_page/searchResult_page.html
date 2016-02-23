@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel = 'stylesheet' type = 'text/css' href = '../css/style.css'>
-  <link rel = 'stylesheet' type = 'text/css' href = 'css/stylesheet.css'>
+  <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+  <link rel = "stylesheet" type = "text/css" href = "css/stylesheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <script src="js/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/imtech_pager.js"></script>
+  <script src="js/modal.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+  });
+
+  </script>
   <meta charset="utf-8">
 </head>
 <body>
-  <div class="row" id = "heading" style = "padding:0px;margin:0px;">           
-                  <div class="col8" id="title_row"> 
-                     <a href = "../home_page/home_page.html"><h1 style = "color:white;text-align:center;font-size:100px">MyTreat.com</h1></a>
-                  </div>
-                  <div class="col4">
-                    <br><br><br><br>
-                    <div class="row">
-                      <div class="col8"></div>
-                      <div class="col2" id="login">
-                        <form action="">
-                        <input type="submit" value="Log In">
-                        </form>
-                      </div>
-                      <div class="col2" id="signup">
-                        <form action="">
-                        <input type="submit" value="Sign Up">
-                        </form>
-                      </div> 
-                    </div>
-                    <div class="row">
-                      <div id="tfheader">
-                        <form id="tfnewsearch" method="get" action="http://www.google.com">
-                            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-                        </form>
-                      <div class="tfclear"></div>
-                      </div>
-                    </div>         
-                  </div>        
-  </div>
+    <div class="row" id = "heading" style = "padding:0px;margin:0px;">
+      <div class="col8" id="title_row">
+          <a href = "../home_page/home_page.html">
+            <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+          </a>
+        </div>
+        <div class="col4">
+          <br>
+          <div class="row">
+            <div class="col6">
+              <form id="login" action="#modal">
+                <a id="modal_trigger" href="#modal"><span class="login_button">Log In</span></a>
+              </form>
+            </div>
+            <div class="col6">
+              <form  id="signup" action="#">
+                <a href="../signup_page/signup_page.html"><span class="login_button">Sign Up</span></a>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div id="tfheader">
+              <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+              </form>
+              <div class="tfclear"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+
 <div id="layout">
+<div class="row">
+<div class="col1"></div>
+<div class="col10">
 <div id="resultstats">
 <div>Searched for <em>text classification</em>&nbsp;&nbsp;</div>
 <div> Searched The Event Collection: <span class="rectots">429,897 records</span></div>
@@ -44,25 +61,19 @@
 <div id="aggs" >
 <div>
     <div class="aggHead">Refine by Genre</div>
-    
-      
-                        <div>
-                        <a title="show/hide" class="showhide" id="Names_link" href="javascript: void(0);" onclick="toggle('Names');">Dating&nbsp;<img src="gifs/arrow-right.gif" id="Names_img" border="0" width="7" height="7" alt="show/hide"></a>
+
+
+                        <div>Dating
                         </div>
-                        <div>
-                        <a title="show/hide" class="showhide" id="Names_link" href="javascript: void(0);" onclick="toggle('Names');">Sports&nbsp;<img src="gifs/arrow-right.gif" id="Names_img" border="0" width="7" height="7" alt="show/hide"></a>
+                        <div>Sports
                         </div>
-                        <div>
-                        <a title="show/hide" class="showhide" id="Names_link" href="javascript: void(0);" onclick="toggle('Names');">Food&nbsp;<img src="gifs/arrow-right.gif" id="Names_img" border="0" width="7" height="7" alt="show/hide"></a>
-                        </div>                                     
-                        <div>
-                        <a title="show/hide" class="showhide" id="Names_link" href="javascript: void(0);" onclick="toggle('Names');">Music&nbsp;<img src="gifs/arrow-right.gif" id="Names_img" border="0" width="7" height="7" alt="show/hide"></a>
-                        </div>                        
-                        <div>
-                        <a title="show/hide" class="showhide" id="Names_link" href="javascript: void(0);" onclick="toggle('Names');">Academic&nbsp;<img src="gifs/arrow-right.gif" id="Names_img" border="0" width="7" height="7" alt="show/hide"></a>
+                        <div>Food
                         </div>
-                        <div>
-                        <a title="show/hide" class="showhide" id="Names_link" href="javascript: void(0);" onclick="toggle('Names');">Names&nbsp;<img src="gifs/arrow-right.gif" id="Names_img" border="0" width="7" height="7" alt="show/hide"></a>
+                        <div>Music
+                        </div>
+                        <div>Academic
+                        </div>
+                        <div>Names
                         </div>
 </div>
 </div>
@@ -72,44 +83,225 @@
 Result 1 &ndash; 20 of 34,787
 </div>
 
-<div class="pagelogic">
-Result page:
-	
-    <span><strong>1</strong></span>
-    <span style="padding-left:10px;"></span>
-    
-    <span>2</span>
-    <span style="padding-left:10px;"></span>
-    
-    <span>3</span>
-    <span style="padding-left:10px;"></span>
-    
-    <span>4</span>
-    <span style="padding-left:10px;"></span>
-    
-    <span>5</span>
-    <span style="padding-left:10px;"></span>
-    
-    
-    <span>&gt;&gt;</span>
-	
-</div>
+
 <br clear="all" />
+<div id="content">
+<div class="entry">
 <div class="numbering">1</div>
+
 <div class="details">
 <div class="title">
+        	<a href="citation.cfm?id=2396838&CFID=583353244&CFTOKEN=19970621" target="_self">Concert</a>
 </div>
+
 <div class="member">
+                          Dan Shen,
+                          Jean-David Ruvini,
+                          Badrul Sarwar
 </div>
-<div class="time">
-</div>
+        <div class="source">
+
+<strong>Time:</strong>
+
+        		<span class="Time">March 29th, 2016</span>
+        </div>
 <div class="loacation">
+<strong>Location:</strong>&nbsp;Tahoe City
+</div>
+	         <div class="ft">
+<strong>Description:</strong>
 </div>
 <div class="description">
+From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly Mountain Resort activities and events are as varied as they are exciting. Lake Tahoe events are famous for incorporating the winter wonderland that surrounds this gorgeous corner of the world. But with our monthly calendar, you can see that the fun lasts all year long – even in the warmer months!
+<br />
+</div>
+</div>
+<br clear="all" />
+</div>
+<div class="entry">
+<div class="numbering">2
+</div>
+
+<div class="details">
+<div class="title">
+        	<a href="citation.cfm?id=2396838&CFID=583353244&CFTOKEN=19970621" target="_self">Concert</a>
+</div>
+
+<div class="member">
+                          Dan Shen,
+                          Jean-David Ruvini,
+                          Badrul Sarwar
+</div>
+        <div class="source">
+
+<strong>Time:</strong>
+
+        		<span class="Time">March 29th, 2016</span>
+        </div>
+<div class="loacation">
+<strong>Location:</strong>&nbsp;Tahoe City
+</div>
+	         <div class="ft">
+<strong>Description:</strong>
+</div>
+<div class="description">
+From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly Mountain Resort activities and events are as varied as they are exciting. Lake Tahoe events are famous for incorporating the winter wonderland that surrounds this gorgeous corner of the world. But with our monthly calendar, you can see that the fun lasts all year long – even in the warmer months!
+<br />
+</div>
+</div>
+        <br clear="all" />
+        </div>
+        <div class="entry">
+        <div class="numbering">3
+</div>
+
+<div class="details">
+<div class="title">
+        	<a href="citation.cfm?id=2396838&CFID=583353244&CFTOKEN=19970621" target="_self">Concert</a>
+</div>
+
+<div class="member">
+                          Dan Shen,
+                          Jean-David Ruvini,
+                          Badrul Sarwar
+</div>
+        <div class="source">
+
+<strong>Time:</strong>
+
+        		<span class="Time">March 29th, 2016</span>
+        </div>
+<div class="loacation">
+<strong>Location:</strong>&nbsp;Tahoe City
+</div>
+	         <div class="ft">
+<strong>Description:</strong>
+</div>
+<div class="description">
+From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly Mountain Resort activities and events are as varied as they are exciting. Lake Tahoe events are famous for incorporating the winter wonderland that surrounds this gorgeous corner of the world. But with our monthly calendar, you can see that the fun lasts all year long – even in the warmer months!
+<br />
+</div>
+</div>
+<br clear="all" />
+</div>
+        <div class="entry">
+        <div class="numbering">4
+</div>
+
+<div class="details">
+<div class="title">
+        	<a href="citation.cfm?id=2396838&CFID=583353244&CFTOKEN=19970621" target="_self">Concert</a>
+</div>
+
+<div class="member">
+                          Dan Shen,
+                          Jean-David Ruvini,
+                          Badrul Sarwar
+</div>
+        <div class="source">
+
+<strong>Time:</strong>
+
+        		<span class="Time">March 29th, 2016</span>
+        </div>
+<div class="loacation">
+<strong>Location:</strong>&nbsp;Tahoe City
+</div>
+	         <div class="ft">
+<strong>Description:</strong>
+</div>
+<div class="description">
+From pool parties to concerts, parades to Tahoe's ultimate apres party, Heavenly Mountain Resort activities and events are as varied as they are exciting. Lake Tahoe events are famous for incorporating the winter wonderland that surrounds this gorgeous corner of the world. But with our monthly calendar, you can see that the fun lasts all year long – even in the warmer months!
+<br />
+</div>
+</div>
+<br clear="all" />
+</div>
+</div>
+</div>
+	<div class="row">
+    	<div class="col3"></div>
+        <div class="col6">
+            <div id="pagingControls"></div>
+        </div>
+        <div class="col3"></div>
+    </div>
+</div>
+</div>
 </div>
 </div>
 
-</div>
-</div>
+<!-- footer -->
+    <div class="row footer">
+        <div class="row">
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.instagram.com" >
+                  <img src="images/inst.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://www.facebook.com">
+                  <img src="images/facebook.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+            <div class="col1 footer">
+                <a class="iconlink" href="https://github.com/COEN276Group/MyTreat/tree/dev">
+                  <img src="images/github.png" width="30" alt="Image Not Found">
+                </a>
+            </div>
+
+            <div class ="col6" id="connect">
+                <p id="footer_title">MyTreat.com</p>
+            </div>
+
+            <div class="col2">
+                <p id="support">customersupport@mytreat.com</p>
+            </div>
+        </div>
+    </div>
+
+
+      <!--modal stuff-->
+
+  <div id="modal" class="popupContainer" style="display:none;">
+      <header class="popupHeader">
+        <span class="header_title">Login</span>
+        <span class="modal_close"><i class="fa fa-times"></i></span>
+      </header>
+
+      <section class="popupBody">
+        <!-- Username & Password Login form -->
+        <div class="user_login">
+          <form>
+            <label>Email / Username</label>
+            <input type="text" />
+            <br>
+
+            <label>Password</label>
+            <input type="password" />
+            <br>
+            <div class="action_btns">
+              <div class=""><a href="#" class="btn btn_theme">Login</a></div>
+            </div>
+          </form>
+          <br>
+          <a href="#" class = "new_user">New User? Click Here to Register</a>
+        </div>
+      </section>
+  </div>
+
+
+
+<script type="text/javascript">
+var pager = new Imtech.Pager();
+$(document).ready(function() {
+    pager.paragraphsPerPage = 2; // set amount elements per page
+    pager.pagingContainer = $('#content'); // set of main container
+    pager.paragraphs = $('div.entry', pager.pagingContainer); // set qof required containers
+    pager.showPage(1);
+});
+
+</script>
+
 </body>
 </html>
