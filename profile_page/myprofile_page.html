@@ -7,72 +7,79 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="style.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="shortcut icon" href="images/favicon.ico" />
         <script src="js/jQuery.js"></script>
+        <script src="js/modal.js"></script>
         <script src="js/ProfileBuilder.js"></script>
         <script src="js/pictureuploader.js"></script>
+
+        <script>
+        $(document).ready(function(){
+          $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+        });
+        </script>
 
         <title>my profile page</title>
     </head>
   <body>
 
-    <div class="row" id = "heading" style = "padding:0px;margin:0px;">           
-		<div class="col8" id="title_row"> 
-			<a href = "../home_page/home_page.html">
-				<h1 style = "color:white;text-align:center;font-size:100px;margin:10px">MyTreat.com</h1>
-			</a>
-		</div>
-		<div class="col4">
-			<br>
-			<div class="row">
-				<div class="col8"></div>
-				<div class="col2" id="login">
-					<form action="../Sign_in/Signin_page.html">
-						<input type="submit" value="Log In">
-					</form>
-				</div>
-				<div class="col2" id="signup">
-					<form action="../signup_page/signup_page.html">
-						<input type="submit" value="Sign Up">
-					</form>
-				</div> 
-			</div>
-			<div class="row">
-				<div id="tfheader">
-					<form id="tfnewsearch" method="get" action="http://www.google.com">
-						<input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-					</form>
-					<div class="tfclear"></div>
-				</div>
-			</div>         
-		</div>        
-	</div>
+    <div class="row" id = "heading" style = "padding:0px;margin:0px;">
+      <div class="col8" id="title_row">
+          <a href = "../home_page/home_page.html">
+            <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
+          </a>
+        </div>
+        <div class="col4">
+          <br>
+          <div class="row">
+            <div class="col6">
+              <form id="login" action="#modal">
+                <a id="modal_trigger" href="#modal"><span class="login_button">Log In</span></a>
+              </form>
+            </div>
+            <div class="col6">
+              <form  id="signup" action="#">
+                <a href="../signup_page/signup_page.html"><span class="login_button">Sign Up</span></a>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div id="tfheader">
+              <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+              </form>
+              <div class="tfclear"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+
     <br>
       <div class="container">
       <div class="row" id="subtitle">
                 <h2>My Profile</h2>
-      </div> 
-      <br>             
+      </div>
+      <br>
       <div class="row" id="subrow">
       <a href=""><h3>Stephen Curry</h3></a>
       </div>
-      <div class="row sec">          
+      <div class="row sec">
       <div class="col3">
        <div id="changepic" style="display: none">
           <input type="file" onchange="previewFile()" value="Change Profile"><br>
         </div>
-        <img id="i1" src="images/curry.jpg" height="200" alt="Image preview...">
-       
+        <img src="images/curry.jpg" height="200" alt="Image preview...">
+
       </div>
       <div class="col9" id="col1">
       <p>Hobbies: <span class="edit_text" contenteditable="false">basketball, fishing, pet, cooking</span></p>
-      <p>Occupation Area: <span class="edit_text" contenteditable="false">basketball player</span></p>    
-      <p>Places of Interests: <span class="edit_text" contenteditable="false">night bar, Oracle Stadium, 3-point line</span></p>
-      
-      
+      <p>Occupation Area: <span class="edit_text" contenteditable="false">basketball player</span></p>
+      <p>Places of Interests: <span class="edit_text" contenteditable="false">night bar, basketball stadium, 3-point line</span></p>
+
+
       <div class="row">
             <div class="col10"></div>
             <div class="col1 edit">
@@ -81,17 +88,17 @@
             <div class="col1 save">
               <input class="save_button" type="button" value="Save" />
             </div>
-           
+
           </div>
-             
+
       <div class="rating">
       <span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>: gnitaR
       </div>
        <br>
       <p><a href="mailto:webmaster@example.com">Reach me@StephenCurry</a></p>
       </div>
-      </div>               
-      <br> 
+      </div>
+      <br>
       <div class = "row" id="subrow">
       <h4>My Event Pictures</h4>
       </div>
@@ -104,14 +111,13 @@
         <div class = "col1"></div>
         <div class = "col1">
                 <form action="../event_page/my_events.html">
-                  <input id="s5" type = "submit" value = "More . . .">
+                  <input type = "submit" value = "More . . .">
                 </form>
         </div>
-        </div>      
-  
-  </div>            
+        </div>
+
   </div>
-  </div>
+
       <br>
       <div class="row footer">
         <div class="row">
@@ -140,5 +146,33 @@
             </div>
         </div>
     </div>
+<!--modal stuff-->
+
+    <div id="modal" class="popupContainer" style="display:none;">
+        <header class="popupHeader">
+          <span class="header_title">Login</span>
+          <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+
+        <section class="popupBody">
+          <!-- Username & Password Login form -->
+          <div class="user_login">
+            <form class="modal_form">
+              <label>Email / Username</label>
+              <input type="text" />
+              <br>
+              <label>Password</label>
+              <input type="password" />
+              <br>
+              <div class="action_btns">
+                <div class=""><a href="#" class="btn btn_theme">Login</a></div>
+              </div>
+            </form>
+            <br>
+            <a href="../signup_page/signup_page.html" class = "new_user">New User? Click Here to Register</a>
+          </div>
+        </section>
+    </div>
+
   </body>
-</html> 
+</html>
