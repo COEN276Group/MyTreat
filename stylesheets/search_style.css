@@ -8,26 +8,7 @@
 	padding:10px;
 	background-color: white;
 }
-/*ul{
-	text-align: center;
-	list-style: none;
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-	position: fixed;
-}
-li a {
-    display: block;
-    color: #666;
-    text-align: left;
-    padding: 14px 16px;
-    text-decoration: none;
-    height: 50px;
-    font-size: 40px;
-    margin: 10px;
-    background-color: #c2d4d8;
-}
-*/
+
 a.sidebar:hover{
 	background-color: #f2efe8;
 
@@ -117,7 +98,7 @@ body{
 		padding-bottom:5px;
 	}
 
-	#results .source{
+	#results .time{
 		font-size: 12px;
 		padding-bottom:5px;
 	}
@@ -126,12 +107,7 @@ body{
 		font-size: 12px;
 		padding-bottom:5px;
 	}
-
-	#results .ft{
-		font-size: 12px;
-		padding-bottom:5px;
-	}
-
+	
 	#results .description{
 		font-size: 12px;
 		padding-bottom:5px;
