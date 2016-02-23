@@ -179,7 +179,7 @@ a {
   }
 #col2{
     margin-left:2% ;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 #col3{
@@ -226,6 +226,7 @@ a {
   }
 #s1,#s2,#s3,#s4{
     margin-right: 30px;
+    margin-top: 15px;
 }
 
   .col1 {
