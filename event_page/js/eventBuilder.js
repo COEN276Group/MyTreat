@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
         $('.delete_app').on('click', function(event) {        
-             $(this).parent().parent().parent().hide(1000); 
+             $(this).parent().parent().parent().hide(); 
         });
 });
 
@@ -13,13 +13,13 @@ $(document).ready(function(){
              app_div.append('<input class="delete" type="button" value="X"/>'); 
              $("#my_event_people_1").append(app_div);
 
-             $(this).parent().parent().parent().hide(1000); 
+             $(this).parent().parent().parent().hide(); 
         });
 });
 
 $(document).ready(function(){
         $(document).on('click', ".delete", function(event) {        
-             $(this).parent().hide(800); 
+             $(this).parent().hide(); 
         });
 });
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
              app_div.append('<input class="delete" type="button" value="X"/>');  
              $("#my_event_people_2").append(app_div);
 
-             $(this).parent().parent().parent().hide(1000); 
+             $(this).parent().parent().parent().hide(); 
         });
 });
 
