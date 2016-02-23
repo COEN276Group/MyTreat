@@ -165,8 +165,9 @@ body{
 	 padding-bottom: 10px;
     }
 
-	#content{text-indent:20px;text-align:justify;}
-	ul li{font-size: 40px;text-align:center;}
+	#content{text-align:justify;}
+	#pagingControls{text-align:center;}
+	ul li{font-size: 40px;}
 	ul{list-style-type: none;padding-left: 0.5em}
 	li{display:inline;padding:0 0.5em}
 	a{display:inline;}
