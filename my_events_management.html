@@ -14,7 +14,6 @@
         <script src="scripts/jQuery.js"></script>
         <script src="scripts/modal.js"></script>
         <script src="scripts/event_script.js"></script>
-        <script src="scripts/pictureuploader.js"></script>
         <script>
         $(document).ready(function(){
           $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
@@ -24,8 +23,8 @@
         <title>My Events</title>
     </head>
   <body onload="checkEdits()">
-    <div class="row" id = "heading" style = "padding:0px;margin:0px;">                      
-      <div class="col8" id="title_row"> 
+    <div class="row" id = "heading" style = "padding:0px;margin:0px;">
+      <div class="col8" id="title_row">
           <a href = "home_page.html">
             <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
           </a>
@@ -42,7 +41,7 @@
               <form  id="signup" action="#">
                 <a href="signup_page.html"><span class="login_button">Sign Up</span></a>
               </form>
-            </div> 
+            </div>
           </div>
           <div class="row">
             <div id="tfheader">
@@ -51,8 +50,8 @@
               </form>
               <div class="tfclear"></div>
             </div>
-          </div>         
-        </div>        
+          </div>
+        </div>
       </div>
 
     <div class="container">
@@ -69,7 +68,7 @@
           <div class="row">
             <div class="col2"></div>
             <div class="col8" id="changepic1" style="display: none;margin-left:auto;margin-right:auto;">
-            <input type="file" onchange="previewFile()" value="Change Profile"><br><br>
+            <input type="file" onchange="previewFile1()" value="Change Profile"><br><br>
             </div>
             <div class="col2"></div>
           </div>
@@ -188,7 +187,7 @@
           <div class="row">
             <div class="col2"></div>
             <div class="col8" id="changepic2" style="display: none;margin-left:auto;margin-right:auto;">
-            <input type="file" onchange="previewFile()" value="Change Profile"><br><br>
+            <input type="file" onchange="previewFile2()" value="Change Profile"><br><br>
             </div>
             <div class="col2"></div>
           </div>
@@ -259,7 +258,7 @@
       </div>
 
     </div>
-      
+
       <br>
       <!-- <div class="row">
         <h2>Cities I've lived in</h2>
@@ -268,7 +267,6 @@
 
 
 
-      
 
 
 
@@ -276,7 +274,8 @@
 
 
 
-    
+
+
     <div class="row footer">
         <div class="row">
             <div class="col1 footer">
@@ -312,7 +311,7 @@
           <span class="header_title">Login</span>
           <span class="modal_close"><i class="fa fa-times"></i></span>
         </header>
-        
+
         <section class="popupBody">
           <!-- Username & Password Login form -->
           <div class="user_login">
