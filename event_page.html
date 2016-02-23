@@ -8,11 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="images/favicon.ico" />
-        <script src="js/jQuery.js"></script>
-        <script src="js/modal.js"></script>
+        <link rel="stylesheet" href="stylesheets/general_style.css">
+        <link rel="stylesheet" href="stylesheets/event_style.css">
+        <link rel="shortcut icon" href="images/general/favicon.ico" />
+        <script src="scripts/jQuery.js"></script>
+        <script src="scripts/modal.js"></script>
         <script>
         $(document).ready(function(){
           $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
@@ -25,7 +25,7 @@
   <body>
     <div class="row" id = "heading" style = "padding:0px;margin:0px;">
       <div class="col8" id="title_row">
-          <a href = "../home_page/home_page.html">
+          <a href = "home_page.html">
             <h1 style = "color:white;text-align:center;font-size:80px;margin:10px">MyTreat.com</h1>
           </a>
         </div>
@@ -39,13 +39,13 @@
             </div>
             <div class="col6">
               <form  id="signup" action="#">
-                <a href="../signup_page/signup_page.html"><span class="login_button">Sign Up</span></a>
+                <a href="signup_page.html"><span class="login_button">Sign Up</span></a>
               </form>
             </div>
           </div>
           <div class="row">
             <div id="tfheader">
-              <form id="tfnewsearch" method="get" action="http://www.google.com">
+              <form id="tfnewsearch" method="get" action="search_result_page.html">
                 <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
               </form>
               <div class="tfclear"></div>
@@ -121,17 +121,17 @@
         <div class="row">
             <div class="col1 footer">
                 <a class="iconlink" href="https://www.instagram.com" >
-                  <img src="images/inst.png" width="30" alt="Image Not Found">
+                  <img src="images/general/inst.png" width="30" alt="Image Not Found">
                 </a>
             </div>
             <div class="col1 footer">
                 <a class="iconlink" href="https://www.facebook.com">
-                  <img src="images/facebook.png" width="30" alt="Image Not Found">
+                  <img src="images/general/facebook.png" width="30" alt="Image Not Found">
                 </a>
             </div>
             <div class="col1 footer">
                 <a class="iconlink" href="https://github.com/COEN276Group/MyTreat/tree/dev">
-                  <img src="images/github.png" width="30" alt="Image Not Found">
+                  <img src="images/general/github.png" width="30" alt="Image Not Found">
                 </a>
             </div>
 
