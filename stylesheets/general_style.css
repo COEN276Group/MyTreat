@@ -151,13 +151,14 @@ a {
     padding: 5px 15px;
     font-size:14px;
     border:1px solid #666; border-right:0px;
+    width: 50%;
     border-top-left-radius: 5px 5px;
     border-bottom-left-radius: 5px 5px;
   }
   .tfbutton {
     margin: 0;
     padding: 5px 15px;
-    font-size:14px;
+    font-size: 2vmin;
     outline: none;
     cursor: pointer;
     text-align: center;
