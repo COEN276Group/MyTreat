@@ -32,9 +32,9 @@ $(document).ready(function(){
              $('.edit_text').css("background-color","");
         });
 });
-function checkEdits() {
 
 //find out if the user has previously saved edits
-if(localStorage.userEdits!=null)
+function checkEdits() {
+if (localStorage.userEdits!=null)
 document.getElementById("edit").innerHTML = localStorage.userEdits;
-}
+};

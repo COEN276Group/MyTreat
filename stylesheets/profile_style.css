@@ -44,9 +44,15 @@ h2 {
     background-color: #c2d4d8;
 }
 
+#pic1{
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+}
 .row sec{
     margin-top: 100px;
 }
+
 h3 {
   font-size: 150%;
   font-weight: 900;
@@ -188,16 +194,21 @@ a {
     margin-left:7%;
 }
 
-#col4{ font-size: smaller;
+#col4{ 
+    font-size: smaller;
     margin-bottom: 1%;
     margin-left:7%;
+}
+
+#col5{
+    font-size: smaller;
+    margin-left: 7%;
 }
   .col9{
     width: 74.5%;
 }
    #col1 {
     width: 75.3%;
-
     font-size: 90.6%;
     margin-left:auto;
     line-height: normal;
@@ -234,10 +245,15 @@ a {
   }
 
 #i1 {
-    margin-top: 50px;
-    margin-left: 15px;
+    margin-top: 25%;
+    margin-left: 35px;
+    box-shadow: 0 0 0 8px #fff;
 }
 
+#save_sec{
+   float: right;
+   margin-right: auto;
+}
 .rating{
     unicode-bidi: bidi-override;
     direction: rtl;
