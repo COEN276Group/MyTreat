@@ -28,7 +28,7 @@ body{
 }
 .treat{
 	color: orange;
-	font-style: italic bold;
+	font: italic bold;
 	font-size: 20px;
 	margin: 20px 0px;
 	text-align: center;
