@@ -366,3 +366,16 @@ div.profile_img_div input.delete {
 #signup{
   float: left;
 }
+
+.delete_app{
+  font-size: 0.5vmin;
+}
+
+.accept_app_1{
+  font-size: 0.5vmin;
+}
+
+.accept_app_2{
+  font-size: 0.5vmin;
+}
+

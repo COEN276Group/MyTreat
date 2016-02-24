@@ -302,3 +302,7 @@ a.btn_theme {color: #FFF;}
 #signup{
   float: left;
 }
+
+.formbutton{
+  font-size: 2vw;
+}
