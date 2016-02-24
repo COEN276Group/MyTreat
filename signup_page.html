@@ -11,6 +11,7 @@
 	<script src="scripts/pictureuploader.js"></script>
 	<script src="scripts/signup_script.js"></script>
 	<script src="scripts/modal.js"></script>
+	<script src="scripts/general.js"></script>
 	<script>
 	$(document).ready(function(){
 		$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
@@ -20,7 +21,7 @@
 	<title>SignUp</title>
 </head>
 
-<body>
+<body onresize="resizeInput()">
     <div class="row" id = "heading" style = "padding:0px;margin:0px;">
       <div class="col8" id="title_row">
           <a href = "home_page.html">
@@ -44,7 +45,7 @@
           <div class="row">
             <div id="tfheader">
               <form id="tfnewsearch" method="get" action="search_result_page.html">
-                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+                <input id="search1" type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
               </form>
               <div class="tfclear"></div>
             </div>
