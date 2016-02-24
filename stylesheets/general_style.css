@@ -297,10 +297,12 @@ a.btn_theme {color: #FFF;}
 
 #login{
   float: right;
+  font-size: 2vw;
 }
 
 #signup{
   float: left;
+  font-size: 2vw;
 }
 
 .formbutton{
