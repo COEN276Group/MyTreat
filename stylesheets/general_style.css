@@ -60,9 +60,6 @@ a {
   .container {
     width: 750px;
   }
-  h1 {
-    font-size: 50px;
-  }
 }
 @media (min-width: 992px) {
   .container {
