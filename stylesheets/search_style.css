@@ -158,3 +158,8 @@ body{
   text-align: center;
   font-size: 100%;
 }
+
+#login_button {
+	display: block;
+	text-decoration: none;
+}
