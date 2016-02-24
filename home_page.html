@@ -13,9 +13,16 @@
 	<script src="scripts/modal.js"></script>
 	<script src="scripts/home.js"></script>
 
+	<script>
+		
+	</script>
+
+
+
 
 </head>
-<body>
+<body onresize="resizeInput()">
+	<p id="demo"></p>
     <div class="row" id = "heading" style = "padding:0px;margin:0px;">
       <div class="col8" id="title_row">
           <a href = "home_page.html">
@@ -39,7 +46,7 @@
           <div class="row">
             <div id="tfheader">
               <form id="tfnewsearch" method="get" action="search_result_page.html">
-                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+                <input type="text" id="search1" class="tftextinput" placeholder="Search Events" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
               </form>
               <div class="tfclear"></div>
             </div>
@@ -79,7 +86,7 @@
 					<br>
 
 					<div class = "row">
-						<div class = "col3 category">
+						<div class = "category">
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
@@ -93,7 +100,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img class = "homeevent" src="images/profile_pics/profile1.png" alt="not found"></a>
+													<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile1.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -124,7 +131,7 @@
 							</div>
 
 						</div>
-						<div class = "col3 category">
+						<div class = "category">
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
@@ -138,7 +145,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile2.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile2.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -167,7 +174,7 @@
 								</div>
 							</div>
 						</div>
-						<div class = "col3 category">
+						<div class = "category">
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
@@ -181,7 +188,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile3.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile3.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -212,7 +219,7 @@
 								</div>
 							</div>
 						</div>
-						<div class = "col3 category">
+						<div class = "category">
 							<div class = "card">
 								<div class = "front">
 									<div class = "event">
@@ -226,7 +233,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile4.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile4.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -292,7 +299,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img class = "homeevent" src="images/profile_pics/profile5.png" alt="not found"></a>
+													<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile5.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -341,7 +348,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile6.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile6.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -384,7 +391,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile7.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile7.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -429,7 +436,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile8.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile8.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -493,7 +500,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img class = "homeevent" src="images/profile_pics/profile9.png" alt="not found"></a>
+													<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile9.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -538,7 +545,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile10.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile10.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -581,7 +588,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile11.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile11.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -626,7 +633,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile12.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile12.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -690,7 +697,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img class = "homeevent" src="images/profile_pics/profile13.png" alt="not found"></a>
+													<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile13.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -735,7 +742,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile14.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile14.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -778,7 +785,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile15.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile15.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -823,7 +830,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href=""><img src="images/profile_pics/profile16.png" alt="not found"></a>
+													<a href="profile_page.html"><img src="images/profile_pics/profile16.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">

@@ -10,6 +10,13 @@ $(document).ready(function(){
 			var h = $(this).find(".card").find(".event").height()+300;
 			$(this).css("height",h+"");
 		});
-		
 
+		
 });
+
+function resizeInput() {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    var ww = w*0.01+"";
+    document.getElementById("search1").size=ww;
+}
