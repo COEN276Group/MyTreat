@@ -37,4 +37,12 @@ Key Features:
 
 	In the my_events_management_page.html, users will be able to access the events they created and be able to modify the contents of the event: location, time, description and event picture. In addition, event organizers will be able to see who are already allowed to join the event, and all pending applicaitons. Organizers can kick people out of the event after they have been admitted, approve applications so they appear in the "already in" section and reject applications. These are all done with animation. These actions will link with the backend once database gets involved.
 
+References:
+	We borrowed either original codes or revised versions of codes from the following sources:
+
+	1) The flip jQuery library that creats the flipping effect of images in our home_page.html. Their contents can be found at https://nnattawat.github.io/flip/
+
+	2) The modal jQuery library that generates the modal login pop-up is borrowed and modified to fit our design. Their original contents can be found at: http://leanmodal.finelysliced.com.au
+
+	All image contents are downloaded from google image search.
 
