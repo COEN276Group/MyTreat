@@ -58,22 +58,7 @@
 	<div class = "row">
 		<div class = "col1"></div>
 		<div class = "col10 sec">
-			<!--Section Code Starts Here-->
-			<div id = "date" class = "row">
-				<div class = "col1">
-				</div>
-				<div class = "col10 sec">
-					<div class = "row">
-						<div class = "col10">
-							<a href = "categories_page.html"><h2>Dating</h2></a>
-						</div>
-						<div class = "col2">
-							<a href="categories_page.html"><h3><span class="more_button">More</span></h3></a>
-						</div>
-					</div>
-					<br>
 
-					<div class = "row">
 <?php
 
 	//database login info
@@ -81,83 +66,109 @@
 	$_dbusr = "root";
 	$_dbpsw = "Lyq117915";
 	//establish connection
-	$link = mysql_connect($_servername,$_dbusr,$_dbpsw);
-	if(!$link){
+	$conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
+	if(!$conn){
 		die('Could not connect: ' .mysql_error());
 	}
-	echo 'Connected Successfully<br>';
-	//choose database	
-	$db = mysql_select_db("mysql",$link);
+	echo '<script>alert(\'Connected Successfully\')</script>';
+	//choose database
+	$db = mysql_select_db("mytreat",$conn);
 	if(!$db){
 		die("Database not found".mysql_error());
-	}	
-	$sql = "select title,organizer_id,description_short from events";
-	$result = mysql_query($sql,$link);
+	}
+	$categories = array("Dating","Food&Drink","Entertainment","Outdoor&Sports");
 
-	while($event1 = mysql_fetch_array($result)){
+	foreach($categories as $cat){
 		echo<<<end
+		<!--Section Code Starts Here-->
+		<div id = "date" class = "row">
+			<div class = "col1">
+			</div>
+			<div class = "col10 sec">
+				<div class = "row">
+					<div class = "col10">
+						<a href = "categories_page.html"><h2>$cat</h2></a>
+					</div>
+					<div class = "col2">
+						<a href="categories_page.html"><h3><span class="more_button">More</span></h3></a>
+					</div>
+				</div>
+				<br>
 
-		<h1>Shutd fuck up</h1>
+				<div class = "row">
+end;
 
 
-			
-						<div class = "category">
-							<div class = "card">
-								<div class = "front">
-									<div class = "event">
-										<img src = "images/content/dating1.png" alt="not found"><br>
-										<span class = "event_title">$event1[0]</span>
+		$sql = "select u.f_name,u.l_name,e.title,u.stars,e.short_desc from mytreat.users u,mytreat.events e where u.id = e.organizer_id and e.category = '".$cat."' limit 4";
+		$result = mysql_query($sql,$conn);
+
+		while($event1 = mysql_fetch_array($result)){
+			echo<<<end
+
+
+							<div class = "category">
+								<div class = "card">
+									<div class = "front">
+										<div class = "event">
+											<img src = "images/content/dating1.png" alt="not found"><br>
+											<span class = "event_title">$event1[2]</span>
+										</div>
 									</div>
-								</div>
-								<div class = "back">
-									<div class = "event">
-										<div class = "row">
-											<div class = "organizer_info">
+									<div class = "back">
+										<div class = "event">
+											<div class = "row">
+												<div class = "organizer_info">
+													<div class = "col1"></div>
+													<div class = "col2">
+														<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile1.png" alt="not found"></a>
+													</div>
+													<div class = "col2"></div>
+													<div class = "col7">
+														<div class = "row">$event1[0].$event1[1]</div>
+														<div class = "row">*****</div>
+													</div>
+												</div>
+											</div>
+											<hr>
+											<p>
+												$event1[4]
+											</p>
+											<div class = "row">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile1.png" alt="not found"></a>
+													<form action = "event_page.html">
+														<input type = "submit" value = "More Info">
+													</form>
 												</div>
-												<div class = "col2"></div>
-												<div class = "col7">
-													<div class = "row">$event1[1]</div>
-													<div class = "row">*****</div>
+												<div class = "col5"></div>
+												<div class = "col3">
+													<input class = "want_in_button" type = "button" value = "I Want In!">
 												</div>
 											</div>
-										</div>
-										<hr>
-										<p>
-											$event1[2]
-										</p>
-										<div class = "row">
-											<div class = "col1"></div>
-											<div class = "col2">
-												<form action = "event_page.html">
-													<input type = "submit" value = "More Info">
-												</form>
-											</div>
-											<div class = "col5"></div>
-											<div class = "col3">
-												<input class = "want_in_button" type = "button" value = "I Want In!">
-											</div>
-										</div>
 
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-			
+
+end;
+
+		}
+		echo<<<end
+		</div>
+		</div>
+		<br>
+
+		</div>
+		<hr>
 end;
 
 	}
-?>	
+	mysql_close($conn);
+?>
 
 
-</div>
-</div>
-<br>
 
-</div>
-<hr>
 </div>
 <div class="col1"></div>
 </div>
