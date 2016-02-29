@@ -56,12 +56,40 @@
 </div>
 
 
+
+<?php
+
+  //database login info
+  $_servername = "localhost";
+  $_dbusr = "root";
+  $_dbpsw = "zq627128";
+  //establish connection
+  //echo "the earlier part is working";
+  $link = mysql_connect($_servername,$_dbusr,$_dbpsw);
+  
+  //echo "the latter part is working";
+  if(!$link){
+    die('Could not connect: ' .mysql_error());
+  }
+  //echo 'Connected Successfully<br>';
+  //choose database 
+  $db = mysql_select_db("mysql",$link);
+  if(!$db){
+    die("Database not found".mysql_error());
+  } 
+  $sql = "select name,location,date, description from events";
+  $result = mysql_query($sql,$link);
+  $event = mysql_fetch_array($result);
+
+  //while($event1 = mysql_fetch_array($result)){
+    echo<<<end
+
 <div class="container">
   <br>
   <br>
   <div class="row sec">
     <div class="col12">
-      <h2 id="event_text">Running Group</h2><hr>
+      <h2 id="event_text">$event[0]</h2><hr>
   </div>
 </div>
 
@@ -76,16 +104,15 @@
         <div class="row">
           <div class="col2"></div>
           <div class="col8">
-            <h5>Location: <span class="edit_text" contenteditable="false">SF</span></h5> <h5>Time: <span class="edit_text" contenteditable="false">March 29th, 2016</span></h5><h5>Pay Type: <span class="edit_text" contenteditable="false">Split</span></h5>
+            <h5>Location: <span class="edit_text" contenteditable="false">$event[1]</span></h5> <h5>Time: <span class="edit_text" contenteditable="false">$event[2]</span></h5><h5>Pay Type: <span class="edit_text" contenteditable="false">Split</span></h5>
         </div>
         <div class="col2"></div>
     </div>
     <div class="row">
       <div class="col2"></div>
       <div class="col10">
-        <iframe width="425" height="285" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=sf&output=embed"></iframe>
-
-    </div>
+        <iframe width="425" height="285" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=$event[1]&output=embed"></iframe>
+      </div>
     <div class="col2"></div>
 </div>
 </div>
@@ -97,7 +124,7 @@
 <div class="row sec">
     <div class="col1"></div>
     <div class="col10">
-        <p class="event_destext">How about we just run ? If you take joy in running any distance, then this might be a good group for you. We meet up at least once a week to run various distances. We are a diverse group of runners of different fitness levels. If you've never run before, you're also welcome to join one of our weekly runs to experience what you've been missing out on -- lots of pure, unadulterated fun! Now let's go run...</p>
+        <p class="event_destext">$event[3]</p>
     </div>
     <div class="col1"></div>
 </div>
@@ -134,6 +161,12 @@
 
 
 </div>
+      
+end;
+
+  //}
+?>  
+
 <div class="row footer">
     <div class="row">
         <div class="col1 footer">
