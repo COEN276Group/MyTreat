@@ -58,7 +58,7 @@
 
 
 <?php
-
+  $event_id = $_POST['event_id'];
   //database login info
   $_servername = "localhost";
   $_dbusr = "root";
@@ -78,6 +78,7 @@
     die("Database not found".mysql_error());
   } 
   $sql = "select name,location,date, description from events";
+  //$sql = "select name,location,date, description from events where id = \"$event_id\"";
   $result = mysql_query($sql,$link);
   $event = mysql_fetch_array($result);
 
