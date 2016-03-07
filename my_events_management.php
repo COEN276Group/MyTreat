@@ -142,7 +142,7 @@
     </div>
     <div class="col1 profile_img_div"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile17.png" alt="profile4" width="100"></a><input class="delete" type="button" value="X" />
     </div>
-    <div class="col1 profile_img_div"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile28.png" alt="profile5" width="100"></a><input class="delete" type="button" value="X" />
+    <div class="col1 profile_img_div"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile9.png" alt="profile5" width="100"></a><input class="delete" type="button" value="X" />
     </div>
 </div>
 
