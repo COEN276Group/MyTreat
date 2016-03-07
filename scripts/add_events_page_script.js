@@ -37,8 +37,27 @@ function previewFile(){
 
 }*/
 
+/*$(document).ready(function(){
+    $('#submit_button').click(function(){
+        var clickBtnValue = $(this).val();
+        var ajaxurl = 'add_evetns_page-ajax.php',
+        data =  {'action': clickBtnValue};
+        $.post(ajaxurl, data, function (response) {
+            // Response div goes here.
+            alert("action performed successfully");
+        });
+    });
 
+});*/
 
+$(document).ready(function(){
+    $('#submit_button').click(function(){
+        
+            alert("action performed successfully");
+        
+    });
+
+});
 
 
 
