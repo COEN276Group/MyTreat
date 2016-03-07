@@ -87,10 +87,12 @@
 			<div class = "col10 sec">
 				<div class = "row">
 					<div class = "col10">
-						<a href = "categories_page.html"><h2>$cat</h2></a>
+						<a><h2>$cat</h2></a>
 					</div>
 					<div class = "col2">
-						<a href="categories_page.html"><h3><span class="more_button">More</span></h3></a>
+						<form action="categories_page.php" method="post">
+							<input type="submit" value = "$cat" name = "category" class="more_button" />
+						</form>
 					</div>
 				</div>
 				<br>
@@ -99,7 +101,7 @@
 end;
 
 
-		$sql = "select u.f_name,u.l_name,e.title,u.stars,e.short_desc from mytreat.users u,mytreat.events e where u.id = e.organizer_id and e.category = '".$cat."' limit 4";
+		$sql = "select u.f_name,u.l_name,e.title,u.stars,e.short_desc,e.pic_url,u.pic_url,e.id,u.id from mytreat.users u,mytreat.events e where u.id = e.organizer_id and e.category = '".$cat."' limit 4";
 		$result = mysql_query($sql,$conn);
 
 		while($event1 = mysql_fetch_array($result)){
@@ -110,7 +112,7 @@ end;
 								<div class = "card">
 									<div class = "front">
 										<div class = "event">
-											<img src = "images/content/dating1.png" alt="not found"><br>
+											<img src = "$event1[5]" alt="not found"><br>
 											<span class = "event_title">$event1[2]</span>
 										</div>
 									</div>
@@ -120,12 +122,12 @@ end;
 												<div class = "organizer_info">
 													<div class = "col1"></div>
 													<div class = "col2">
-														<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile1.png" alt="not found"></a>
+														<a href="profile_page.html"><img class = "homeevent" src="$event1[6]" alt="not found"></a>
 													</div>
 													<div class = "col2"></div>
 													<div class = "col7">
 														<div class = "row">$event1[0].$event1[1]</div>
-														<div class = "row">*****</div>
+														<div class = "row">$event1[3]</div>
 													</div>
 												</div>
 											</div>
@@ -136,8 +138,8 @@ end;
 											<div class = "row">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<form action = "event_page.html">
-														<input type = "submit" value = "More Info">
+													<form action = "test.php" method="post">
+														<input type = "submit" name = "event_id" value = "$event1[7]">
 													</form>
 												</div>
 												<div class = "col5"></div>
@@ -171,6 +173,32 @@ end;
 
 </div>
 <div class="col1"></div>
+</div>
+
+<!--modal stuff-->
+
+<div id="modal" class="popupContainer" style="display:none;">
+		<header class="popupHeader">
+			<span class="header_title">Login</span>
+			<span class="modal_close"><i class="fa fa-times"></i></span>
+		</header>
+
+		<section class="popupBody">
+			<!-- Username & Password Login form -->
+			<div class="user_login">
+				<form action="myprofile_page.php" method="post">
+					<label>Email / Username</label>
+					<input type="text" name = "username"/>
+					<br>
+					<label>Password</label>
+					<input type="password" name = "password"/>
+					<br>
+					<input type="submit" value="Login"  class="btn btn_theme" style="width:98%;font-size:18px;border:1px solid white"/>
+				</form>
+				<br>
+				<a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
+			</div>
+		</section>
 </div>
 </body>
 </html>
