@@ -87,7 +87,7 @@
 			<div class = "col10 sec">
 				<div class = "row">
 					<div class = "col10">
-						<a><h2>$cat</h2></a>
+						<a><h2>$cat_value</h2></a>
 					</div>
 					<div class = "col2">
 						<form action="categories_page.php" method="post">

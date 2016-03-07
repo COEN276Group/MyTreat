@@ -64,16 +64,16 @@
         case "Food&Drink":
             $category_query =  "food";
             $category_message = "Eat, Drink and Make a Friend";
-            $category_pic = "images/general/food_theme.jpg";
+            $category_pic = "images/general/food_theme.jpeg";
             break;
         case "Entertainment":
             $category_query = "enter";
-            $category_message = "";
+            $category_message = "Exercise Your Unalienable Right to be Happy";
             $category_pic = "images/general/enter_theme.jpg";
             break;
         case "Outdoor&Sports":
             $category_query = "outdoor";
-            $category_message = "Life is about motion";
+            $category_message = "Life is About Motion";
             $category_pic = "images/general/outdoor_theme.jpg";
             break;
     }
@@ -92,7 +92,7 @@
 	if(!$db){
 		die("Database not found".mysql_error());
 	}
-    $sql = "select e.organizer_id,u.id,event_time,street,city,state,zip,e.pic_url,title,short_desc,long_desc,category,mytreat,tag,u.pic_url,u.f_name,u.l_name from events as e,users as u where e.organizer_id = u.id and e.category = '$category_query';";
+    $sql = "select e.id,u.id,event_time,street,city,state,zip,e.pic_url,title,short_desc,long_desc,category,mytreat,tag,u.pic_url,u.f_name,u.l_name from events as e,users as u where e.organizer_id = u.id and e.category = '$category_query';";
     $result = mysql_query($sql,$conn);
 
     echo <<<end1
@@ -106,11 +106,6 @@
     </div>
 
 end1;
-
-
-
-
-
     while($row= mysql_fetch_array($result)){
         $e_id = $row[0];
         $u_id = $row[1];
@@ -122,7 +117,7 @@ end1;
         $title = $row[8];
         $tag = $row[13];
         $mytreat = $row[12];
-        $organizer_name = $row[15].$row[16];
+        $organizer_name = $row[15]." ".$row[16];
         $organizer_pic = $row[14];
 
         echo <<<end2
@@ -167,20 +162,28 @@ end1;
                 <hr>
                 <p>Already In:</p>
                 <div class = "row">
-                    <div class = "col1 participant"><a href=""><img src="images/profile_pics/profile31.png" alt="not found"></a></div>
-                    <div class = "col1 participant"><a href=""><img src="images/profile_pics/profile32.png" alt="not found"></a></div>
-                </div>
+end2;
+        $inner_sql = "select p.user_id,u.pic_url from participants as p,users as u where p.event_id = $e_id and p.user_id = u.id";
+        $inner_result = mysql_query($inner_sql,$conn);
+        while($row = mysql_fetch_array($inner_result)){
+            $pic = $row[1];
+            echo "<div class = \"col1 participant\"><a href=\"\"><img src=\"$pic\" alt=\"not found\"></a></div>";
+        }
+
+        echo <<<end3
+            </div>
 
             </div>
             <div class = "col1"></div>
         </div>
         <hr>
+end3;
 
 
 
 
-end2;
 }
+mysql_close($conn);
 ?>
 </div>
 </div>
