@@ -5,7 +5,7 @@ create table users(
 	DOB date,
 	age int,
 	gender char(1),
-	occupation varchar(30),
+	occupation varchar(100),
 	hobbies varchar(500),
 	description varchar(500),
 	email varchar(100),
@@ -23,7 +23,7 @@ create table applications(
 
 create table participants(
 	user_id int NOT NULL,
-	event_id int NOT NULL, 
+	event_id int NOT NULL,
 	primary key(user_id,event_id)
 
 );
