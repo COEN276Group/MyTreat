@@ -76,9 +76,9 @@
 	if(!$db){
 		die("Database not found".mysql_error());
 	}
-	$categories = array("Dating","Food&Drink","Entertainment","Outdoor&Sports");
+	$categories = array("dating"=>"Dating","food"=>"Food&Drink","enter"=>"Entertainment","outdoor"=>"Outdoor&Sports");
 
-	foreach($categories as $cat){
+	foreach($categories as $cat => $cat_value){
 		echo<<<end
 		<!--Section Code Starts Here-->
 		<div id = "date" class = "row">
@@ -91,7 +91,7 @@
 					</div>
 					<div class = "col2">
 						<form action="categories_page.php" method="post">
-							<input type="submit" value = "$cat" name = "category" class="more_button" />
+							<input type="submit" value = "$cat_value" name = "category" class="more_button" />
 						</form>
 					</div>
 				</div>
@@ -101,10 +101,20 @@
 end;
 
 
-		$sql = "select u.f_name,u.l_name,e.title,u.stars,e.short_desc,e.pic_url,u.pic_url,e.id,u.id from mytreat.users u,mytreat.events e where u.id = e.organizer_id and e.category = '".$cat."' limit 4";
+		$sql = "select u.f_name,u.l_name,e.title,e.short_desc,e.pic_url as event_pic,u.pic_url as profile_pic,e.id as event_id,u.id as user_id from mytreat.users u,mytreat.events e where u.id = e.organizer_id and e.category = '".$cat."' limit 4";
+		/*
+		0	f_name
+		1	l_name
+		2	title
+		3	short
+		4	event_pic
+		5	user_pic
+		6	event_id
+		7	user_id
+		*/
 		$result = mysql_query($sql,$conn);
 
-		while($event1 = mysql_fetch_array($result)){
+		while($row= mysql_fetch_array($result)){
 			echo<<<end
 
 
@@ -112,8 +122,8 @@ end;
 								<div class = "card">
 									<div class = "front">
 										<div class = "event">
-											<img src = "$event1[5]" alt="not found"><br>
-											<span class = "event_title">$event1[2]</span>
+											<img src = "$row[4]" alt="not found"><br>
+											<span class = "event_title">$row[2]</span>
 										</div>
 									</div>
 									<div class = "back">
@@ -122,24 +132,24 @@ end;
 												<div class = "organizer_info">
 													<div class = "col1"></div>
 													<div class = "col2">
-														<a href="profile_page.html"><img class = "homeevent" src="$event1[6]" alt="not found"></a>
+														<a href="profile_page.html"><img class = "homeevent" src="$row[5]" alt="not found"></a>
 													</div>
 													<div class = "col2"></div>
 													<div class = "col7">
-														<div class = "row">$event1[0].$event1[1]</div>
-														<div class = "row">$event1[3]</div>
+														<div class = "row">$row[0].$row[1]</div>
+														<div class = "row">*****</div>
 													</div>
 												</div>
 											</div>
 											<hr>
 											<p>
-												$event1[4]
+												$row[3]
 											</p>
 											<div class = "row">
 												<div class = "col1"></div>
 												<div class = "col2">
 													<form action = "test.php" method="post">
-														<input type = "submit" name = "event_id" value = "$event1[7]">
+														<input type = "submit" name = "event_id" value = "$row[7]">
 													</form>
 												</div>
 												<div class = "col5"></div>
