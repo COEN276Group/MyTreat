@@ -70,47 +70,42 @@
 				<div class = "col3"></div>
 				<div class = "col6">
 					<form>
+						<img id="pic" src="images/general/default.jpg" height="200" alt="Image preview...">
+						<br>
+						<input type="file" onchange="previewFile()"><br>
+						<br>
 						<input type="text" name="usr" class="input" placeholder="Username/Email"><br/>
 						<input id="psw1" type="text" name="psw"  class="input" placeholder="Password"><br/>
 						<input id="psw2" type = "text" name = "con_psw" class = "input" placeholder="Confirm Password" onblur="passwordValidate()"><br>
-					</form>
-				</div>
-				<div class = "col3"></div>
-				<br>
-			</div>
-			<div class="row header_s" style = "margin-bottom:50px">
-				<h2 style = "margin:10px; color:white">Create Your Profile</h2>
-			</div>
-
-				<form>
-					<img id="pic" src="images/general/default.jpg" height="200" alt="Image preview...">
-					<br>
-					<input type="file" onchange="previewFile()"><br>
-					<br>
-
-					<input type="text" name="first name" class="input" placeholder = "firstname"><br/>
-					<input type="text" name="last name" size="30" class="input" placeholder = "lastname"><br/>
-					<input type="radio" name="gender" value="male" checked> Male
-				  	<input type="radio" name="gender" value="female"> Female
-				  	<input type="radio" name="gender" value="other"> Other
-				  	<br>
 
 
-					<input type="text" name="date of birth" size="30" class="input" placeholder="Date of Birth">
-					<br>
-					<input type="text" name="occupation" class="input" placeholder="Occupation">
-					<br/>
 
-					<br>
-					Say Something About Yourself<br/>
-					<textarea name="describe" rows="10" cols="50" style="color:#AE89AF;"></textarea><br/>
-				</form>
-				<form action="myprofile_page.html">
-					<input type="submit" value="Sign Up" class="button" style="font-size:20px">
+						<input type="text" name="first name" class="input" placeholder = "firstname"><br/>
+						<input type="text" name="last name" size="30" class="input" placeholder = "lastname"><br/>
+						<input type="radio" name="gender" value="male" checked> Male
+					  	<input type="radio" name="gender" value="female"> Female
+					  	<input type="radio" name="gender" value="other"> Other
+					  	<br>
+
+
+						<input type="text" name="date of birth" size="30" class="input" placeholder="Date of Birth">
+						<br>
+						<input type="text" name="occupation" class="input" placeholder="Occupation">
+						<br/>
+						<input type="text" name="interests" class="input" placeholder="Personal Interests">
+						<br/>
+
+						<br>
+						Say Something About Yourself<br/>
+						<textarea name="describe" rows="10" cols="50" style="color:#AE89AF;"></textarea><br/>
+						<input type="submit" value="Sign Up" class="button" style="font-size:20px">
+
 				</form>
 
 			</div>
 		</div>
+	</div>
+</div>
 	<br>
 	<br>
 

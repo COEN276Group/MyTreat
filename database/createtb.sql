@@ -1,5 +1,5 @@
 create table users(
-	id int,
+	id int auto_increment,
 	f_name char(30),
 	l_name char(30),
 	DOB date,
@@ -29,7 +29,7 @@ create table participants(
 );
 
 create table events(
-	id int NOT NULL,
+	id int NOT NULL auto_increment,
 	organizer_id int,
 	time timestamp,
 	street varchar(100),
@@ -39,9 +39,12 @@ create table events(
 	pic_url varchar(100),
 	title varchar(50),
 	short_desc varchar(100),
-	long_desc varchar(500),
+	long_desc varchar(2000),
 	category char(20),
 	mytreat char(20),
 	tag varchar(500),
 	primary key(id)
 );
+
+ALTER TABLE events AUTO_INCREMENT = 2134567;
+ALTER TABLE users AUTO_INCREMENT = 10000;
