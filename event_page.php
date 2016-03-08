@@ -144,9 +144,19 @@ end1;
         $inner_result = mysql_query($inner_sql,$conn);
         while($row = mysql_fetch_array($inner_result)){
             $pic = $row[1];
+            $user_id = $row[0];
+            //echo $user_id;
             //echo "<div class = \"col1 participant\"><a href=\"\"><img src=\"$pic\" alt=\"not found\"></a></div>";
-            echo "<div class=\"col1 profile_img_div\"><a href=\"\"><img class=\"img-responsive profile_img\" src=\"$pic\" alt=\"profile\" width=\"100\"></a>
-    </div>";
+            echo<<<end5
+            <div class="col1 profile_img_div">
+                <form name = "form$user_id" action="profile_page.php" method = "post">
+                    <input  name="user_id" value="$user_id" style="display:none">
+                    <a href="javascript:document.form$user_id.submit()">
+                        <img class="img-responsive profile_img" src="$pic" alt="profile" width="100">
+                    </a>
+                </form>
+            </div>
+end5;
         }
 echo<<<end2
     <div class="col1"></div>
