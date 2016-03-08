@@ -64,7 +64,7 @@
 				<h2 style = "margin:10px; color:white">Create Your Events</h2>
 			</div>
 
-				<form action="add_events_todb.php" method="post">
+				<form action="add_events_page.php" method="post">
 					<img id="pic" src="images/general/edefault.png" height="200" alt="Image preview...">
 					<br>
 					<input type="file" onchange="previewFile()"><br>
@@ -94,10 +94,10 @@
 					<input id="submit_button" name="submit_button" type="submit" value="Create Event" class="button" style="font-size:20px">
 				</form>
 				<?php
-					  //$organizer_id = $_POST['organizer_id'];
-						$organizer_id = "23131";
-					  //database login info
-					  $_servername = "localhost";
+
+
+
+	$_servername = "localhost";
 					  $_dbusr = "root";
 					  $_dbpsw = "zq627128";
 					  //establish connection
@@ -114,10 +114,45 @@
 					  if(!$db){
 					    die("Database not found".mysql_error());
 					  } 
-					  /*session_start();
-					  $_SESSION['organizer'] = $organizer_id;
-					  error_reporting(E_ALL);*/
-				?>
+
+				$o_id = $_POST['new_event'];
+				echo isset($o_id);
+				
+				echo $o_id;
+				
+				echo "111";
+	$name = $_POST['event_title'];
+	$cat = $_POST['event_category'];
+	$time = $_POST['event_time'];
+	$tag = $_POST['event_tag'];
+	$st_ad = $_POST['street_address'];
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$zipcode = $_POST['zipcode'];
+	$pay_type = $_POST['pay_type'];
+	$short_des = $_POST['short_describe'];
+	$long_des = $_POST['long_describe'];
+	/*session_start();
+	$organizer_id = $_SESSION['organizer'];
+	error_reporting(E_ALL);
+	echo "$organizer_id";*/
+	/*echo $name;
+	echo $cat;
+	echo $time;
+	echo $tag;
+	echo $st_ad;
+	echo $city;
+	echo $state;
+	echo $zipcode;
+	echo $pay_type;
+	echo $short_des;
+	echo $long_des;	*/				  
+	$SQL = "insert into events (organizer_id, event_time, street, city, state, zip, pic_url, title, short_desc, long_desc, category, mytreat, tag) VALUES (10001, '$time', '$st_ad', '$city', '$state', '$zipcode', '29102910', '$name', '$short_des', '$long_des', '$cat', '$pay_type', '$tag')";
+	$result = mysql_query($SQL);
+	//die(mysql_error());
+						
+?>
+
 			</div>
 		</div>
 	<br>

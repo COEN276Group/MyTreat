@@ -59,6 +59,8 @@
 
 <?php
   //database login info
+  //$organizer_id = $_POST['organizer_id'];
+  $organizer_id = "019203";
   $_servername = "localhost";
   $_dbusr = "root";
   $_dbpsw = "zq627128";
@@ -76,7 +78,7 @@
   if(!$db){
     die("Database not found".mysql_error());
   } 
-  $sql = "select name,location,date, description from events where EID='0001'";
+  $sql = "select name,location,date, description from events where organizer_id='$organizer_id'";
   $result1 = mysql_query($sql,$link);
   $event1 = mysql_fetch_array($result1);
   $sql = "select name,location,date, description from events where EID='0002'";
@@ -89,8 +91,13 @@
   <div class="row subtitle">
     <div class="col12">
       <h1 id="event_text">My Events</h1>
-  </div>
+  </div>`
 </div><br>
+  Create New Event
+  <form method="post" action="add_events_page.php">
+    <input type="submit" name= "new_event" value="$organizer_id">
+  </form>
+  
 <div class="row sec">
     <div class="col4">
       <h2>$event1[0]</h2><br><br>
