@@ -84,6 +84,7 @@
   $result2 = mysql_query($sql,$link);
   $event2 = mysql_fetch_array($result2);*/
   //while($event1 = mysql_fetch_array($result)){
+
     echo<<<end1
 <div class="container">
   <br>
@@ -97,7 +98,23 @@
     <input type="submit" name= "new_event" value="$organizer_id">
   </form>
 end1;
+if (!$try = mysql_fetch_array($result)){
 
+    echo<<<end6
+    <div class="row">
+      <div class="col1"></div>
+      <div class="col10">
+          <h1>Create Your Own Event Here!</h1>
+      </div>
+      <div class="col1"></div>
+
+
+
+    </div>
+
+
+end6;
+  }
 while($event= mysql_fetch_array($result)){
         
     echo<<<end2
