@@ -58,8 +58,8 @@
 
 
 <?php
-  $user_id = $_POST['event_id'];
-  echo $event_id;
+  $event_id = $_POST['event_id'];
+  //echo $event_id;
   //database login info
   $_servername = "localhost";
   $_dbusr = "root";
@@ -78,14 +78,14 @@
   if(!$db){
     die("Database not found".mysql_error());
   } 
-  $sql = "select title,street, long_desc from mytreat.events where id = $event_id";
-  echo $sql;
+  $sql = "select title,street, city, state, zip, event_time, long_desc, mytreat, pic_url from events where id = $event_id";
+  //echo $sql;
   //$sql = "select name,location,date, description from events where id = \"$event_id\"";
   $result = mysql_query($sql,$conn);
   if($result === FALSE) { 
     die(mysql_error()); // TODO: better error handling
   }
-  echo $result;
+  //echo $result;
 
   $event = mysql_fetch_array($result);
   if($event=== FALSE) { 
@@ -106,21 +106,21 @@
     <div class="col1"></div>
     <div class="col5">
       <br><br>
-      <img class="img-responsive event_img" src="images/content/outdoor3.png" alt="event1" style="margin:0px;" width="410">
+      <img class="img-responsive event_img" src="$event[8]" alt="event1" style="margin:0px;" width="410">
   </div>
   <div class="col5">
       <div class="row">
         <div class="row">
           <div class="col2"></div>
           <div class="col8">
-            <h5>Location: <span class="edit_text" contenteditable="false">$event[1]</span></h5> <h5>Time: <span class="edit_text" contenteditable="false">$event[2]</span></h5><h5>Pay Type: <span class="edit_text" contenteditable="false">Split</span></h5>
+            <h5>Location: <span class="edit_text" contenteditable="false">$event[1], $event[2], $event[3], $event[4]</span></h5> <h5>Time: <span class="edit_text" contenteditable="false">$event[5]</span></h5><h5>Pay Type: <span class="edit_text" contenteditable="false">$event[7]</span></h5>
         </div>
         <div class="col2"></div>
     </div>
     <div class="row">
       <div class="col2"></div>
       <div class="col10">
-        <iframe width="425" height="285" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=$event[1]&output=embed"></iframe>
+        <iframe width="425" height="285" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=$event[1], $event[2], $event[3], $event[4]&output=embed"></iframe>
       </div>
     <div class="col2"></div>
 </div>
@@ -133,26 +133,24 @@
 <div class="row sec">
     <div class="col1"></div>
     <div class="col10">
-        <p class="event_destext">$event[3]</p>
+        <p class="event_destext">$event[6]</p>
     </div>
     <div class="col1"></div>
 </div>
 <div class="row sec">
     <div class="col1"></div>
 end1;
-    $inner_sql = "select p.user_id,u.pic_url from participants as p,users as u where p.event_id = $event_id and p.user_id = u.id";
+        $inner_sql = "select p.user_id,u.pic_url from participants as p,users as u where p.event_id = $event_id and p.user_id = u.id";
         $inner_result = mysql_query($inner_sql,$conn);
         while($row = mysql_fetch_array($inner_result)){
             $pic = $row[1];
-            echo "<div class = \"col1 participant\"><a href=\"\"><img src=\"$pic\" alt=\"not found\"></a></div>";
+            //echo "<div class = \"col1 participant\"><a href=\"\"><img src=\"$pic\" alt=\"not found\"></a></div>";
+            echo "<div class=\"col1 profile_img_div\"><a href=\"\"><img class=\"img-responsive profile_img\" src=\"$pic\" alt=\"profile\" width=\"100\"></a>
+    </div>";
         }
 echo<<<end2
     <div class="col1"></div>
 </div><br>
-      <!-- <div class="row">
-        <h2>Cities I've lived in</h2>
-        <div></div>
-    </div> -->
 </div>
       
 end2;
