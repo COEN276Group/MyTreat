@@ -42,7 +42,7 @@
                 </div>
                 <div class="col6">
                     <form  id="signup" action="#">
-                        <a href="signup_page.php"><span class="login_button">Sign Up</span></a>
+                        <a href="signup_page.html"><span class="login_button">Sign Up</span></a>
                     </form>
                 </div>
             </div>

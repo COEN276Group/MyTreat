@@ -271,7 +271,7 @@ end4;
         </div>
     </form>
     <br>
-    <a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
+    <a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
 </div>
 </section>
 </div>
