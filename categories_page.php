@@ -131,7 +131,7 @@ end1;
                 <div class = "row">
                     <div class = "row">
                         <div class = "col9">
-							<form name = "form$e_id" action="test.php" method="post">
+							<form name = "form$e_id" action="event_page.php" method="post">
 								<input name="event_id" value = "$e_id" style="display:none" />
 								<a href="javascript:document.form$e_id.submit()">
 									<h2>$title</h2>
