@@ -79,14 +79,13 @@
     }
     //database login info
 	$_servername = "localhost";
-	$_dbusr = "root";
-	$_dbpsw = "Lyq117915";
+	$_dbusr = "mt_developer";
+	$_dbpsw = "mytreat";
 	//establish connection
 	$conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
 	if(!$conn){
 		die('Could not connect: ' .mysql_error());
 	}
-	echo '<script>alert(\'Connected Successfully\')</script>';
 	//choose database
 	$db = mysql_select_db("mytreat",$conn);
 	if(!$db){
@@ -125,13 +124,21 @@ end1;
         <div class = "row event_container">
             <div class = "col1"></div>
             <div class = "col3 eventphoto">
-                <a href=""><img src="$event_pic" alt="not found"></a>
+                <img src="$event_pic" alt="not found">
             </div>
             <div class = "col1"></div>
             <div class = "col6">
                 <div class = "row">
                     <div class = "row">
-                        <div class = "col9"><a href="event_page.html"><h2>$title</h2></a></div>
+                        <div class = "col9">
+							<form name = "form$e_id" action="test.php" method="post">
+								<input name="event_id" value = "$e_id" style="display:none" />
+								<a href="javascript:document.form$e_id.submit()">
+									<h2>$title</h2>
+								</a>
+							</form>
+
+						</div>
                         <div class = "col3 treat">
                             $mytreat!
                         </div>

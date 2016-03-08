@@ -5,6 +5,9 @@ body{
 	background-color: #ffffff;
 	margin: 0px;
 }
+button{
+	padding:2px;
+}
 .category{
 	min-height: 300px;
 	width:250px;

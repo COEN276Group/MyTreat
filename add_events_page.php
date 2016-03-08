@@ -97,7 +97,7 @@
 
 
 
-	$_servername = "localhost";
+						$_servername = "localhost";
 					  $_dbusr = "root";
 					  $_dbpsw = "zq627128";
 					  //establish connection
@@ -110,14 +110,14 @@
 					  }
 					  //echo 'Connected Successfully<br>';
 					  //choose database 
-					  $db = mysql_select_db("mysql",$link);
+					  $db = mysql_select_db("mytreat",$link);
 					  if(!$db){
 					    die("Database not found".mysql_error());
 					  } 
 
 				$o_id = $_POST['new_event'];
 				echo isset($o_id);
-				
+
 				echo $o_id;
 				
 				echo "111";

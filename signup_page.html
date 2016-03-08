@@ -69,30 +69,30 @@
 			<div class = "row" style = "margin-bottom:50px">
 				<div class = "col3"></div>
 				<div class = "col6">
-					<form>
-						<img id="pic" src="images/general/default.jpg" height="200" alt="Image preview...">
+					<form action="signup_handler.php" method="post">
+						<img id="pic" src="images/general/default.jpg" height="200" name = "pic_url" alt="Image preview...">
 						<br>
 						<input type="file" onchange="previewFile()"><br>
 						<br>
-						<input type="text" name="usr" class="input" placeholder="Username/Email"><br/>
+						<input type="text" name="email" class="input" placeholder="Username/Email"><br/>
 						<input id="psw1" type="text" name="psw"  class="input" placeholder="Password"><br/>
 						<input id="psw2" type = "text" name = "con_psw" class = "input" placeholder="Confirm Password" onblur="passwordValidate()"><br>
 
 
 
-						<input type="text" name="first name" class="input" placeholder = "firstname"><br/>
-						<input type="text" name="last name" size="30" class="input" placeholder = "lastname"><br/>
+						<input type="text" name="f_name" class="input" placeholder = "firstname"><br/>
+						<input type="text" name="l_name" size="30" class="input" placeholder = "lastname"><br/>
 						<input type="radio" name="gender" value="male" checked> Male
 					  	<input type="radio" name="gender" value="female"> Female
 					  	<input type="radio" name="gender" value="other"> Other
 					  	<br>
 
 
-						<input type="text" name="date of birth" size="30" class="input" placeholder="Date of Birth">
+						<input type="text" name="dob" size="30" class="input" placeholder="Date of Birth">
 						<br>
 						<input type="text" name="occupation" class="input" placeholder="Occupation">
 						<br/>
-						<input type="text" name="interests" class="input" placeholder="Personal Interests">
+						<input type="text" name="hobbies" class="input" placeholder="Personal Interests">
 						<br/>
 
 						<br>
