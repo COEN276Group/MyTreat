@@ -15,7 +15,7 @@
 <body onresize="resizeInput()">
 <div class="row" id = "heading" style = "padding:0px;margin:0px;">
       <div class="col8" id="title_row">
-          <a href = "home_page.html">
+          <a href = "home_page.php">
             <h1 style = "color:white;text-align:center;font-size:10vmin;margin:10px">MyTreat.com</h1>
           </a>
         </div>
