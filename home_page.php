@@ -189,6 +189,32 @@ end;
 </div>
 <div class="col1"></div>
 </div>
+<!-- footer -->
+	<br><br>
+	<div class="row footer">
+		<div class="row">
+			<div class="col1 footer">
+				<a class="iconlink" href="https://www.instagram.com" >
+				  <img src="images/general/inst.png" width="30" alt="Image Not Found">
+				</a>
+			</div>
+			<div class="col1 footer">
+				<a class="iconlink" href="https://www.facebook.com">
+				  <img src="images/general/facebook.png" width="30" alt="Image Not Found">
+				</a>
+			</div>
+			<div class="col1 footer">
+				<a class="iconlink" href="https://github.com/COEN276Group/MyTreat/tree/dev">
+				  <img src="images/general/github.png" width="30" alt="Image Not Found">
+				</a>
+			</div>
+
+			<div class ="col6" id="connect">
+				<p id="footer_title">MyTreat.com</p>
+			</div>
+		</div>
+	</div>
+
 
 <!--modal stuff-->
 
