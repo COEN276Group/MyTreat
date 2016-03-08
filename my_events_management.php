@@ -59,8 +59,8 @@
 
 <?php
   //database login info
-  $organizer_id = $_POST['organizer_id'];
-  $organizer_id = "10018";
+  $organizer_id = $_POST['user_id'];
+  //$organizer_id = "10018";
   $_servername = "localhost";
   $_dbusr = "mt_developer";
   $_dbpsw = "mytreat";
