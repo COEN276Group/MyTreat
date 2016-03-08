@@ -116,3 +116,5 @@ function previewFile1(){
   }
 
   previewFile2();  //calls the function named previewFile()
+
+  

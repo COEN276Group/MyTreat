@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="images/general/favicon.ico" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="scripts/pictureuploader.js"></script>
 	<script src="scripts/add_events_page_script.js"></script>
 	<script src="scripts/modal.js"></script>
 	<script src="scripts/general.js"></script>
@@ -67,7 +66,8 @@
 				<form action="add_events_page.php" method="post">
 					<img id="pic" src="images/general/edefault.png" height="200" alt="Image preview...">
 					<br>
-					<input type="file" onchange="previewFile()"><br>
+					<input id="img_upload" type="file" onchange="previewFile()"><br>
+					<input id="pic_url" name = "pic_url"/>
 					<br>
 					General Info<br/>
 					<input type="text" name="event_title" class="input" placeholder = "Event Title"><br/>
@@ -98,29 +98,29 @@
 
 
 						$_servername = "localhost";
-					  $_dbusr = "root";
-					  $_dbpsw = "zq627128";
+					  $_dbusr = "mt_developer";
+					  $_dbpsw = "mytreat";
 					  //establish connection
 					  //echo "the earlier part is working";
-					  $link = mysql_connect($_servername,$_dbusr,$_dbpsw);
+					  $conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
 					  
 					  //echo "the latter part is working";
-					  if(!$link){
+					  if(!$conn){
 					    die('Could not connect: ' .mysql_error());
 					  }
 					  //echo 'Connected Successfully<br>';
 					  //choose database 
-					  $db = mysql_select_db("mytreat",$link);
+					  $db = mysql_select_db("mytreat",$conn);
 					  if(!$db){
 					    die("Database not found".mysql_error());
 					  } 
 
 				$o_id = $_POST['new_event'];
-				echo isset($o_id);
+				//echo isset($o_id);
 
-				echo $o_id;
+				//echo $o_id;
 				
-				echo "111";
+				//echo "111";
 	$name = $_POST['event_title'];
 	$cat = $_POST['event_category'];
 	$time = $_POST['event_time'];
