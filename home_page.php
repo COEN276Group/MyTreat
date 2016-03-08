@@ -15,7 +15,7 @@
 <body onresize="resizeInput()">
 <div class="row" id = "heading" style = "padding:0px;margin:0px;">
       <div class="col8" id="title_row">
-          <a href = "home_page.php">
+          <a href = "home_page.html">
             <h1 style = "color:white;text-align:center;font-size:10vmin;margin:10px">MyTreat.com</h1>
           </a>
         </div>
@@ -35,7 +35,7 @@
           </div>
           <div class="row">
             <div id="tfheader">
-              <form id="tfnewsearch" method="get" action="search_result_page.php">
+              <form id="tfnewsearch" method="get" action="search_result_page.html">
                 <input type="text" id="search1" class="tftextinput" placeholder="Search Events" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
               </form>
               <div class="tfclear"></div>
@@ -132,7 +132,12 @@ end;
 												<div class = "organizer_info">
 													<div class = "col1"></div>
 													<div class = "col2">
-
+														<form name="form$row[7]" action="profile_page.php" method="post">
+															<a href="javascript:document.form$row[7].submit()">
+																<input name = "user_id" value="$row[7]" style="display:none"/>
+																<img src="$row[5]" alt="not found"/>
+															</a>
+														</form>
 													</div>
 													<div class = "col2"></div>
 													<div class = "col7">
@@ -206,7 +211,7 @@ end;
 					<input type="submit" value="Login"  class="btn btn_theme" style="width:98%;font-size:18px;border:1px solid white"/>
 				</form>
 				<br>
-				<a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
+				<a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
 			</div>
 		</section>
 </div>
