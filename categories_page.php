@@ -29,13 +29,13 @@
 				</div>
 				<div class="col6">
 					<form  id="signup" action="#">
-						<a href="signup_page.html"><span class="login_button">Sign Up</span></a>
+						<a href="signup_page.php"><span class="login_button">Sign Up</span></a>
 					</form>
 				</div>
 			</div>
 			<div class="row">
 				<div id="tfheader">
-					<form id="tfnewsearch" method="get" action="search_result_page.html">
+					<form id="tfnewsearch" method="get" action="search_result_page.php">
 						<input id="search1" type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
 					</form>
 					<div class="tfclear"></div>
@@ -241,11 +241,11 @@ mysql_close($conn);
                 <input type="password" />
                 <br>
                 <div class="action_btns">
-                    <div class=""><a href="myprofile_page.html" class="btn btn_theme">Login</a></div>
+                    <div class=""><a href="myprofile_page.php" class="btn btn_theme">Login</a></div>
                 </div>
             </form>
             <br>
-            <a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
+            <a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
         </div>
     </section>
 </div>
