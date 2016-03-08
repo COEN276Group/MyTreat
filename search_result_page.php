@@ -46,7 +46,7 @@
 											<div class = "organizer_info">
 												<div class = "col1"></div>
 												<div class = "col2">
-													<a href="profile_page.html"><img class = "homeevent" src="images/profile_pics/profile1.png" alt="not found"></a>
+													<a href="profile_page.php"><img class = "homeevent" src="images/profile_pics/profile1.png" alt="not found"></a>
 												</div>
 												<div class = "col2"></div>
 												<div class = "col7">
@@ -62,7 +62,7 @@
 										<div class = "row">
 											<div class = "col1"></div>
 											<div class = "col2">
-												<form action = "event_page.html">
+												<form action = "event_page.php">
 													<input type = "submit" value = "More Info">
 												</form>
 											</div>

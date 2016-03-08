@@ -178,7 +178,7 @@ $inner_sql2 = "select u.pic_url from applications as p,events as e, users as u w
   <div class=\"col10\">
       <div class=\"row application\">
           <div class=\"col1\"></div>
-          <div class=\"col1\"><a href=\"profile_page.html\"><img class=\"img-responsive profile_img\" src=\"$pic2\" alt=\"applicant\" width=\"100\"></a></div>
+          <div class=\"col1\"><img class=\"img-responsive profile_img\" src=\"$pic2\" alt=\"applicant\" width=\"100\"></div>
           <div class=\"col3\"><input class=\"accept_app_1\" type=\"button\" value=\"Let me in\" /><input class=\"delete_app\" type=\"button\" value=\"Next Time\" /></div>
           <div class=\"col7\"><p>I am really interested in your activities! Please let me in!!</p></div>
       </div>
@@ -267,11 +267,11 @@ end4;
           <input type="password" />
           <br>
           <div class="action_btns">
-            <div class=""><a href="myprofile_page.html" class="btn btn_theme">Login</a></div>
+            <div class=""><a href="myprofile_page.php" class="btn btn_theme">Login</a></div>
         </div>
     </form>
     <br>
-    <a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
+    <a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
 </div>
 </section>
 </div>

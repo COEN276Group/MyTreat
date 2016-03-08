@@ -28,7 +28,7 @@
 
     <div class="row" id = "heading" style = "padding:0px;margin:0px;">
         <div class="col8" id="title_row">
-            <a href = "home_page.html">
+            <a href = "home_page.php">
                 <h1 style = "color:white;text-align:center;font-size:10vmin;margin:10px">MyTreat.com</h1>
             </a>
         </div>
@@ -42,13 +42,13 @@
                 </div>
                 <div class="col6">
                     <form  id="signup" action="#">
-                        <a href="signup_page.html"><span class="login_button">Sign Up</span></a>
+                        <a href="signup_page.php"><span class="login_button">Sign Up</span></a>
                     </form>
                 </div>
             </div>
             <div class="row">
                 <div id="tfheader">
-                    <form id="tfnewsearch" method="get" action="search_result_page.html">
+                    <form id="tfnewsearch" method="get" action="search_result_page.php">
                         <input id="search1" type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
                     </form>
                     <div class="tfclear"></div>
@@ -206,7 +206,7 @@ end2;
                     </div>
                 </form>
                 <br>
-                <a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
+                <a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
             </div>
         </section>
     </div>

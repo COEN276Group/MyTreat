@@ -202,11 +202,11 @@ end2;
           <input type="password" />
           <br>
           <div class="action_btns">
-            <div class=""><a href="myprofile_page.html" class="btn btn_theme">Login</a></div>
+            <div class=""><a href="myprofile_page.php" class="btn btn_theme">Login</a></div>
         </div>
     </form>
     <br>
-    <a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
+    <a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
 </div>
 </section>
 </div>
