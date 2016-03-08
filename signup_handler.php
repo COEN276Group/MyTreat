@@ -55,8 +55,8 @@
 <?php
     //database login info
     $_servername = "localhost";
-    $_dbusr = "root";
-    $_dbpsw = "Lyq117915";
+    $_dbusr = "mt_developer";
+    $_dbpsw = "mytreat";
     //establish connection
     $conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
     if(!$conn){

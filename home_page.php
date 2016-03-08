@@ -63,8 +63,8 @@
 	$cur_user = $_GET['cur_user'];
 	//database login info
 	$_servername = "localhost";
-	$_dbusr = "root";
-	$_dbpsw = "Lyq117915";
+	$_dbusr = "mt_developer";
+	$_dbpsw = "mytreat";
 	//establish connection
 	$conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
 	if(!$conn){
@@ -132,12 +132,7 @@ end;
 												<div class = "organizer_info">
 													<div class = "col1"></div>
 													<div class = "col2">
-														<form name = "form$row[7]" action="profile_page.php" method="post">
-															<input name="user_id" value = "$row[7]" style="display:none" />
-															<a href="javascript:document.form$row[7].submit()">
-																<img class = "homeevent" src="$row[5]" alt="not found">
-															</a>
-														</form>
+
 													</div>
 													<div class = "col2"></div>
 													<div class = "col7">
