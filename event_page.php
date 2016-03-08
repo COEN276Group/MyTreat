@@ -58,31 +58,42 @@
 
 
 <?php
-  $event_id = $_POST['event_id'];
+  $user_id = $_POST['event_id'];
+  echo $event_id;
   //database login info
   $_servername = "localhost";
   $_dbusr = "root";
   $_dbpsw = "zq627128";
   //establish connection
   //echo "the earlier part is working";
-  $link = mysql_connect($_servername,$_dbusr,$_dbpsw);
+  $conn = mysql_connect($_servername,$_dbusr,$_dbpsw);
   
   //echo "the latter part is working";
-  if(!$link){
+  if(!$conn){
     die('Could not connect: ' .mysql_error());
   }
   //echo 'Connected Successfully<br>';
   //choose database 
-  $db = mysql_select_db("mysql",$link);
+  $db = mysql_select_db("mytreat",$conn);
   if(!$db){
     die("Database not found".mysql_error());
   } 
-  $sql = "select name,location,date, description from events";
+  $sql = "select title,street, long_desc from mytreat.events where id = $event_id";
+  echo $sql;
   //$sql = "select name,location,date, description from events where id = \"$event_id\"";
-  $result = mysql_query($sql,$link);
+  $result = mysql_query($sql,$conn);
+  if($result === FALSE) { 
+    die(mysql_error()); // TODO: better error handling
+  }
+  echo $result;
+
   $event = mysql_fetch_array($result);
+  if($event=== FALSE) { 
+    die(mysql_error()); // TODO: better error handling
+  }
+
   //while($event1 = mysql_fetch_array($result)){
-    echo<<<end
+    echo<<<end1
 <div class="container">
   <br>
   <br>
@@ -128,18 +139,14 @@
 </div>
 <div class="row sec">
     <div class="col1"></div>
-    <div class="col1"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile23.png" alt="profile1" width="100"></a>
-    </div>
-    <div class="col1"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile6.png" alt="profile1" width="100"></a>
-    </div>
-    <div class="col1"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile2.png" alt="profile2" width="100"></a>
-    </div>
-    <div class="col1"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile5.png" alt="profile3" width="100"></a>
-    </div>
-    <div class="col1"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile17.png" alt="profile4" width="100"></a>
-    </div>
-    <div class="col1"><a href="profile_page.html"><img class="img-responsive profile_img" src="images/profile_pics/profile28.png" alt="profile5" width="100"></a>
-    </div>
+end1;
+    $inner_sql = "select p.user_id,u.pic_url from participants as p,users as u where p.event_id = $event_id and p.user_id = u.id";
+        $inner_result = mysql_query($inner_sql,$conn);
+        while($row = mysql_fetch_array($inner_result)){
+            $pic = $row[1];
+            echo "<div class = \"col1 participant\"><a href=\"\"><img src=\"$pic\" alt=\"not found\"></a></div>";
+        }
+echo<<<end2
     <div class="col1"></div>
 </div><br>
       <!-- <div class="row">
@@ -148,7 +155,7 @@
     </div> -->
 </div>
       
-end;
+end2;
   //}
 ?>  
 
