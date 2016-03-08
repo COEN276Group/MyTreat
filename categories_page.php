@@ -29,13 +29,13 @@
 				</div>
 				<div class="col6">
 					<form  id="signup" action="#">
-						<a href="signup_page.html"><span class="login_button">Sign Up</span></a>
+						<a href="signup_page.php"><span class="login_button">Sign Up</span></a>
 					</form>
 				</div>
 			</div>
 			<div class="row">
 				<div id="tfheader">
-					<form id="tfnewsearch" method="get" action="search_result_page.html">
+					<form id="tfnewsearch" method="get" action="search_result_page.php">
 						<input id="search1" type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
 					</form>
 					<div class="tfclear"></div>
@@ -79,14 +79,13 @@
     }
     //database login info
 	$_servername = "localhost";
-	$_dbusr = "root";
-	$_dbpsw = "Lyq117915";
+	$_dbusr = "mt_developer";
+	$_dbpsw = "mytreat";
 	//establish connection
 	$conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
 	if(!$conn){
 		die('Could not connect: ' .mysql_error());
 	}
-	echo '<script>alert(\'Connected Successfully\')</script>';
 	//choose database
 	$db = mysql_select_db("mytreat",$conn);
 	if(!$db){
@@ -125,13 +124,21 @@ end1;
         <div class = "row event_container">
             <div class = "col1"></div>
             <div class = "col3 eventphoto">
-                <a href=""><img src="$event_pic" alt="not found"></a>
+                <img src="$event_pic" alt="not found">
             </div>
             <div class = "col1"></div>
             <div class = "col6">
                 <div class = "row">
                     <div class = "row">
-                        <div class = "col9"><a href="event_page.html"><h2>$title</h2></a></div>
+                        <div class = "col9">
+							<form name = "form$e_id" action="event_page.php" method="post">
+								<input name="event_id" value = "$e_id" style="display:none" />
+								<a href="javascript:document.form$e_id.submit()">
+									<h2>$title</h2>
+								</a>
+							</form>
+
+						</div>
                         <div class = "col3 treat">
                             $mytreat!
                         </div>
@@ -234,7 +241,7 @@ mysql_close($conn);
                 <input type="password" />
                 <br>
                 <div class="action_btns">
-                    <div class=""><a href="myprofile_page.html" class="btn btn_theme">Login</a></div>
+                    <div class=""><a href="myprofile_page.php" class="btn btn_theme">Login</a></div>
                 </div>
             </form>
             <br>

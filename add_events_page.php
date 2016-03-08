@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="images/general/favicon.ico" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="scripts/pictureuploader.js"></script>
 	<script src="scripts/add_events_page_script.js"></script>
 	<script src="scripts/modal.js"></script>
 	<script src="scripts/general.js"></script>
@@ -24,7 +23,7 @@
 <body onresize="resizeInput()">
     <div class="row" id = "heading" style = "padding:0px;margin:0px;">
       <div class="col8" id="title_row">
-          <a href = "home_page.html">
+          <a href = "home_page.php">
             <h1 style = "color:white;text-align:center;font-size:10vmin;margin:10px">MyTreat.com</h1>
           </a>
         </div>
@@ -44,7 +43,7 @@
           </div>
           <div class="row">
             <div id="tfheader">
-              <form id="tfnewsearch" method="get" action="search_result_page.html">
+              <form id="tfnewsearch" method="get" action="search_result_page.php">
                 <input id="search1" type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
               </form>
               <div class="tfclear"></div>
@@ -64,10 +63,11 @@
 				<h2 style = "margin:10px; color:white">Create Your Events</h2>
 			</div>
 
-				<form>
+				<form action="add_events_page.php" method="post">
 					<img id="pic" src="images/general/edefault.png" height="200" alt="Image preview...">
 					<br>
-					<input type="file" onchange="previewFile()"><br>
+					<input id="img_upload" type="file" onchange="previewFile()"><br>
+					<input id="pic_url" name = "pic_url"/>
 					<br>
 					General Info<br/>
 					<input type="text" name="event_title" class="input" placeholder = "Event Title"><br/>
@@ -88,51 +88,71 @@
 					<br>
 					Full description of the event<br/>
 					<textarea name="long_describe" rows="10" cols="50" style="color:#AE89AF;"></textarea><br/>
-				</form>
+				
 				<!-- <form action="event_page.php"> -->
-				<form method="post">
+				
 					<input id="submit_button" name="submit_button" type="submit" value="Create Event" class="button" style="font-size:20px">
 				</form>
 				<?php
-					  //$event_id = $_POST['event_id'];
-					  //database login info
-					  $_servername = "localhost";
-					  $_dbusr = "root";
-					  $_dbpsw = "zq627128";
+
+
+
+						$_servername = "localhost";
+					  $_dbusr = "mt_developer";
+					  $_dbpsw = "mytreat";
 					  //establish connection
 					  //echo "the earlier part is working";
-					  $link = mysql_connect($_servername,$_dbusr,$_dbpsw);
+					  $conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
 					  
 					  //echo "the latter part is working";
-					  if(!$link){
+					  if(!$conn){
 					    die('Could not connect: ' .mysql_error());
 					  }
 					  //echo 'Connected Successfully<br>';
 					  //choose database 
-					  $db = mysql_select_db("mysql",$link);
+					  $db = mysql_select_db("mytreat",$conn);
 					  if(!$db){
 					    die("Database not found".mysql_error());
 					  } 
-					  if(isset($_POST['submit_button']))
-						{
-							$name = $_POST['event_title'];
-							$cat = $_POST['event_category'];
-							$time = $_POST['event_time'];
-							$tag = $_POST['event_tag'];
-							$st_ad = $_POST['street_address'];
-							$city = $_POST['city'];
-							$state = $_POST['state'];
-							$zipcode = $_POST['zipcode'];
-							$pay_type = $_POST['pay_type'];
-							$short_des = $_POST['short_describe'];
-							$long_des = $_POST['long_describe'];
-							print ($name);
 
-						     $SQL = "insert into events (EID, Name, Location, Date, description) VALUES ('0005', '$name', '$st_ad', '2008-09-09', '$long_des')";
-						     $result = mysql_query($SQL);
-						     die(mysql_error());
-						}
-				?>
+				$o_id = $_POST['new_event'];
+				//echo isset($o_id);
+
+				//echo $o_id;
+				
+				//echo "111";
+	$name = $_POST['event_title'];
+	$cat = $_POST['event_category'];
+	$time = $_POST['event_time'];
+	$tag = $_POST['event_tag'];
+	$st_ad = $_POST['street_address'];
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$zipcode = $_POST['zipcode'];
+	$pay_type = $_POST['pay_type'];
+	$short_des = $_POST['short_describe'];
+	$long_des = $_POST['long_describe'];
+	/*session_start();
+	$organizer_id = $_SESSION['organizer'];
+	error_reporting(E_ALL);
+	echo "$organizer_id";*/
+	/*echo $name;
+	echo $cat;
+	echo $time;
+	echo $tag;
+	echo $st_ad;
+	echo $city;
+	echo $state;
+	echo $zipcode;
+	echo $pay_type;
+	echo $short_des;
+	echo $long_des;	*/				  
+	$SQL = "insert into events (organizer_id, event_time, street, city, state, zip, pic_url, title, short_desc, long_desc, category, mytreat, tag) VALUES (10001, '$time', '$st_ad', '$city', '$state', '$zipcode', '29102910', '$name', '$short_des', '$long_des', '$cat', '$pay_type', '$tag')";
+	$result = mysql_query($SQL);
+	//die(mysql_error());
+						
+?>
+
 			</div>
 		</div>
 	<br>
@@ -185,11 +205,11 @@
 						<input type="password" />
 						<br>
 						<div class="action_btns">
-							<div class=""><a href="myprofile_page.html" class="btn btn_theme">Login</a></div>
+							<div class=""><a href="myprofile_page.php" class="btn btn_theme">Login</a></div>
 						</div>
 					</form>
 					<br>
-					<a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
+					<a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
 				</div>
 			</section>
 	</div>
