@@ -52,6 +52,54 @@
       </div>
     </div>
 
+<?php
+    //database login info
+    $_servername = "localhost";
+    $_dbusr = "root";
+    $_dbpsw = "Lyq117915";
+    //establish connection
+    $conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
+    if(!$conn){
+        die('Could not connect: ' .mysql_error());
+    }
+    echo '<script>alert(\'Connected Successfully\')</script>';
+    //choose database
+    $db = mysql_select_db("mytreat",$conn);
+    if(!$db){
+        die("Database not found".mysql_error());
+    }
+
+
+    $f_name = $_POST['f_name'];
+    $l_name = $_POST['l_name'];
+    $gender = $_POST['gender'];
+    $dob = $_POST['dob'];
+    $describe = $_POST['describe'];
+    $hobbies = $_POST['hobbies'];
+    $occupataion = $_POST['occupation'];
+    $email = $_POST['email'];
+    $psw = $_POST['psw'];
+    $pic_url = $_POST['pic_url'];
+
+    echo $f_name;
+    echo $l_name;
+    echo $gender;
+    echo $dob;
+    echo $describe;
+    echo $hobbies;
+    echo $occupataion;
+    echo $email;
+    echo $psw;
+    echo $pic_url;
+
+
+
+
+    //$sql = "insert into users(f_name,l_name,DOB,age,gender,occupation,hobbies,description,email,psw,pic_url)
+    //values($f_name,$l_name)";
+
+?>
+
     <h1>Thank you for signing up</h1>
 
     <!-- footer -->

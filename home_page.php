@@ -136,7 +136,7 @@ end;
 													</div>
 													<div class = "col2"></div>
 													<div class = "col7">
-														<div class = "row">$row[0].$row[1]</div>
+														<div class = "row">$row[0]$row[1]</div>
 														<div class = "row">*****</div>
 													</div>
 												</div>
@@ -147,12 +147,12 @@ end;
 											</p>
 											<div class = "row">
 												<div class = "col1"></div>
-												<div class = "col2">
+												<div class = "col4">
 													<form action = "test.php" method="post">
-														<input type = "submit" name = "event_id" value = "$row[7]">
+														<button type = "submit" name = "event_id" value = "$row[6]">More Info</button>
 													</form>
 												</div>
-												<div class = "col5"></div>
+												<div class = "col3"></div>
 												<div class = "col3">
 													<input class = "want_in_button" type = "button" value = "I Want In!">
 												</div>
