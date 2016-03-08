@@ -8,8 +8,6 @@
     <link rel="shortcut icon" href="images/general/favicon.ico" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="scripts/pictureuploader.js"></script>
-	<script src="scripts/signup_script.js"></script>
 	<script src="scripts/modal.js"></script>
 	<script src="scripts/general.js"></script>
 	<script>
@@ -72,36 +70,56 @@
 
     $f_name = $_POST['f_name'];
     $l_name = $_POST['l_name'];
-    $gender = $_POST['gender'];
+    switch ($_POST['gender']){
+		case 'Male':
+			$gender = "M";
+			break;
+		case 'Female':
+			$gender = "F";
+			break;
+		case 'other':
+			$gender = "O";
+			break;
+	}
     $dob = $_POST['dob'];
-    $describe = $_POST['describe'];
+    $desc = $_POST['describe'];
     $hobbies = $_POST['hobbies'];
-    $occupataion = $_POST['occupation'];
+    $occ= $_POST['occupation'];
     $email = $_POST['email'];
     $psw = $_POST['psw'];
-    $pic_url = $_POST['pic_url'];
+    $pic_url = "images/content/profile_pics/".$_POST['pic_url'];
 
-    echo $f_name;
-    echo $l_name;
-    echo $gender;
-    echo $dob;
-    echo $describe;
-    echo $hobbies;
-    echo $occupataion;
-    echo $email;
-    echo $psw;
-    echo $pic_url;
+    $sql = "insert into users(f_name,l_name,DOB,gender,occupation,hobbies,description,email,psw,pic_url) values('$f_name','$l_name','$dob','$gender','$occ','$hobbies','$desc','$email','$psw','$pic_url')";
+	$result = mysql_query($sql,$conn) or die(mysql_error());
+
+	$sql = "select max(id) from users";
+	$id_result = mysql_query($sql,$conn);
+	$u_id = mysql_fetch_array($id_result)[0];
+
+	echo <<<end
+	<div class="row">
+		<div class="col3"></div>
+		<div class="col6">
+			<div class="row">
+				<img src="images/general/signedup.jpg" alt="not found" />
+			</div>
+			<div class="row" style="text-align:center">
+				<h2>Thank you for signing up</h2>
+				<form name = "form1" action="myprofile_page.php" method="post">
+					<input name="user_id" value = "$u_id" style="display:none" />
+					<a href="javascript:document.form1.submit()">
+						<h2>Click Here to Go to Your Profile Page</h2>
+					</a>
+				</form>
+			</div>
 
 
+		</div>
+		<div class="col3"></div>
 
-
-    //$sql = "insert into users(f_name,l_name,DOB,age,gender,occupation,hobbies,description,email,psw,pic_url)
-    //values($f_name,$l_name)";
-
+	</div>
+end;
 ?>
-
-    <h1>Thank you for signing up</h1>
-
     <!-- footer -->
     	<br><br>
         <div class="row footer">

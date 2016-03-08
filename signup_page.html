@@ -70,16 +70,14 @@
 				<div class = "col3"></div>
 				<div class = "col6">
 					<form action="signup_handler.php" method="post">
-						<img id="pic" src="images/general/default.jpg" height="200" name = "pic_url" alt="Image preview...">
+						<img id="pic" src="images/general/default.jpg" height="200" alt="Image preview...">
 						<br>
+						<input id = "pic_url" name = "pic_url" style="display:none"/>
 						<input type="file" onchange="previewFile()"><br>
 						<br>
 						<input type="text" name="email" class="input" placeholder="Username/Email"><br/>
 						<input id="psw1" type="text" name="psw"  class="input" placeholder="Password"><br/>
 						<input id="psw2" type = "text" name = "con_psw" class = "input" placeholder="Confirm Password" onblur="passwordValidate()"><br>
-
-
-
 						<input type="text" name="f_name" class="input" placeholder = "firstname"><br/>
 						<input type="text" name="l_name" size="30" class="input" placeholder = "lastname"><br/>
 						<input type="radio" name="gender" value="male" checked> Male
