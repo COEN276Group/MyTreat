@@ -60,7 +60,7 @@
 		<div class = "col10 sec">
 
 <?php
-
+	$cur_user = $_GET['cur_user'];
 	//database login info
 	$_servername = "localhost";
 	$_dbusr = "root";
@@ -132,11 +132,16 @@ end;
 												<div class = "organizer_info">
 													<div class = "col1"></div>
 													<div class = "col2">
-														<a href="profile_page.html"><img class = "homeevent" src="$row[5]" alt="not found"></a>
+														<form name = "form$row[7]" action="profile_page.php" method="post">
+															<input name="user_id" value = "$row[7]" style="display:none" />
+															<a href="javascript:document.form$row[7].submit()">
+																<img class = "homeevent" src="$row[5]" alt="not found">
+															</a>
+														</form>
 													</div>
 													<div class = "col2"></div>
 													<div class = "col7">
-														<div class = "row">$row[0]$row[1]</div>
+														<div class = "row">$row[0] $row[1]</div>
 														<div class = "row">*****</div>
 													</div>
 												</div>
@@ -148,7 +153,7 @@ end;
 											<div class = "row">
 												<div class = "col1"></div>
 												<div class = "col4">
-													<form action = "test.php" method="post">
+													<form action = "event_page.php" method="post">
 														<button type = "submit" name = "event_id" value = "$row[6]">More Info</button>
 													</form>
 												</div>
