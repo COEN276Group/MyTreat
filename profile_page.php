@@ -14,7 +14,6 @@
     <script src="scripts/jQuery.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/profile_script.js"></script>
-    <script src="scripts/pictureuploader.js"></script>
     <script src="scripts/general.js"></script>
 
     <script>
@@ -29,7 +28,7 @@
 
     <div class="row" id = "heading" style = "padding:0px;margin:0px;">
         <div class="col8" id="title_row">
-            <a href = "home_page.html">
+            <a href = "home_page.php">
                 <h1 style = "color:white;text-align:center;font-size:10vmin;margin:10px">MyTreat.com</h1>
             </a>
         </div>
@@ -49,7 +48,7 @@
             </div>
             <div class="row">
                 <div id="tfheader">
-                    <form id="tfnewsearch" method="get" action="search_result_page.html">
+                    <form id="tfnewsearch" method="get" action="search_result_page.php">
                         <input id="search1" type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
                     </form>
                     <div class="tfclear"></div>
@@ -59,78 +58,111 @@
     </div>
     <br>
 
+
+
+
+<?php
+    $cur_user = $_GET['cur_user'];
+    $user_id = $_POST['user_id'];
+    //database login info
+    $_servername = "localhost";
+    $_dbusr = "mt_developer";
+    $_dbpsw = "mytreat";
+    //establish connection
+    $conn= mysql_connect($_servername,$_dbusr,$_dbpsw);
+    if(!$conn){
+        die('Could not connect: ' .mysql_error());
+    }
+    echo '<script>alert(\'Connected Successfully\')</script>';
+    //choose database
+    $db = mysql_select_db("mytreat",$conn);
+    if(!$db){
+        die("Database not found".mysql_error());
+    }
+
+	$sql = "select * from users where id = $user_id";
+	$result = mysql_query($sql,$conn);
+    $row = mysql_fetch_array($result);
+
+    $f_name = $row[1];
+    $l_name = $row[2];
+    $gender = $row[5];
+    $dob = $row[3];
+    $occ = $row[6];
+    $hob = $row[7];
+    $desc = $row[8];
+    $email = $row[9];
+    $pic_url = $row[11];
+
+    echo <<<end1
     <div class="container">
         <div class="row" id="subtitle">
             <h2>Profile</h2>
         </div>
         <br>
         <div class="row" id="subrow1">
-            <h3>Steven Parsons</h3>
+            <h3>$f_name $l_name</h3>
         </div>
         <div class="row sec">
-            <div class="col2">
-                <img id="i1" src="images/profile_pics/profile3.png" alt="Image preview...">
-                <p id="pa">Water sports lover, life lies in motion!</p>
+            <div class="col2" style="padding-top:20px">
+                <img id="i1" src="$pic_url" alt="image not found">
+                <p id="pa">$desc!</p>
             </div>
             <div class="col1"></div>
-            <div class="col9" id="col1">
-                <p>Hobbies: Surfing, Fintess, Swimming, Cooking</p>
-                <p>Occupation Area: Fitness, Sports</p>
+            <div class="col9">
+            <br />
+                <p>A Bit About Myself:</p>
+                <hr>
+                <p>Hobbies: $hob</p>
+                <p>Occupation Area: $occ</p>
                 <p>Places of Interests: Ocean beach, Gym, Swimming Pool</p>
-                <hr>
-                <p id="col2">Review Highlights:</p>
-                <img class="img-responsive profile_img" src="images/profile_pics/profile5.png" alt="not found" width="35">
-                <p id="col3"> - " It was fantastic to go surfing with Steven on our trip to Haiwaii, really a skillful surfer! "<span style="padding-left: 2%">- 1 month ago</span></p>
+                <p>Reach Me At: $email</p>
                 <br>
-                <img class="img-responsive profile_img" src="images/profile_pics/profile33.png" alt="not found" width="35">
-                <p id="col4"> - " He was professional at yoga as my training instructor, warm-hearted guy! "<span style="padding-left: 2%">- 2 weeks ago</span>
-                </p>
-                <br>
-                <img class="img-responsive profile_img" src="images/profile_pics/profile46.png" alt="not found" width="36">
-                <p id="col5">- "<span></span><span class="edit_text" contenteditable="false"> "</span></p>
-                <div class="row">
-                    <div class="col9"></div>
-                    <div class="col2 edit">
-                        <input class="edit_button" type="button" value="Write your Review"/>
-                    </div>
-                    <div class="col1 save">
-                        <input class="save_button" type="button" value="Save" />
-                    </div>
-                </div>
-                <p></p>
-                <hr>
-                <div class="rating">
-                    <input class="save_button" id="save_sec" type="submit" value="Rate This User">
-                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                    <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>:gnitaR
-                    <p></p>
-                </div>
             </div>
         </div>
 
         <br>
         <div class = "row" id="subrow2">
-            <h4>Manage My Events</h4>
+            <h4>Events Hosted by this User</h4>
         </div>
         <div class="row sec">
             <div class = "col1"></div>
-            <div class="col2" id="s1"><a href="event_page.html"><img  src="images/content/outdoor3.png" alt="loading..."></a><span class = "event_title"><a href="event_page.html">#Running Group</a></span></div>
-            <div class="col2" id="s2"><a href="event_page.html"><img  src="images/content/outdoor5.png" alt="loading..."></a><span class = "event_title"><a href="event_page.html">#Advanturous Diving</a></span></div>
-            <div class="col2" id="s3"><a href="event_page.html"><img  src="images/content/food2.png" alt="loading..."></a><span class = "event_title"><a href="event_page.html">#Wine Tasting</a></span></div>
-            <div class="col2" id="s4"><a href="event_page.html"><img  src="images/content/food3.png" alt="loading..."></a><span class = "event_title"><a href="event_page.html">#Hot Pot Party</a></span></div>
-            <div class = "col1"></div>
-            <div class = "col1">
-                <form action="event_page.html">
-                    <input id="s5" type = "submit" value = "More . . .">
-                </form>
+            <div class = "col10">
+end1;
+        $sql = "select id,pic_url,title from events where organizer_id = $user_id limit 4";
+        $event_result = mysql_query($sql,$conn);
+        while($event = mysql_fetch_array($event_result)){
+            $title = $event[2];
+            $pic = $event[1];
+            $e_id = $event[0];
+            echo <<<end2
+            <div class="col2" id="s1">
+            <form name="form$e_id" action="event_page.php" method="post">
+                <input name = "event_id" value="$e_id" style="display:none"/>
+                <a href="javascript:document.form$e_id.submit()">
+                    <img  src="$pic" alt="image not found">
+                    <span style="text-align:center"><h5>$title</h5></span>
+                </a>
+            </form>
+
+            </div>
+end2;
+
+
+        }
+        echo <<<end2
             </div>
         </div>
 
     </div>
 
     <br>
+end2;
+
+
+?>
+
+
     <div class="row footer">
         <div class="row">
             <div class="col1 footer">
@@ -156,7 +188,7 @@
         </div>
     </div>
     <!--modal stuff-->
-    
+
     <div id="modal" class="popupContainer" style="display:none;">
         <header class="popupHeader">
             <span class="header_title">Login</span>
@@ -178,9 +210,12 @@
                     </div>
                 </form>
                 <br>
-                <a href="signup_page.html" class = "new_user">New User? Click Here to Register</a>
+                <a href="signup_page.php" class = "new_user">New User? Click Here to Register</a>
             </div>
         </section>
     </div>
+
+
+
 </body>
 </html>
