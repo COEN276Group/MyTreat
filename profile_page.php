@@ -137,10 +137,14 @@ end1;
             $e_id = $event[0];
             echo <<<end2
             <div class="col2" id="s1">
-                <a href="event_page.php">
+            <form name="form$e_id" action="event_page.php" method="post">
+                <input name = "event_id" value="$e_id" style="display:none"/>
+                <a href="javascript:document.form$e_id.submit()">
                     <img  src="$pic" alt="image not found">
                     <span style="text-align:center"><h5>$title</h5></span>
                 </a>
+            </form>
+
             </div>
 end2;
 
