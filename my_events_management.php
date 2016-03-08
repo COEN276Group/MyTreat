@@ -62,8 +62,8 @@
   $organizer_id = $_POST['organizer_id'];
   $organizer_id = "10018";
   $_servername = "localhost";
-  $_dbusr = "root";
-  $_dbpsw = "zq627128";
+  $_dbusr = "mt_developer";
+  $_dbpsw = "mytreat";
   //establish connection
   //echo "the earlier part is working";
   $conn = mysql_connect($_servername,$_dbusr,$_dbpsw);
